@@ -1,0 +1,11 @@
+Daily values look like single-day amounts (not running totals).
+Input has one row per state per month: treated as monthly totals.
+Months with 5+ days missing (departure is still valid: actual and normal cover the same days): Sep 2022 (19 days), Oct 2022 (25 days), May 2024 (21 days), Jun 2024 (17 days)
+Coverage: 30 Sep 2022 to 30 Sep 2026, 1 states.
+0 state-months have more than 2 missing days and are flagged complete=False (the first and last months usually fall here).
+All-India departure = sum of state actuals / sum of state normals - 1 (normal-weighted, not area-weighted).
+Monsoon 2022: +5% vs normal (only 1 of 4 months)
+Monsoon 2023: -7% vs normal
+Monsoon 2024: +6% vs normal
+Monsoon 2025: +1% vs normal
+Monsoon 2026: -17% vs normal

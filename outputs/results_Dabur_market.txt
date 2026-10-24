@@ -1,0 +1,25 @@
+Company: Dabur   |   Target: overall rural market (market)
+Eligible quarters (labelled, not Insufficient): 17  ->  train 10, test 7
+Train: Q1 FY23, Q2 FY23, Q3 FY23, Q4 FY23, Q1 FY24, Q2 FY24, Q3 FY24, Q4 FY24, Q1 FY25, Q2 FY25
+Test : Q3 FY25, Q4 FY25, Q1 FY26, Q2 FY26, Q3 FY26, Q4 FY26, Q1 FY27
+
+Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
+  MGNREGA persondays     train accuracy 60% on 10 qtrs; higher signal -> Accelerating; cut-offs (z-score) -0.60 / 0.39
+  MGNREGA wage bill      train accuracy 60% on 10 qtrs; higher signal -> Accelerating; cut-offs (z-score) -0.66 / 0.34
+  Rainfall               train accuracy 83% on 6 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / -1.64
+  MGNREGA + rainfall     train accuracy 67% on 6 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / -0.46
+
+Selected on train: MGNREGA persondays
+
+TEST RESULTS (7 test quarters; 7 where all main methods could predict):
+  selected               1/7 correct overall   |   1/7 on common quarters
+  repeat_last            6/7 correct overall   |   6/7 on common quarters
+  most_common            0/7 correct overall   |   0/7 on common quarters
+  MGNREGA persondays     1/7 correct overall   |   1/7 on common quarters
+  MGNREGA wage bill      1/7 correct overall   |   1/7 on common quarters
+  Rainfall               2/7 correct overall   |   2/7 on common quarters
+  MGNREGA + rainfall     1/7 correct overall   |   1/7 on common quarters
+
+The selected rule did NOT beat the best baseline (repeat_last: 6 vs 1 of 7). Report this honestly and explain what limited it.
+Caution: with this few quarters, one quarter changes the conclusion. Present counts, not just percentages.
+Note: in 2 of 7 test quarters MGNREGA persondays were down more than 25% year on year (Q4 FY26, Q1 FY27). From Aug 2025 the fall looks like a scheme/policy change rather than rural demand, so the signal may be measuring policy in these quarters.

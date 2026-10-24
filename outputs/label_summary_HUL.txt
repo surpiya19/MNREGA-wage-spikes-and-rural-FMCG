@@ -1,0 +1,6 @@
+Quarters in table: 17
+Both readers labelled: 17;  agreed on 16 (94%);  Cohen's kappa = 0.81
+  (kappa guide: <0.4 weak, 0.4-0.6 moderate, >0.6 good - weak agreement means the label rules need tightening)
+Agreed labels: Insufficient 14, Accelerating 2, Steady 1
+Usable quarters for testing (not Insufficient): 3
+Disagreements saved to /Users/supriyanannapaneni/Desktop/Fall 26'/Alt Data/Thurro/MNREGA-wage-spikes-and-rural-FMCG/outputs/label_disagreements_HUL.csv

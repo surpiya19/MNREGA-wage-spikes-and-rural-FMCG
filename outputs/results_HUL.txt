@@ -1,0 +1,25 @@
+Company: HUL   |   Target: own rural business (own)
+Eligible quarters (labelled, not Insufficient): 3  ->  train 3, test 0
+Train: Q2 FY24, Q3 FY24, Q1 FY27
+Test : 
+
+Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
+  MGNREGA persondays     train accuracy 67% on 3 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / -0.30
+  MGNREGA wage bill      train accuracy 67% on 3 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / -0.42
+  Rainfall               train accuracy 67% on 3 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / -0.71
+  MGNREGA + rainfall     train accuracy 67% on 3 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 0.20
+
+Selected on train: MGNREGA persondays
+
+TEST RESULTS (0 test quarters; 0 where all main methods could predict):
+  selected               0/0 correct overall   |   0/0 on common quarters
+  repeat_last            0/0 correct overall   |   0/0 on common quarters
+  follow_market          0/0 correct overall   |   0/0 on common quarters
+  most_common            0/0 correct overall   |   0/0 on common quarters
+  MGNREGA persondays     0/0 correct overall   |   0/0 on common quarters
+  MGNREGA wage bill      0/0 correct overall   |   0/0 on common quarters
+  Rainfall               0/0 correct overall   |   0/0 on common quarters
+  MGNREGA + rainfall     0/0 correct overall   |   0/0 on common quarters
+
+No common test quarters - cannot compare. Extend the history or add companies.
+Caution: with this few quarters, one quarter changes the conclusion. Present counts, not just percentages.

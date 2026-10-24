@@ -1,0 +1,7 @@
+Share of state-FYs where persondays never fall month to month: 0%.
+=> Looks like SINGLE-MONTH values. No conversion applied.
+Coverage: Apr 2019 to Sep 2026, 1 states.
+States with missing persondays months: none
+wage_bill_inr = persondays x average wage paid per day. This is a constructed proxy, not reported payments.
+persons_demanded is a count of PEOPLE asking for work; persondays is DAYS worked. Different units - don't compare levels.
+Months with persondays YoY beyond +/-30% (check for revisions or scheme changes before modelling): Apr 2020 (-48%), May 2020 (+56%), Jun 2020 (+101%), Jul 2020 (+102%), Aug 2020 (+70%), Sep 2020 (+79%), Oct 2020 (+90%), Nov 2020 (+39%), Dec 2020 (+39%), Mar 2021 (+40%), Apr 2021 (+140%), May 2021 (-35%), Jul 2022 (-38%), Aug 2022 (-40%), Sep 2022 (-36%), Aug 2023 (+32%), Oct 2025 (-37%), Nov 2025 (-35%), Dec 2025 (-30%), Mar 2026 (-42%), Apr 2026 (-54%), May 2026 (-37%), Jul 2026 (-48%)

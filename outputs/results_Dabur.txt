@@ -21,6 +21,6 @@ TEST RESULTS (6 test quarters; 6 where all main methods could predict):
   Rainfall               2/6 correct overall   |   2/6 on common quarters
   MGNREGA + rainfall     3/6 correct overall   |   3/6 on common quarters
 
-The selected rule did NOT beat the best baseline (repeat_last: 5 vs 2 of 6). Report this honestly and explain what limited it.
-Caution: with this few quarters, one quarter changes the conclusion. Present counts, not just percentages.
+Finding: the selected rule did not beat the best baseline (repeat_last: 5 vs 2 of 6).
+With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.
 Note: in 2 of 6 test quarters MGNREGA persondays were down more than 25% year on year (Q4 FY26, Q1 FY27). From Aug 2025 the fall looks like a scheme/policy change rather than rural demand, so the signal may be measuring policy in these quarters.

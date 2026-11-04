@@ -128,8 +128,30 @@ if not india_reported.empty:
 # --- Big year-on-year swings worth investigating ----------------------------
 big = india[india["persondays_yoy"].abs() > 0.3]
 if len(big):
-    notes.append("Months with persondays YoY beyond +/-30% (check for revisions or scheme changes before modelling): "
+    notes.append("Months with persondays YoY beyond +/-30%: "
                  + ", ".join(f"{d:%b %Y} ({v:+.0%})" for d, v in zip(big["month_end"], big["persondays_yoy"])))
+
+    def _period(d):
+        if pd.Timestamp("2020-04-01") <= d < pd.Timestamp("2022-01-01"):
+            return "covid"
+        if pd.Timestamp("2022-01-01") <= d < pd.Timestamp("2023-01-01"):
+            return "post_covid"
+        if d >= pd.Timestamp("2025-08-01"):
+            return "scheme"
+        return "other"
+
+    big_p = big.assign(period=big["month_end"].map(_period))
+    findings = {
+        "covid": "{n} months in Apr 2020-Dec 2021: the COVID-era surge in MGNREGA work (and the lockdown dip in Apr 2020).",
+        "post_covid": "{n} months in 2022: a fall back from the high 2021 base, not a new shock.",
+        "scheme": "{n} months from Aug 2025: the decline that runs into MGNREGA's replacement by VB-G RAM G (Jul 2026). "
+                  "This looks like a scheme change rather than weaker rural demand, so these months measure policy as much as income.",
+        "other": "{n} other month(s) ({months}): no clear COVID or scheme cause; treated as genuine swings.",
+    }
+    for key, template in findings.items():
+        months = big_p.loc[big_p["period"] == key, "month_end"]
+        if len(months):
+            notes.append("  Finding: " + template.format(n=len(months), months=", ".join(f"{d:%b %Y}" for d in months)))
 
 states.drop(columns="fy").to_csv(C.CLEAN / "mgnrega_state_monthly.csv", index=False)
 india.to_csv(C.CLEAN / "mgnrega_india_monthly.csv", index=False)

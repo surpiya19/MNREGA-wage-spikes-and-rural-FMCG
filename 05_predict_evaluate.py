@@ -152,14 +152,18 @@ sel_c, sel_n = score("pred_selected", common)
 base = {k: score(k, common)[0] for k in BASES}
 best_base = max(base, key=base.get)
 lines.append("")
-if sel_n == 0:
-    lines.append("No common test quarters - cannot compare. Extend the history or add companies.")
+if len(t) == 0:
+    lines.append(f"Finding: {C.COMPANY}'s {C.TARGET_NAME} target can't be tested - only {len(eligible)} of {len(f)} quarters "
+                 f"have a usable label, and all {len(train)} were needed for training, leaving no test quarters.")
+elif sel_n == 0:
+    lines.append(f"Finding: none of the {len(t)} test quarters had a prediction from every main method, so the rule "
+                 "can't be compared with the baselines on equal terms.")
 elif sel_c > base[best_base]:
     lines.append(f"The selected rule beat the best baseline ({best_base.replace('pred_', '')}) by {sel_c - base[best_base]} of {sel_n} quarters.")
 else:
-    lines.append(f"The selected rule did NOT beat the best baseline ({best_base.replace('pred_', '')}: {base[best_base]} vs {sel_c} of {sel_n}). "
-                 "Report this honestly and explain what limited it.")
-lines.append("Caution: with this few quarters, one quarter changes the conclusion. Present counts, not just percentages.")
+    lines.append(f"Finding: the selected rule did not beat the best baseline ({best_base.replace('pred_', '')}: {base[best_base]} vs {sel_c} of {sel_n}).")
+if sel_n > 0:
+    lines.append("With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.")
 shock = t[t["pd_yoy"] < -0.25]
 if len(shock):
     lines.append(f"Note: in {len(shock)} of {len(t)} test quarters MGNREGA persondays were down more than 25% year on year "

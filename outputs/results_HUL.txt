@@ -21,5 +21,4 @@ TEST RESULTS (0 test quarters; 0 where all main methods could predict):
   Rainfall               0/0 correct overall   |   0/0 on common quarters
   MGNREGA + rainfall     0/0 correct overall   |   0/0 on common quarters
 
-No common test quarters - cannot compare. Extend the history or add companies.
-Caution: with this few quarters, one quarter changes the conclusion. Present counts, not just percentages.
+Finding: HUL's own rural business target can't be tested - only 3 of 17 quarters have a usable label, and all 3 were needed for training, leaving no test quarters.

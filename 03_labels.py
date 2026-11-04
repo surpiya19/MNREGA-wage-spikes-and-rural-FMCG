@@ -85,13 +85,31 @@ dis = both.loc[~agree, ["quarter", "reader1_label", "reader2_label", "own_rural_
 dis.to_csv(C.OUT / f"label_disagreements_{C.COMPANY}.csv", index=False)
 
 ev.to_csv(C.CLEAN / f"labels_{C.COMPANY}.csv", index=False)
+def agreement_finding(k):
+    """State the agreement result (bar: kappa 0.6)."""
+    if pd.isna(k):
+        return "  Agreement: kappa can't be computed (too few labels or only one label used)."
+    level = "good" if k > 0.6 else "moderate" if k >= 0.4 else "weak"
+    verdict = "above" if k > 0.6 else "below"
+    return f"  Agreement is {level}: kappa {k:.2f}, {verdict} the 0.6 bar."
+
+
+def usable_finding(n_usable, n_total):
+    """State how many quarters can be used, and whether that is enough to test."""
+    line = f"Usable quarters for testing (not Insufficient): {n_usable} of {n_total}"
+    if n_usable <= 3:
+        line += (f" - too few to hold any back for testing; in most quarters {C.COMPANY} "
+                 "did not describe its own rural trend")
+    return line
+
+
 counts = ev["agreed_label"].replace("", "(not agreed yet)").value_counts()
 lines = [
     f"Quarters in table: {len(ev)}",
     f"Both readers labelled: {n};  agreed on {int(agree.sum())} ({po:.0%});  Cohen's kappa = {kappa:.2f}",
-    "  (kappa guide: <0.4 weak, 0.4-0.6 moderate, >0.6 good - weak agreement means the label rules need tightening)",
+    agreement_finding(kappa),
     f"Agreed labels: " + ", ".join(f"{k} {v}" for k, v in counts.items()),
-    f"Usable quarters for testing (not Insufficient): {int(ev['agreed_label'].isin(C.LABELS).sum())}",
+    usable_finding(int(ev['agreed_label'].isin(C.LABELS).sum()), len(ev)),
     f"Disagreements saved to {C.OUT / f'label_disagreements_{C.COMPANY}.csv'}",
 ]
 if problems:

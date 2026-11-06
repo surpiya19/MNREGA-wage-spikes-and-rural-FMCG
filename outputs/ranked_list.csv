@@ -1,0 +1,49 @@
+quarter,prediction_date,rank,company,predicted_direction,score,rationale,period,actual_market_wide,actual_own_rural,own_correct
+Q2 FY24,2023-10-18,1,Emami,Accelerating,0.52,"MGNREGA market call Accelerating (rule: persondays, data through 2023-06-30); rural share 52%; no own rural comment last call",before spending cap,Accelerating,Steady,No
+Q2 FY24,2023-10-18,2,Dabur,Accelerating,0.47,"MGNREGA market call Accelerating (rule: persondays, data through 2023-06-30); rural share 47%; last call own rural: Accelerating",before spending cap,Accelerating,Steady,No
+Q2 FY24,2023-10-18,3,HUL,Accelerating,0.33,"MGNREGA market call Accelerating (rule: persondays, data through 2023-06-30); rural share 33%; no own rural comment last call",before spending cap,Accelerating,,
+Q2 FY24,2023-10-18,4,Marico,Accelerating,0.31,"MGNREGA market call Accelerating (rule: persondays, data through 2023-06-30); rural share 31% (assumed); no own rural comment last call",before spending cap,Accelerating,Steady,No
+Q3 FY24,2024-01-18,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-09-30); rural share 52%; last call own rural: Steady",before spending cap,Slowing,,
+Q3 FY24,2024-01-18,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-09-30); rural share 47%; last call own rural: Steady",before spending cap,Slowing,Accelerating,No
+Q3 FY24,2024-01-18,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-09-30); rural share 33%; no own rural comment last call",before spending cap,Slowing,,
+Q3 FY24,2024-01-18,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-09-30); rural share 31% (assumed); last call own rural: Steady",before spending cap,Slowing,,
+Q4 FY24,2024-04-23,1,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-12-31); rural share 47%; last call own rural: Accelerating",before spending cap,Accelerating,Steady,Yes
+Q4 FY24,2024-04-23,2,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-12-31); rural share 52%; no own rural comment last call",before spending cap,Accelerating,Steady,Yes
+Q4 FY24,2024-04-23,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-12-31); rural share 33%; no own rural comment last call",before spending cap,Accelerating,,
+Q4 FY24,2024-04-23,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2023-12-31); rural share 31% (assumed); no own rural comment last call",before spending cap,Accelerating,,
+Q1 FY25,2024-07-22,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-03-31); rural share 52%; last call own rural: Steady",before spending cap,Accelerating,Steady,Yes
+Q1 FY25,2024-07-22,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-03-31); rural share 47%; last call own rural: Steady",before spending cap,Accelerating,Steady,Yes
+Q1 FY25,2024-07-22,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-03-31); rural share 33%; no own rural comment last call",before spending cap,Accelerating,,
+Q1 FY25,2024-07-22,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-03-31); rural share 31% (assumed); no own rural comment last call",before spending cap,Accelerating,,
+Q2 FY25,2024-10-22,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-06-30); rural share 52%; last call own rural: Steady",before spending cap,Steady,Steady,Yes
+Q2 FY25,2024-10-22,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-06-30); rural share 47%; last call own rural: Steady",before spending cap,Steady,Steady,Yes
+Q2 FY25,2024-10-22,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-06-30); rural share 33%; no own rural comment last call",before spending cap,Steady,,
+Q2 FY25,2024-10-22,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-06-30); rural share 31% (assumed); no own rural comment last call",before spending cap,Steady,,
+Q3 FY25,2025-01-21,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-09-30); rural share 52%; last call own rural: Steady",before spending cap,Steady,Accelerating,No
+Q3 FY25,2025-01-21,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-09-30); rural share 47%; last call own rural: Steady",before spending cap,Steady,Steady,Yes
+Q3 FY25,2025-01-21,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-09-30); rural share 33%; no own rural comment last call",before spending cap,Steady,,
+Q3 FY25,2025-01-21,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2024-09-30); rural share 31% (assumed); no own rural comment last call",before spending cap,Steady,Steady,Yes
+Q4 FY25,2025-04-23,1,Emami,Accelerating,0.52,"MGNREGA market call Accelerating (rule: persondays, data through 2024-12-31); rural share 52%; last call own rural: Accelerating",before spending cap,Steady,,
+Q4 FY25,2025-04-23,2,Dabur,Accelerating,0.47,"MGNREGA market call Accelerating (rule: persondays, data through 2024-12-31); rural share 47%; last call own rural: Steady",before spending cap,Steady,Slowing,No
+Q4 FY25,2025-04-23,3,HUL,Accelerating,0.33,"MGNREGA market call Accelerating (rule: persondays, data through 2024-12-31); rural share 33%; no own rural comment last call",before spending cap,Steady,,
+Q4 FY25,2025-04-23,4,Marico,Accelerating,0.31,"MGNREGA market call Accelerating (rule: persondays, data through 2024-12-31); rural share 31% (assumed); last call own rural: Steady",before spending cap,Steady,,
+Q1 FY26,2025-07-30,1,Emami,Accelerating,0.52,"MGNREGA market call Accelerating (rule: work demanded, data through 2025-04-30); rural share 52%; no own rural comment last call",before spending cap,Steady,,
+Q1 FY26,2025-07-30,2,Dabur,Accelerating,0.47,"MGNREGA market call Accelerating (rule: work demanded, data through 2025-04-30); rural share 47%; last call own rural: Slowing",before spending cap,Steady,Steady,No
+Q1 FY26,2025-07-30,3,HUL,Accelerating,0.33,"MGNREGA market call Accelerating (rule: work demanded, data through 2025-04-30); rural share 33%; no own rural comment last call",before spending cap,Steady,,
+Q1 FY26,2025-07-30,4,Marico,Accelerating,0.31,"MGNREGA market call Accelerating (rule: work demanded, data through 2025-04-30); rural share 31% (assumed); no own rural comment last call",before spending cap,Steady,,
+Q2 FY26,2025-10-22,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-06-30); rural share 52%; no own rural comment last call",before spending cap,Steady,Steady,Yes
+Q2 FY26,2025-10-22,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-06-30); rural share 47%; last call own rural: Steady",before spending cap,Steady,Steady,Yes
+Q2 FY26,2025-10-22,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-06-30); rural share 33%; no own rural comment last call",before spending cap,Steady,,
+Q2 FY26,2025-10-22,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-06-30); rural share 31% (assumed); no own rural comment last call",before spending cap,Steady,,
+Q3 FY26,2026-01-28,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-09-30); rural share 52%; last call own rural: Steady",spending cap (from Aug 2025),Steady,Accelerating,No
+Q3 FY26,2026-01-28,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-09-30); rural share 47%; last call own rural: Steady",spending cap (from Aug 2025),Steady,Steady,Yes
+Q3 FY26,2026-01-28,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-09-30); rural share 33%; no own rural comment last call",spending cap (from Aug 2025),Steady,,
+Q3 FY26,2026-01-28,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-09-30); rural share 31% (assumed); no own rural comment last call",spending cap (from Aug 2025),Steady,,
+Q4 FY26,2026-04-29,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-12-31); rural share 52%; last call own rural: Accelerating",spending cap (from Aug 2025),Steady,,
+Q4 FY26,2026-04-29,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-12-31); rural share 47%; last call own rural: Steady",spending cap (from Aug 2025),Steady,Steady,Yes
+Q4 FY26,2026-04-29,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-12-31); rural share 33%; no own rural comment last call",spending cap (from Aug 2025),Steady,Steady,Yes
+Q4 FY26,2026-04-29,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2025-12-31); rural share 31% (assumed); no own rural comment last call",spending cap (from Aug 2025),Steady,,
+Q1 FY27,2026-07-27,1,Emami,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2026-03-31); rural share 52%; no own rural comment last call",spending cap (from Aug 2025),Steady,,
+Q1 FY27,2026-07-27,2,Dabur,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2026-03-31); rural share 47%; last call own rural: Steady",spending cap (from Aug 2025),Steady,Steady,Yes
+Q1 FY27,2026-07-27,3,HUL,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2026-03-31); rural share 33%; last call own rural: Steady",spending cap (from Aug 2025),Steady,Steady,Yes
+Q1 FY27,2026-07-27,4,Marico,Steady,0.0,"MGNREGA market call Steady (rule: persondays, data through 2026-03-31); rural share 31% (assumed); no own rural comment last call",spending cap (from Aug 2025),Steady,,

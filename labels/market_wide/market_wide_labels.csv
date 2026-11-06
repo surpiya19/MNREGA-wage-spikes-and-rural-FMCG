@@ -1,0 +1,18 @@
+quarter,market_wide_label,confidence,votes,n_companies_commenting,first_results_date
+Q1 FY23,Steady,low,Dabur: Slowing; HUL: Steady,2,2022-07-19
+Q2 FY23,Steady,low,Dabur: Slowing; HUL: Steady,2,2022-10-21
+Q3 FY23,Steady,low,Dabur: Slowing; HUL: Accelerating,2,2023-01-19
+Q4 FY23,Steady,low,Dabur: Steady; HUL: Accelerating,2,2023-04-27
+Q1 FY24,Steady,low,Dabur: Accelerating; Emami: Steady; HUL: Accelerating; Marico: Steady,4,2023-07-20
+Q2 FY24,Accelerating,low,Dabur: Accelerating; Emami: Steady; HUL: Accelerating; Marico: Slowing,4,2023-10-19
+Q3 FY24,Slowing,low,Dabur: Slowing; Emami: Slowing; HUL: Accelerating; Marico: Steady,4,2024-01-19
+Q4 FY24,Accelerating,high,Dabur: Accelerating; Emami: Accelerating; HUL: Steady; Marico: Accelerating,4,2024-04-24
+Q1 FY25,Accelerating,high,Dabur: Accelerating; Emami: Steady; HUL: Accelerating; Marico: Accelerating,4,2024-07-23
+Q2 FY25,Steady,high,Dabur: Steady; Emami: Steady; HUL: Steady; Marico: Steady,4,2024-10-23
+Q3 FY25,Steady,high,Dabur: Steady; Emami: Steady; HUL: Steady; Marico: Steady,4,2025-01-22
+Q4 FY25,Steady,high,Dabur: Steady; Emami: Steady; HUL: Steady; Marico: Steady,4,2025-04-24
+Q1 FY26,Steady,high,Dabur: Steady; Emami: Steady; HUL: Accelerating; Marico: Steady,4,2025-07-31
+Q2 FY26,Steady,high,Dabur: Steady; Emami: Insufficient; HUL: Steady; Marico: Steady,3,2025-10-23
+Q3 FY26,Steady,high,Dabur: Steady; Emami: Steady; HUL: Steady; Marico: Steady,4,2026-01-29
+Q4 FY26,Steady,low,Dabur: Slowing; Emami: Insufficient; HUL: Steady; Marico: Steady,3,2026-04-30
+Q1 FY27,Steady,low,Dabur: Slowing; Emami: Insufficient; HUL: Steady; Marico: Steady,3,2026-07-28

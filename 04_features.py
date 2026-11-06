@@ -13,6 +13,9 @@ Features (all year-on-year, to strip out MGNREGA's strong seasonality):
                 mostly dry-season months, where normal rain is tiny and % swings
                 are huge noise.)
   rain_dep_chg  rain_dep minus the same measure one quarter earlier
+  dm_yoy / dm_yoy_chg   same, for persons DEMANDING work (need, rather than what the
+                budget allowed - the team's preferred signal after the 2025 cap)
+  period        which MGNREGA regime the latest usable month falls in (see config.py)
 
 Output: data/clean/features_<COMPANY>.csv
 """
@@ -73,6 +76,10 @@ for _, r in labels.iterrows():
 
     pd_now, pd_prev = yoy_sum(mg[PD], mg_end), yoy_sum(mg[PD], prev_mg_end)
     wb_now, wb_prev = yoy_sum(mg[WB], mg_end), yoy_sum(mg[WB], prev_mg_end)
+    if "persons_demanded" in mg.columns:
+        dm_now, dm_prev = yoy_sum(mg["persons_demanded"], mg_end), yoy_sum(mg["persons_demanded"], prev_mg_end)
+    else:
+        dm_now = dm_prev = np.nan
     rd_now, rd_prev = rain_departure(rain_end), rain_departure(prev_rain_end)
     rows.append({
         "company": r["company"], "quarter": r["quarter"], "quarter_end": r["quarter_end"].date(),
@@ -81,6 +88,10 @@ for _, r in labels.iterrows():
         "rain_data_through": rain_end.date(),
         "pd_yoy": pd_now, "pd_yoy_chg": pd_now - pd_prev,
         "wb_yoy": wb_now, "wb_yoy_chg": wb_now - wb_prev,
+        "dm_yoy": dm_now, "dm_yoy_chg": dm_now - dm_prev,
+        "period": ("after VB-G RAM G (Jul 2026)" if mg_end >= pd.Timestamp(C.REGIME_BREAK_FROM)
+                   else "spending cap (from Aug 2025)" if mg_end >= pd.Timestamp(C.SPENDING_CAP_FROM)
+                   else "before spending cap"),
         "rain_dep": rd_now, "rain_dep_chg": rd_now - rd_prev,
         "agreed_label": r["agreed_label"], "market_rural_label": r["market_rural_label"],
         "volume_growth_pct": r.get("volume_growth_pct"),

@@ -10,7 +10,14 @@ COLORS = {"Accelerating": "#2e7d32", "Steady": "#9e9e9e", "Slowing": "#c62828"}
 
 mg = pd.read_csv(C.CLEAN / "mgnrega_india_monthly.csv", parse_dates=["month_end"])
 rain = pd.read_csv(C.CLEAN / "rainfall_india_monthly.csv", parse_dates=["month_end"])
-pred = pd.read_csv(C.OUT / f"predictions_{C.TAG}.csv", parse_dates=["prediction_date"])
+_pred_file = C.OUT / f"predictions_{C.TAG}.csv"
+_res = C.OUT / f"results_{C.TAG}.txt"
+if not _pred_file.exists() or (_res.exists() and "can't be tested" in _res.read_text() and "too few to fit" in _res.read_text()):
+    print(f"No predictions for {C.TAG} (target can't be tested) - skipping charts.")
+    raise SystemExit(0)
+pred = pd.read_csv(_pred_file, parse_dates=["prediction_date"])
+WHO = "Companies (consensus)" if C.COMPANY == "Market" else C.COMPANY
+WHAT = "market-wide rural trend" if C.COMPANY == "Market" else C.TARGET_NAME
 LAB = "agreed_label" if C.TARGET == "own" else "market_rural_label"
 feat = pd.read_csv(C.CLEAN / f"features_{C.COMPANY}.csv", parse_dates=["quarter_end"])
 
@@ -28,8 +35,8 @@ ymax = ax.get_ylim()[1]
 for _, r in lab.iterrows():
     ax.scatter(r["quarter_end"], ymax * 0.9, color=COLORS[r[LAB]], s=60, zorder=3)
 for k, c in COLORS.items():
-    ax.scatter([], [], color=c, label=f"{C.COMPANY} on {C.TARGET_NAME}: {k}")
-ax.set_title(f"MGNREGA activity (year-on-year) vs {C.COMPANY}'s view of the {C.TARGET_NAME}")
+    ax.scatter([], [], color=c, label=f"{WHO}: {k}")
+ax.set_title(f"MGNREGA activity (year-on-year) vs {WHO.replace(' (consensus)', '')} on the {WHAT}")
 ax.legend(loc="lower left", fontsize=8, ncol=2)
 fig.tight_layout(); fig.savefig(C.OUT / f"chart_mgnrega_vs_labels_{C.TAG}.png", dpi=160); plt.close(fig)
 
@@ -63,7 +70,7 @@ if len(common) == 0:
     ax.text(0.5, 0.5, "Not enough labelled quarters to test\n(every labelled quarter was needed to fit the rule)",
             ha="center", va="center", fontsize=11, transform=ax.transAxes)
     ax.set_axis_off()
-    ax.set_title(f"{C.COMPANY} ({C.TARGET_NAME}): no held-out test possible")
+    ax.set_title(f"{WHO} ({WHAT}): no held-out test possible")
     fig.tight_layout(); fig.savefig(C.OUT / f"chart_accuracy_{C.TAG}.png", dpi=160); plt.close(fig)
     print(f"Saved charts to {C.OUT}")
     raise SystemExit(0)
@@ -71,7 +78,7 @@ bars = ax.bar(list(names.values()), vals, color=(["#1565c0"] + ["#9e9e9e"] * 3)[
 ax.bar_label(bars, labels=[f"{v}/{len(common)}" for v in vals])
 ax.set_ylim(0, max(len(common), 1) + 0.5)
 ax.set_ylabel("Correct test quarters")
-ax.set_title(f"{C.COMPANY} ({C.TARGET_NAME}): correct predictions on held-out quarters")
+ax.set_title(f"{WHO} ({WHAT}): correct predictions on held-out quarters")
 fig.tight_layout(); fig.savefig(C.OUT / f"chart_accuracy_{C.TAG}.png", dpi=160); plt.close(fig)
 
 print(f"Saved charts to {C.OUT}")

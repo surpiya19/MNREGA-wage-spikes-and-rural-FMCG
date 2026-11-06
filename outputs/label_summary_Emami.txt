@@ -1,0 +1,6 @@
+Quarters in table: 13
+Both readers labelled: 13;  agreed on 9 (69%);  Cohen's kappa = 0.54
+  Agreement is moderate: kappa 0.54, below the 0.6 bar.
+Agreed labels: Insufficient 6, Steady 5, Accelerating 2
+Usable quarters for testing (not Insufficient): 7 of 13
+Disagreements saved to /tmp/claude-0/-home-claude/25839b9c-4fa5-5954-aa8e-5747eecec4e6/scratchpad/work/outputs/label_disagreements_Emami.csv

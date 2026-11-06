@@ -38,11 +38,23 @@ TARGET = os.environ.get("RURAL_TARGET", "own")
 if TARGET not in ("own", "market"):
     raise SystemExit(f"TARGET must be 'own' or 'market', not {TARGET!r}")
 
+# Thurro feedback (Nov 2026): MGNREGA months from Aug 2025 reflect the 60% first-half
+# spending cap more than rural demand, and VB-G RAM G replaced MGNREGA on 1 Jul 2026
+# (same units, new rules). Quarters whose MGNREGA data reaches these months are
+# reported separately. With the Q1 FY27 cut-off and the 3-month lag, no post-Jul-2026
+# month is ever used, but the flag is kept so later runs stay honest.
+SPENDING_CAP_FROM = "2025-08-31"
+REGIME_BREAK_FROM = "2026-07-31"
+
+# Walk-forward test: refit on every earlier quarter, predict the next one.
+# The first prediction needs at least this many labelled quarters to learn from.
+WALK_FORWARD_MIN_TRAIN = 5
+
 LABELS = ["Accelerating", "Steady", "Slowing"]
 INSUFFICIENT = "Insufficient"
 
 # Quarters to put in a blank evidence template (Indian fiscal quarters).
-TEMPLATE_QUARTERS = [f"Q{q} FY{y}" for y in range(23, 28) for q in range(1, 5)][:-3]  # Q1 FY23..Q1 FY27
+TEMPLATE_QUARTERS = [f"Q{q} FY{y}" for y in range(23, 28) for q in range(1, 5)][:-3]  # Q1 FY23..Q1 FY27 (Thurro: stop at Q1 FY27)
 
 # Optional: weight states by your assumed company exposure instead of using
 # the all-India total, e.g. {"Uttar Pradesh": 0.15, "Maharashtra": 0.12, ...}.
@@ -83,6 +95,8 @@ EVIDENCE_FILE = RAW / f"evidence_{COMPANY}.csv"
 # Output name tag: results_HUL.txt for own, results_HUL_market.txt for market.
 TAG = COMPANY if TARGET == "own" else f"{COMPANY}_market"
 TARGET_NAME = "own rural business" if TARGET == "own" else "overall rural market"
+if COMPANY == "Market":
+    TARGET_NAME = "market-wide rural trend (consensus across HUL, Dabur, Marico, Emami)"
 
 ALL_INDIA_NAMES = {"all india", "india", "total", "all-india"}
 

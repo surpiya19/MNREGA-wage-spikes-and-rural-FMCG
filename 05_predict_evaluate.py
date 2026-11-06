@@ -45,6 +45,7 @@ BASES = ["pred_repeat_last", "pred_most_common"] + (["pred_follow_market"] if OW
 SIGNALS = {
     "MGNREGA persondays": ["pd_yoy_chg"],
     "MGNREGA wage bill": ["wb_yoy_chg"],
+    "MGNREGA work demanded": ["dm_yoy_chg"],
     "Rainfall": ["rain_dep"],
     "MGNREGA + rainfall": ["pd_yoy_chg", "rain_dep"],
 }
@@ -100,7 +101,7 @@ def predict(df, cols, m):
 # the MGNREGA rules only (they share the same training quarters, so the choice is
 # fair). Rainfall rules are fitted on the quarters where rainfall exists (the data
 # starts Sep 2022, and the first full monsoon is 2023) and shown for comparison.
-SELECTABLE = ["MGNREGA persondays", "MGNREGA wage bill"]
+SELECTABLE = ["MGNREGA persondays", "MGNREGA wage bill", "MGNREGA work demanded"]
 
 models = {}
 for name, cols in SIGNALS.items():
@@ -109,6 +110,8 @@ for name, cols in SIGNALS.items():
         models[name] = (cols, m)
 
 lines = [f"Company: {C.COMPANY}   |   Target: {C.TARGET_NAME} ({C.TARGET})",
+         f"Coverage: {len(eligible)} of {len(f)} quarters have a usable label. Blank (Insufficient) quarters are "
+         "left out of scoring, not counted as misses (Thurro guidance).",
          f"Eligible quarters (labelled, not Insufficient): {len(eligible)}  ->  train {len(train)}, test {len(test)}",
          f"Train: {', '.join(train['quarter'])}", f"Test : {', '.join(test['quarter'])}", "",
          "Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):"]
@@ -118,7 +121,13 @@ for name, (cols, m) in models.items():
                  f"cut-offs (z-score) {m['lower']:.2f} / {m['upper']:.2f}")
 
 if not models:
-    raise SystemExit("Not enough training quarters with data to fit any rule.")
+    lines += ["", f"Finding: {C.COMPANY}'s {C.TARGET_NAME} target can't be tested - only {len(eligible)} of {len(f)} "
+              "quarters have a usable label, too few to fit a rule. In most quarters the company did not "
+              "describe this trend (blank = Insufficient)."]
+    (C.OUT / f"results_{C.TAG}.txt").write_text("\n".join(lines) + "\n")
+    print("\n".join(lines))
+    import sys
+    sys.exit(0)
 if not any(k in models for k in SELECTABLE):
     raise SystemExit("Not enough training quarters with MGNREGA data to fit a rule.")
 best_name = max([k for k in SELECTABLE if k in models], key=lambda k: models[k][1]["train_acc"])
@@ -170,9 +179,60 @@ if len(shock):
                  f"({', '.join(shock['quarter'])}). From Aug 2025 the fall looks like a scheme/policy change rather than rural "
                  "demand, so the signal may be measuring policy in these quarters.")
 
+# --- Walk-forward test (Thurro/teammate suggestion) ---------------------------
+# Refit on every earlier labelled quarter and predict the next one, so every
+# quarter after the first few gets a true out-of-sample prediction. Scored
+# separately before and after the 2025 spending cap (see config.py).
+def choose(train_df):
+    fitted = {k: fit(train_df, SIGNALS[k]) for k in SELECTABLE}
+    fitted = {k: v for k, v in fitted.items() if v}
+    if not fitted:
+        return None, None
+    k = max(fitted, key=lambda n: fitted[n]["train_acc"])
+    return k, fitted[k]
+
+f["wf_rule"] = ""
+f["wf_pred"] = np.nan
+f["wf_pred"] = f["wf_pred"].astype(object)
+f["wf_most_common"] = np.nan
+f["wf_most_common"] = f["wf_most_common"].astype(object)
+elig_idx = list(eligible.index)
+for j in range(C.WALK_FORWARD_MIN_TRAIN, len(elig_idx)):
+    i = elig_idx[j]
+    past = eligible.loc[elig_idx[:j]]
+    k, m_ = choose(past)
+    if k is None:
+        continue
+    f.at[i, "wf_rule"] = k
+    f.at[i, "wf_pred"] = predict(f.loc[[i]], SIGNALS[k], m_).iloc[0]
+    f.at[i, "wf_most_common"] = past["agreed_label"].mode().iloc[0]
+
+wf = f[f["wf_rule"] != ""]
+lines += ["", f"WALK-FORWARD TEST (refit before every quarter; first {C.WALK_FORWARD_MIN_TRAIN} labelled quarters used only for training):"]
+if wf.empty:
+    lines.append("  Not enough labelled quarters for a walk-forward test.")
+else:
+    lines.append(f"  {'period':32s} {'MGNREGA rule':>14s} {'repeat last':>12s} {'most common':>12s}")
+    groups = [("all", wf)] + [(p, g) for p, g in wf.groupby("period", sort=False)]
+    for pname, g in groups:
+        g2 = g.dropna(subset=["wf_pred", "pred_repeat_last"])
+        n = len(g2)
+        if n == 0:
+            continue
+        a = int((g2["wf_pred"] == g2["agreed_label"]).sum())
+        b = int((g2["pred_repeat_last"] == g2["agreed_label"]).sum())
+        c = int((g2["wf_most_common"] == g2["agreed_label"]).sum())
+        lines.append(f"  {pname:32s} {a:>6d} of {n:<5d} {b:>4d} of {n:<5d} {c:>4d} of {n:<5d}")
+    lines.append("  Rule picked at each step: " + ", ".join(f"{r.quarter}={r.wf_rule.replace('MGNREGA ', '')}" for r in wf.itertuples()))
+    pre = wf[wf["period"] == "before spending cap"].dropna(subset=["wf_pred", "pred_repeat_last"])
+    if len(pre):
+        a = int((pre["wf_pred"] == pre["agreed_label"]).sum()); b = int((pre["pred_repeat_last"] == pre["agreed_label"]).sum())
+        verdict = "beat" if a > b else "tied" if a == b else "did not beat"
+        lines.append(f"  Before the spending cap, the MGNREGA rule {verdict} 'same as last quarter' ({a} vs {b} of {len(pre)}).")
+
 out_cols = ["company", "quarter", "split", "prediction_date", "mgnrega_data_through", "rain_data_through",
-            "pd_yoy", "pd_yoy_chg", "rain_dep", "rain_dep_chg", "pred_selected", "agreed_label",
-            "own_label", "market_rural_label"] + MAIN[1:] + ["pred_most_common"] + [f"pred_{k}" for k in models]
+            "pd_yoy", "pd_yoy_chg", "dm_yoy", "dm_yoy_chg", "rain_dep", "rain_dep_chg", "pred_selected", "agreed_label",
+            "own_label", "market_rural_label", "period", "wf_rule", "wf_pred", "wf_most_common"] + MAIN[1:] + ["pred_most_common"] + [f"pred_{k}" for k in models]
 pred = f[list(dict.fromkeys(out_cols))].copy()
 pred["selected_correct"] = np.where(pred["pred_selected"].isna() | ~pred["agreed_label"].isin(C.LABELS), "",
                                     np.where(pred["pred_selected"] == pred["agreed_label"], "Yes", "No"))

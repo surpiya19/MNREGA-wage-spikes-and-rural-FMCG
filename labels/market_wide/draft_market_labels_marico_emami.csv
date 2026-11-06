@@ -1,0 +1,27 @@
+company,quarter,market_label,confidence,reason
+Marico,Q1 FY24,Steady,low,Baseline quarter (not scored). Rural 'consolidated on a lower base'; pickup 'elusive' = no change.
+Marico,Q2 FY24,Slowing,low,'Drop in sentiment especially rural in Aug/early Sep'; recovery 'slower than expected'.
+Marico,Q3 FY24,Steady,low,'Rural demand remained soft' = same as before.
+Marico,Q4 FY24,Accelerating,low,'Uptick in rural sentiment towards end of quarter'; rural converging with urban.
+Marico,Q1 FY25,Accelerating,low,'Trajectory in rural bearing more promise' vs urban stable (comparative about rural).
+Marico,Q2 FY25,Steady,low,'Rural growing at 2x urban; outperforming for third quarter in a row' = level not change (rule 1).
+Marico,Q3 FY25,Steady,high,'Rural sustains at 2x of urban' = explicitly unchanged.
+Marico,Q4 FY25,Steady,low,'Rural recovery continues' = continuing (rule 7); 'improving trajectory' is weak.
+Marico,Q1 FY26,Steady,low,'Stable to improving demand trends' = no clear change.
+Marico,Q2 FY26,Steady,low,'Steady demand except GST-transition disruption'.
+Marico,Q3 FY26,Steady,low,'Strong rural demand momentum' is a level; no comparison with last quarter. Accelerating arguable.
+Marico,Q4 FY26,Steady,low,No rural figure; 'rural had earlier recovered' = no change this quarter.
+Marico,Q1 FY27,Steady,low,'Sector demand steady'; no rural-specific change.
+Emami,Q1 FY24,Steady,low,Baseline quarter (not scored). 'Rural still challenged'.
+Emami,Q2 FY24,Steady,low,'Subdued consumption demand especially in rural' = still weak; no stated change.
+Emami,Q3 FY24,Slowing,low,'Similar trends to Q2 with lower rural offtakes'; 'rural market under stress'.
+Emami,Q4 FY24,Accelerating,high,'Rural market witnessing a recovery'; Nielsen 'very bullish on rural' after Q3 stress.
+Emami,Q1 FY25,Steady,low,'Gradual improvement' continues last quarter's recovery (rule 7). 'Rural markets shining' makes Accelerating arguable.
+Emami,Q2 FY25,Steady,high,'Demand trends similar to Q1'.
+Emami,Q3 FY25,Steady,low,'Rural demand demonstrated resilience' (rule 7: resilient = steady).
+Emami,Q4 FY25,Steady,high,'Consumption trends similar to previous quarter; rural continued to perform well'.
+Emami,Q1 FY26,Steady,low,'Early signs of recovery' implies a dip not described in Q4 FY25. Low confidence.
+Emami,Q2 FY26,Insufficient,low,Only an outlook statement about GST reform (outlook does not count).
+Emami,Q3 FY26,Steady,low,'Rural demand continued to be resilient'.
+Emami,Q4 FY26,Insufficient,low,No market rural comment found in the labelling pass.
+Emami,Q1 FY27,Insufficient,low,No market rural comment found in the labelling pass.

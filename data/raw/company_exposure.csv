@@ -1,0 +1,5 @@
+company,rural_share_of_india_sales,status,source,quote
+HUL,0.33,disclosed,"HUL Q1 FY26 earnings call, p.33: https://nsearchives.nseindia.com/corporate/HINDUNILVR_07082025150040_SEIntimationRTranscriptsigned.pdf#page=33","CFO Ritesh Tiwari: 'one third of our business comes from rural'"
+Dabur,0.47,disclosed,"Dabur Annual Report FY22, p.43: https://www.bseindia.com/bseplus/AnnualReport/500096/73713500096.pdf#page=43","'Rural India accounts for nearly 47% of Dabur's domestic market sales' (older: ~46%, Aug 2018 investor deck)"
+Emami,0.52,disclosed,"Emami Q3 FY26 earnings call, p.11: https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d21a9f67-39a1-4306-abd7-33678c95ccdd.pdf#page=11","Manish Gupta: 'about 48-52 split in favor of rural from an offtake perspective'"
+Marico,0.31,ASSUMPTION - not found in filings,"Team estimate carried over from README; no rural share disclosure found in the Thurro corpus","Treat as an assumption; the ranking is re-run with equal weights to check it does not matter"

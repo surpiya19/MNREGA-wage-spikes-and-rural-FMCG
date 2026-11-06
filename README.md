@@ -4,6 +4,51 @@ We're testing whether MGNREGA data (rural job-scheme work), which comes out befo
 
 We look at **HUL** and **Dabur** from Q1 FY23 to Q1 FY27 (17 quarters each), using data from Thurro.
 
+## Update after Thurro's feedback (Nov 2026)
+
+Thurro answered our questions on 5 Nov. What changed:
+
+| Thurro said | What we did |
+|---|---|
+| Make the **market-wide rural trend** the main target; company labels are a secondary check | New primary test: `--company Market --target market`. Each quarter gets one market-wide label: the most common direction across what HUL, Dabur, Marico and Emami said about the overall rural market (ties count as Steady). See `labels/market_wide/`. |
+| Leave **blank quarters out** of scoring and show coverage | Blank (Insufficient) quarters are excluded; every results file now starts with a coverage line, and results are given as "X of Y scorable". |
+| **Stop at Q1 FY27** | Q2 FY27 rows dropped from all evidence sheets. |
+| Treat **July 2026 as a structural break** | Each quarter is tagged with the MGNREGA regime its data falls in (before the 2025 spending cap / spending cap from Aug 2025 / VB-G RAM G from Jul 2026). With the Q1 FY27 cut-off and the 3-month lag, no post-July-2026 month is used. |
+| Deliverable = **code + a CSV of the ranked list and its scoring**, plus a short deck | New `07_rank.py` writes `outputs/ranked_list.csv` and `outputs/ranking_scores.txt`. |
+
+Also added:
+- **All four companies** run through the pipeline (`data/raw/evidence_<company>.csv`, built from the second labelling pass by `build_label_inputs.py`). FY24 onward use the second-pass own labels; FY23 keeps the first-pass labels for HUL and Dabur.
+- **Walk-forward test:** the rule is refitted before every quarter, using only earlier quarters, so 12 quarters get a true out-of-sample prediction instead of 7. Scored separately before and after the Aug 2025 spending cap.
+- **A third MGNREGA signal:** persons *asking* for work (need, rather than what the budget allowed).
+- **Company exposure:** `data/raw/company_exposure.csv`, rural share of India sales with sources. HUL 33%, Dabur 47%, Emami 52% (from filings; Emami was previously listed as 33%). Marico 31% is an assumption; no disclosure was found.
+- **Human check:** the five non-steady own labels (Dabur Q1 FY24, Q3 FY24, Q4 FY25; Emami Q3 FY25, Q3 FY26) were checked by hand against the transcripts. No changes were needed.
+
+**Thurro's data notes, and why they don't change our numbers:**
+- Andhra Pradesh's state series reads zero from Jul 2026. The last MGNREGA month we use is Apr 2026 (Q1 FY27 cut-off plus the 3-month lag), so this doesn't reach our results. Use district totals if the window is ever extended.
+- 743 vs 694 districts was a join issue on our side; the true count is 739. Our pipeline uses state totals summed to all-India, so it isn't affected.
+- Duplicate district names (Pratapgarh 380 = UP, Bilaspur 248 = Chhattisgarh, Hamirpur 382 = UP vs Hamirpurr 561 = HP): always join rainfall on district ID. Our rainfall input is already aggregated to all-India.
+- 60-day farm-season pauses show as zeros, not blanks (after Jun 2026 only, so outside our window).
+
+The earlier "Where we are" section below is kept for history; the tables above replace it.
+
+**Run everything:** `python run_everything.py` (labels, all tests and the ranked list, in order).
+
+### Headline results (Q1 FY23 to Q1 FY27)
+
+| Test | MGNREGA rule | Same as last quarter |
+|---|---|---|
+| **Market-wide rural trend (primary)**, held-out quarters | 6 of 7 | **7 of 7** |
+| Market-wide, walk-forward, all quarters | 7 of 12 | **8 of 12** |
+| Market-wide, walk-forward, before the spending cap | 4 of 9 | **5 of 9** |
+| Dabur own rural, walk-forward, before the spending cap | **5 of 9** | 4 of 9 |
+| HUL's market read, walk-forward, before the spending cap | **6 of 9** | 4 of 9 |
+| HUL and Marico own rural | can't test: 2 scorable quarters each | |
+
+- **Main finding:** MGNREGA does not beat "same as last quarter" on the primary target. Since mid-2024, all four companies have described the rural market as steady in almost every quarter, so the baseline is very hard to beat.
+- **Some signal before the cap:** the rule beats the baseline on two secondary tests (Dabur's own rural label, and HUL's market read), each on 9 quarters. That is too few to claim, but worth showing as a direction.
+- **Ranked list:** the market call is Steady in 9 of 12 quarters, so the ranking is mostly decided by rural share, not MGNREGA. Dropping rural share changes the top company in 8 of 12 quarters. Present it as an exposure ordering with a weak MGNREGA overlay.
+- **Market labels for Marico and Emami:** these were drafted from the second pass's market text and need a human review. They are in `labels/market_wide/draft_market_labels_marico_emami.csv`.
+
 ## What we're doing
 
 - **Question:** can rural income data released before a company's results show which FMCG companies' rural business is about to pick up or slow down? The data is MGNREGA work and wages, with rainfall and state-level UPI payments as controls.

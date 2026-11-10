@@ -1,0 +1,36 @@
+Company: Marico   |   Target: overall rural market (market)
+Coverage: 13 of 13 quarters have a usable label. Blank (Insufficient) quarters are left out of scoring, not counted as misses (Thurro guidance).
+Eligible quarters (labelled, not Insufficient): 13  ->  train 8, test 5
+Train: Q1 FY24, Q2 FY24, Q3 FY24, Q4 FY24, Q1 FY25, Q2 FY25, Q3 FY25, Q4 FY25
+Test : Q1 FY26, Q2 FY26, Q3 FY26, Q4 FY26, Q1 FY27
+
+Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
+  MGNREGA persondays     train accuracy 75% on 8 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 1.00
+  MGNREGA wage bill      train accuracy 75% on 8 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 1.01
+  MGNREGA work demanded  train accuracy 75% on 8 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 1.00
+  Rainfall               train accuracy 62% on 8 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.01
+  MGNREGA + rainfall     train accuracy 75% on 8 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 1.10
+
+Selected on train: MGNREGA persondays
+
+TEST RESULTS (5 test quarters; 5 where all main methods could predict):
+  selected               3/5 correct overall   |   3/5 on common quarters
+  repeat_last            5/5 correct overall   |   5/5 on common quarters
+  most_common            5/5 correct overall   |   5/5 on common quarters
+  MGNREGA persondays     3/5 correct overall   |   3/5 on common quarters
+  MGNREGA wage bill      3/5 correct overall   |   3/5 on common quarters
+  MGNREGA work demanded  3/5 correct overall   |   3/5 on common quarters
+  Rainfall               5/5 correct overall   |   5/5 on common quarters
+  MGNREGA + rainfall     4/5 correct overall   |   4/5 on common quarters
+
+Finding: the selected rule did not beat the best baseline (repeat_last: 5 vs 3 of 5).
+With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.
+Note: in 2 of 5 test quarters MGNREGA persondays were down more than 25% year on year (Q4 FY26, Q1 FY27). From Aug 2025 the fall looks like a scheme/policy change rather than rural demand, so the signal may be measuring policy in these quarters.
+
+WALK-FORWARD TEST (refit before every quarter; first 5 labelled quarters used only for training):
+  period                             MGNREGA rule  repeat last  most common
+  all                                   4 of 8        7 of 8        7 of 8    
+  before spending cap                   1 of 5        4 of 5        4 of 5    
+  spending cap (from Aug 2025)          3 of 3        3 of 3        3 of 3    
+  Rule picked at each step: Q2 FY25=persondays, Q3 FY25=persondays, Q4 FY25=persondays, Q1 FY26=persondays, Q2 FY26=persondays, Q3 FY26=persondays, Q4 FY26=persondays, Q1 FY27=persondays
+  Before the spending cap, the MGNREGA rule did not beat 'same as last quarter' (1 vs 4 of 5).

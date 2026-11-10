@@ -1,0 +1,20 @@
+RANKED LIST - SCORING (walk-forward market calls; blanks excluded from scoring)
+
+Market-wide call correct in 7 of 12 scorable quarters ('same as last quarter' baseline: 8 of 12).
+Company direction vs the company's own rural label: correct in 15 of 23 scorable company-quarters (48 company-quarters ranked; 25 had no own rural comment).
+  HUL     2 of 2 scorable
+  Dabur   8 of 12 scorable
+  Marico  1 of 2 scorable
+  Emami   4 of 7 scorable
+
+Robustness: with equal exposure weights (rural share dropped entirely), the top-ranked company changes in 8 of 12 quarters - the order rests mainly on the rural-share assumption.
+Calls by quarter: Q2 FY24=Accelerating, Q3 FY24=Steady, Q4 FY24=Steady, Q1 FY25=Steady, Q2 FY25=Steady, Q3 FY25=Steady, Q4 FY25=Accelerating, Q1 FY26=Accelerating, Q2 FY26=Steady, Q3 FY26=Steady, Q4 FY26=Steady, Q1 FY27=Steady
+
+Reading this: the market call is Steady in most quarters, so most rankings are decided by the
+tie-breaks (last reported own rural momentum, then rural share), not by MGNREGA. The ranking is
+therefore an exposure ordering more than a MGNREGA signal - say so when presenting it.
+
+signal_rank reports ties in the numerical model score; rank retains the original display order.
+Exposure shares use fixed disclosures/assumptions, including later disclosures for earlier quarters.
+Treat exposure ordering as a scenario, not a point-in-time backtest of company outperformance.
+The company-direction score tests the shared market call, not the relative ordering of companies.

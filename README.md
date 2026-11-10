@@ -1,5 +1,32 @@
 # MGNREGA and rural FMCG demand
 
+## Submission quality work (10 November 2026)
+
+The original analysis and saved `outputs/` are retained as a historical snapshot.
+For corrected results, deadline sensitivity, class-level accuracy, genuine ranking
+ties and the remaining evidence-review queue, start with
+[`docs/SUBMISSION_STATUS.md`](docs/SUBMISSION_STATUS.md) and
+[`outputs/quality/REPORT.md`](outputs/quality/REPORT.md).
+
+Reproduce the additive audit with Python 3.10:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python run_quality.py
+```
+
+`run_quality.py` writes to `outputs/quality/` and leaves the original saved outputs
+alone. It rebuilds evidence inputs from the existing reconciled label files, retaining
+label decisions and restoring dates dropped from the Marico/Emami inputs.
+The dated November 2026 update below supersedes older sections such as
+"Where we are" and "Still to do". In particular, all four companies are connected,
+Emami exposure is 52%, the primary target is market-wide, and Q2 FY27 is excluded.
+The later quality report adds further corrections and limitations; no human review
+is implied by generated provenance fields.
+
 We're testing whether MGNREGA data (rural job-scheme work), which comes out before company results, can predict what FMCG companies say about rural demand on their next earnings call: is it **accelerating, steady or slowing**?
 
 We look at **HUL** and **Dabur** from Q1 FY23 to Q1 FY27 (17 quarters each), using data from Thurro.

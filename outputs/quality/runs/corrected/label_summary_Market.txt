@@ -1,0 +1,6 @@
+Quarters in table: 17
+Both readers labelled: 0;  agreed on 0 (nan%);  Cohen's kappa = nan
+  Agreement: kappa can't be computed (too few labels or only one label used).
+Agreed labels: Steady 13, Accelerating 3, Slowing 1
+Usable quarters for testing (not Insufficient): 17 of 17
+Disagreements saved to ./outputs/quality/runs/corrected/label_disagreements_Market.csv

@@ -1,0 +1,6 @@
+Quarters in table: 17
+Both readers labelled: 17;  agreed on 15 (88%);  Cohen's kappa = 0.79
+  Agreement is good: kappa 0.79, above the 0.6 bar.
+Agreed labels: Steady 11, Slowing 3, Accelerating 3
+Usable quarters for testing (not Insufficient): 17 of 17
+Disagreements saved to ./outputs/quality/runs/corrected/label_disagreements_Dabur.csv

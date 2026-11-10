@@ -1,0 +1,6 @@
+Quarters in table: 13
+Both readers labelled: 13;  agreed on 9 (69%);  Cohen's kappa = 0.15
+  Agreement is weak: kappa 0.15, below the 0.6 bar.
+Agreed labels: Insufficient 11, Steady 2
+Usable quarters for testing (not Insufficient): 2 of 13 - too few to hold any back for testing; in most quarters Marico did not describe its own rural trend
+Disagreements saved to ./outputs/quality/runs/early_deadline/label_disagreements_Marico.csv

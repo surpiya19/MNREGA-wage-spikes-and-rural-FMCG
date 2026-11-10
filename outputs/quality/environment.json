@@ -1,0 +1,23 @@
+{
+  "python": "3.10.0",
+  "pandas": "2.2.3",
+  "numpy": "1.26.4",
+  "scenarios": [
+    [
+      "corrected",
+      "day_before_results",
+      3
+    ],
+    [
+      "early_deadline",
+      "early_next_quarter",
+      3
+    ],
+    [
+      "early_lag4",
+      "early_next_quarter",
+      4
+    ]
+  ],
+  "interpretation": "Exploratory reanalysis of existing sample"
+}

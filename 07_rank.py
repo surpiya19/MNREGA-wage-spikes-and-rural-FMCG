@@ -57,6 +57,8 @@ def rank_quarter(q, call, weights, share_tiebreak=True):
     keys = ["score", "tiebreak_prev_own"] + (["rural_share"] if share_tiebreak else [])
     d = d.sort_values(keys + ["company"], ascending=[False] * len(keys) + [True])
     d["rank"] = range(1, len(d) + 1)
+    # Keep the team's display order, while exposing genuine ties in model scores.
+    d["signal_rank"] = d["score"].rank(method="dense", ascending=False).astype(int)
     return d
 
 
@@ -75,6 +77,8 @@ for r in mk.itertuples():
                + (" (assumed)" if expo.loc[x.company, "status"].startswith("ASSUMPTION") else "")
                + (f"; last call own rural: {x.prev_own_label}" if x.prev_own_label else "; no own rural comment last call"))
         out.append({"quarter": q, "prediction_date": r.prediction_date, "rank": x.rank, "company": x.company,
+                    "signal_rank": x.signal_rank,
+                    "ranking_basis": "Fixed-exposure scenario; display order uses tie-breaks; not a point-in-time stock ranking",
                     "predicted_direction": call, "score": round(x.score, 3), "rationale": why,
                     "period": r.period, "actual_market_wide": actual_mkt, "actual_own_rural": own_now,
                     "own_correct": "" if not own_now else ("Yes" if own_now == call else "No")})
@@ -104,6 +108,10 @@ lines += ["", f"Robustness: with equal exposure weights (rural share dropped ent
           "", "Reading this: the market call is Steady in most quarters, so most rankings are decided by the",
           "tie-breaks (last reported own rural momentum, then rural share), not by MGNREGA. The ranking is",
           "therefore an exposure ordering more than a MGNREGA signal - say so when presenting it."]
+lines += ["", "signal_rank reports ties in the numerical model score; rank retains the original display order.",
+          "Exposure shares use fixed disclosures/assumptions, including later disclosures for earlier quarters.",
+          "Treat exposure ordering as a scenario, not a point-in-time backtest of company outperformance.",
+          "The company-direction score tests the shared market call, not the relative ordering of companies."]
 (C.OUT / "ranking_scores.txt").write_text("\n".join(lines) + "\n")
 print("\n".join(lines))
 print(f"\nSaved {C.OUT / 'ranked_list.csv'}")

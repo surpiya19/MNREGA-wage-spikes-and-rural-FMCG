@@ -34,11 +34,17 @@ WB = "wage_bill_inr_idx_w" if weighted else "wage_bill_inr"
 
 
 def prediction_date(row):
+    if C.PREDICTION_DATE_RULE == "early_next_quarter":
+        # A reproducible interpretation of Thurro's "early October" example.
+        # Use the earlier of quarter-end + 7 days and the day before results.
+        deadline = row["quarter_end"] + pd.Timedelta(days=7)
+        rd = pd.to_datetime(row.get("results_date"), errors="coerce")
+        return min(deadline, rd - pd.Timedelta(days=1)) if pd.notna(rd) else deadline
     if C.PREDICTION_DATE_RULE == "day_before_results":
         rd = pd.to_datetime(row.get("results_date"), errors="coerce")
         if pd.notna(rd):
             return rd - pd.Timedelta(days=1)
-        return row["quarter_end"] + pd.Timedelta(days=21)
+        raise ValueError(f"Missing results_date for {row['company']} {row['quarter']}; do not invent a prediction date")
     return row["quarter_end"]
 
 

@@ -15,7 +15,9 @@ COMPANY = os.environ.get("RURAL_COMPANY", "HUL")
 
 # Thurro guidance: month M is only usable from M+3 onward (recent MGNREGA
 # figures get revised). Rainfall is not revised, so it gets no lag by default.
-MGNREGA_LAG_MONTHS = 3
+MGNREGA_LAG_MONTHS = int(os.environ.get("RURAL_MGNREGA_LAG", "3"))
+if MGNREGA_LAG_MONTHS < 3:
+    raise ValueError("MGNREGA lag must be at least 3 months (Thurro revision guidance)")
 RAIN_LAG_MONTHS = 0
 
 # How many months of data make up one "quarter window" of features.
@@ -28,7 +30,9 @@ TRAIN_FRACTION = 0.6
 # When is the prediction made? "day_before_results" uses the results_date
 # column of the evidence table (falls back to quarter end + 21 days if blank).
 # "quarter_end" predicts on the last day of the quarter.
-PREDICTION_DATE_RULE = "day_before_results"
+PREDICTION_DATE_RULE = os.environ.get("RURAL_PREDICTION_RULE", "day_before_results")
+if PREDICTION_DATE_RULE not in ("day_before_results", "quarter_end", "early_next_quarter"):
+    raise ValueError("Unknown RURAL_PREDICTION_RULE")
 
 # What are we predicting?
 #   "own"    = the company's comments on ITS OWN rural business (agreed_label)
@@ -84,8 +88,8 @@ ROOT = Path(__file__).resolve().parent
 DEMO = os.environ.get("RURAL_DEMO") == "1"
 _suffix = "_demo" if DEMO else ""
 RAW = ROOT / "data" / f"raw{_suffix}"
-CLEAN = ROOT / "data" / f"clean{_suffix}"
-OUT = ROOT / f"outputs{_suffix}"
+CLEAN = Path(os.environ.get("RURAL_CLEAN_DIR", str(ROOT / "data" / f"clean{_suffix}")))
+OUT = Path(os.environ.get("RURAL_OUTPUT_DIR", str(ROOT / f"outputs{_suffix}")))
 for _p in (RAW, CLEAN, OUT):
     _p.mkdir(parents=True, exist_ok=True)
 

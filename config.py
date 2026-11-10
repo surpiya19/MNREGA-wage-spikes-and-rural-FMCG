@@ -54,6 +54,25 @@ REGIME_BREAK_FROM = "2026-07-31"
 # The first prediction needs at least this many labelled quarters to learn from.
 WALK_FORWARD_MIN_TRAIN = 5
 
+# Analysis window. FY23 own and market labels for HUL and Dabur come from the first pass
+# (3 AI readers, majority vote, never human spot-checked), and their "reader 1 / reader 2"
+# columns are not independent labellers, so FY23 is left out of every test and of the
+# agreement scores. Q1 FY24 is the first quarter of the reconciled second pass.
+# Q1 FY27 is the last quarter (Thurro: "Q1FY27 is fine").
+FIRST_QUARTER = "Q1 FY24"
+LAST_QUARTER = "Q1 FY27"
+
+# A rule is only fitted and tested when at least this many labelled quarters are
+# available for training. With fewer, any rule can fit the training quarters
+# perfectly and the test says nothing.
+MIN_TRAIN_QUARTERS = 6
+
+# Market-wide consensus when the companies' votes tie (or split Accelerating vs Slowing).
+# "Insufficient" (team rule from 9 Nov 2026): no consensus, left out of scoring.
+# "Steady": the earlier convention, kept as a sensitivity option.
+MARKET_TIE_RULE = os.environ.get("RURAL_MARKET_TIE", "Insufficient")
+assert MARKET_TIE_RULE in ("Insufficient", "Steady"), MARKET_TIE_RULE
+
 LABELS = ["Accelerating", "Steady", "Slowing"]
 INSUFFICIENT = "Insufficient"
 
@@ -113,6 +132,11 @@ def month_end(s):
 def fiscal_year(ts):
     """Indian fiscal year label number: Apr 2023-Mar 2024 -> 2024."""
     return ts.year + 1 if ts.month >= 4 else ts.year
+
+
+def in_window(q):
+    """True when quarter label q is inside FIRST_QUARTER..LAST_QUARTER."""
+    return quarter_end(FIRST_QUARTER) <= quarter_end(q) <= quarter_end(LAST_QUARTER)
 
 
 def quarter_end(q):

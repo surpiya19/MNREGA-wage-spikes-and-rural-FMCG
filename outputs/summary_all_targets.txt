@@ -1,0 +1,15 @@
+ALL TARGETS (Q1 FY24 to Q1 FY27; blanks excluded)
+
+Dabur            usable 13 of 13  MGNREGA persondays     distress train 75%  test 5/5 vs best baseline most_common 5/5;  walk-forward rule 7/8 vs repeat 6, most common 7
+Dabur_market     usable 13 of 13  MGNREGA persondays     income   train 62%  test 3/5 vs best baseline repeat_last 4/5;  walk-forward rule 3/8 vs repeat 6, most common 1
+Emami            usable  7 of 13  not testable (too few labelled quarters)
+Emami_market     usable 10 of 13  MGNREGA persondays     distress train 83%  test 2/4 vs best baseline repeat_last 4/4;  walk-forward rule 3/5 vs repeat 5, most common 5
+HUL              usable  2 of 13  not testable (too few labelled quarters)
+HUL_market       usable 13 of 13  MGNREGA persondays     income   train 88%  test 3/5 vs best baseline repeat_last 3/5;  walk-forward rule 4/8 vs repeat 5, most common 3
+Marico           usable  2 of 13  not testable (too few labelled quarters)
+Marico_market    usable 13 of 13  MGNREGA persondays     distress train 75%  test 3/5 vs best baseline repeat_last 5/5;  walk-forward rule 4/8 vs repeat 7, most common 7
+Market_market    usable 12 of 13  MGNREGA work demanded  distress train 71%  test 1/5 vs best baseline repeat_last 5/5;  walk-forward rule 4/7 vs repeat 7, most common 4
+
+Direction of the selected MGNREGA rule across tested targets: {'distress': 4, 'income': 2}.
+The rules disagree on whether more MGNREGA work means stronger demand (income) or weaker demand (distress), so there is no stable MGNREGA relationship to report.
+Selected rule beat the best baseline on the held-out test in 0 of 6 tested targets.

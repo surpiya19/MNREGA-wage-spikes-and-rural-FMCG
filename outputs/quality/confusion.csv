@@ -2,8 +2,8 @@ scenario,company,target,evaluation,method,actual,predicted,count
 corrected,Market,market,held_out,MGNREGA,Accelerating,Accelerating,0
 corrected,Market,market,held_out,MGNREGA,Accelerating,Steady,0
 corrected,Market,market,held_out,MGNREGA,Accelerating,Slowing,0
-corrected,Market,market,held_out,MGNREGA,Steady,Accelerating,1
-corrected,Market,market,held_out,MGNREGA,Steady,Steady,6
+corrected,Market,market,held_out,MGNREGA,Steady,Accelerating,4
+corrected,Market,market,held_out,MGNREGA,Steady,Steady,1
 corrected,Market,market,held_out,MGNREGA,Steady,Slowing,0
 corrected,Market,market,held_out,MGNREGA,Slowing,Accelerating,0
 corrected,Market,market,held_out,MGNREGA,Slowing,Steady,0
@@ -12,7 +12,7 @@ corrected,Market,market,held_out,Repeat last,Accelerating,Accelerating,0
 corrected,Market,market,held_out,Repeat last,Accelerating,Steady,0
 corrected,Market,market,held_out,Repeat last,Accelerating,Slowing,0
 corrected,Market,market,held_out,Repeat last,Steady,Accelerating,0
-corrected,Market,market,held_out,Repeat last,Steady,Steady,7
+corrected,Market,market,held_out,Repeat last,Steady,Steady,5
 corrected,Market,market,held_out,Repeat last,Steady,Slowing,0
 corrected,Market,market,held_out,Repeat last,Slowing,Accelerating,0
 corrected,Market,market,held_out,Repeat last,Slowing,Steady,0
@@ -20,8 +20,8 @@ corrected,Market,market,held_out,Repeat last,Slowing,Slowing,0
 corrected,Market,market,held_out,Most common,Accelerating,Accelerating,0
 corrected,Market,market,held_out,Most common,Accelerating,Steady,0
 corrected,Market,market,held_out,Most common,Accelerating,Slowing,0
-corrected,Market,market,held_out,Most common,Steady,Accelerating,0
-corrected,Market,market,held_out,Most common,Steady,Steady,7
+corrected,Market,market,held_out,Most common,Steady,Accelerating,5
+corrected,Market,market,held_out,Most common,Steady,Steady,0
 corrected,Market,market,held_out,Most common,Steady,Slowing,0
 corrected,Market,market,held_out,Most common,Slowing,Accelerating,0
 corrected,Market,market,held_out,Most common,Slowing,Steady,0
@@ -30,52 +30,52 @@ corrected,Market,market,held_out,Always steady,Accelerating,Accelerating,0
 corrected,Market,market,held_out,Always steady,Accelerating,Steady,0
 corrected,Market,market,held_out,Always steady,Accelerating,Slowing,0
 corrected,Market,market,held_out,Always steady,Steady,Accelerating,0
-corrected,Market,market,held_out,Always steady,Steady,Steady,7
+corrected,Market,market,held_out,Always steady,Steady,Steady,5
 corrected,Market,market,held_out,Always steady,Steady,Slowing,0
 corrected,Market,market,held_out,Always steady,Slowing,Accelerating,0
 corrected,Market,market,held_out,Always steady,Slowing,Steady,0
 corrected,Market,market,held_out,Always steady,Slowing,Slowing,0
-corrected,Market,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
-corrected,Market,market,walk_forward,MGNREGA,Accelerating,Steady,2
+corrected,Market,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
+corrected,Market,market,walk_forward,MGNREGA,Accelerating,Steady,0
 corrected,Market,market,walk_forward,MGNREGA,Accelerating,Slowing,0
 corrected,Market,market,walk_forward,MGNREGA,Steady,Accelerating,2
-corrected,Market,market,walk_forward,MGNREGA,Steady,Steady,6
-corrected,Market,market,walk_forward,MGNREGA,Steady,Slowing,0
+corrected,Market,market,walk_forward,MGNREGA,Steady,Steady,4
+corrected,Market,market,walk_forward,MGNREGA,Steady,Slowing,1
 corrected,Market,market,walk_forward,MGNREGA,Slowing,Accelerating,0
-corrected,Market,market,walk_forward,MGNREGA,Slowing,Steady,1
+corrected,Market,market,walk_forward,MGNREGA,Slowing,Steady,0
 corrected,Market,market,walk_forward,MGNREGA,Slowing,Slowing,0
-corrected,Market,market,walk_forward,Repeat last,Accelerating,Accelerating,1
-corrected,Market,market,walk_forward,Repeat last,Accelerating,Steady,1
-corrected,Market,market,walk_forward,Repeat last,Accelerating,Slowing,1
-corrected,Market,market,walk_forward,Repeat last,Steady,Accelerating,1
+corrected,Market,market,walk_forward,Repeat last,Accelerating,Accelerating,0
+corrected,Market,market,walk_forward,Repeat last,Accelerating,Steady,0
+corrected,Market,market,walk_forward,Repeat last,Accelerating,Slowing,0
+corrected,Market,market,walk_forward,Repeat last,Steady,Accelerating,0
 corrected,Market,market,walk_forward,Repeat last,Steady,Steady,7
 corrected,Market,market,walk_forward,Repeat last,Steady,Slowing,0
-corrected,Market,market,walk_forward,Repeat last,Slowing,Accelerating,1
+corrected,Market,market,walk_forward,Repeat last,Slowing,Accelerating,0
 corrected,Market,market,walk_forward,Repeat last,Slowing,Steady,0
 corrected,Market,market,walk_forward,Repeat last,Slowing,Slowing,0
 corrected,Market,market,walk_forward,Most common,Accelerating,Accelerating,0
-corrected,Market,market,walk_forward,Most common,Accelerating,Steady,3
+corrected,Market,market,walk_forward,Most common,Accelerating,Steady,0
 corrected,Market,market,walk_forward,Most common,Accelerating,Slowing,0
-corrected,Market,market,walk_forward,Most common,Steady,Accelerating,0
-corrected,Market,market,walk_forward,Most common,Steady,Steady,8
+corrected,Market,market,walk_forward,Most common,Steady,Accelerating,3
+corrected,Market,market,walk_forward,Most common,Steady,Steady,4
 corrected,Market,market,walk_forward,Most common,Steady,Slowing,0
 corrected,Market,market,walk_forward,Most common,Slowing,Accelerating,0
-corrected,Market,market,walk_forward,Most common,Slowing,Steady,1
+corrected,Market,market,walk_forward,Most common,Slowing,Steady,0
 corrected,Market,market,walk_forward,Most common,Slowing,Slowing,0
 corrected,Market,market,walk_forward,Always steady,Accelerating,Accelerating,0
-corrected,Market,market,walk_forward,Always steady,Accelerating,Steady,3
+corrected,Market,market,walk_forward,Always steady,Accelerating,Steady,0
 corrected,Market,market,walk_forward,Always steady,Accelerating,Slowing,0
 corrected,Market,market,walk_forward,Always steady,Steady,Accelerating,0
-corrected,Market,market,walk_forward,Always steady,Steady,Steady,8
+corrected,Market,market,walk_forward,Always steady,Steady,Steady,7
 corrected,Market,market,walk_forward,Always steady,Steady,Slowing,0
 corrected,Market,market,walk_forward,Always steady,Slowing,Accelerating,0
-corrected,Market,market,walk_forward,Always steady,Slowing,Steady,1
+corrected,Market,market,walk_forward,Always steady,Slowing,Steady,0
 corrected,Market,market,walk_forward,Always steady,Slowing,Slowing,0
 corrected,HUL,market,held_out,MGNREGA,Accelerating,Accelerating,0
 corrected,HUL,market,held_out,MGNREGA,Accelerating,Steady,1
 corrected,HUL,market,held_out,MGNREGA,Accelerating,Slowing,0
-corrected,HUL,market,held_out,MGNREGA,Steady,Accelerating,2
-corrected,HUL,market,held_out,MGNREGA,Steady,Steady,4
+corrected,HUL,market,held_out,MGNREGA,Steady,Accelerating,1
+corrected,HUL,market,held_out,MGNREGA,Steady,Steady,3
 corrected,HUL,market,held_out,MGNREGA,Steady,Slowing,0
 corrected,HUL,market,held_out,MGNREGA,Slowing,Accelerating,0
 corrected,HUL,market,held_out,MGNREGA,Slowing,Steady,0
@@ -84,7 +84,7 @@ corrected,HUL,market,held_out,Repeat last,Accelerating,Accelerating,0
 corrected,HUL,market,held_out,Repeat last,Accelerating,Steady,1
 corrected,HUL,market,held_out,Repeat last,Accelerating,Slowing,0
 corrected,HUL,market,held_out,Repeat last,Steady,Accelerating,1
-corrected,HUL,market,held_out,Repeat last,Steady,Steady,5
+corrected,HUL,market,held_out,Repeat last,Steady,Steady,3
 corrected,HUL,market,held_out,Repeat last,Steady,Slowing,0
 corrected,HUL,market,held_out,Repeat last,Slowing,Accelerating,0
 corrected,HUL,market,held_out,Repeat last,Slowing,Steady,0
@@ -92,7 +92,7 @@ corrected,HUL,market,held_out,Repeat last,Slowing,Slowing,0
 corrected,HUL,market,held_out,Most common,Accelerating,Accelerating,1
 corrected,HUL,market,held_out,Most common,Accelerating,Steady,0
 corrected,HUL,market,held_out,Most common,Accelerating,Slowing,0
-corrected,HUL,market,held_out,Most common,Steady,Accelerating,6
+corrected,HUL,market,held_out,Most common,Steady,Accelerating,4
 corrected,HUL,market,held_out,Most common,Steady,Steady,0
 corrected,HUL,market,held_out,Most common,Steady,Slowing,0
 corrected,HUL,market,held_out,Most common,Slowing,Accelerating,0
@@ -102,43 +102,43 @@ corrected,HUL,market,held_out,Always steady,Accelerating,Accelerating,0
 corrected,HUL,market,held_out,Always steady,Accelerating,Steady,1
 corrected,HUL,market,held_out,Always steady,Accelerating,Slowing,0
 corrected,HUL,market,held_out,Always steady,Steady,Accelerating,0
-corrected,HUL,market,held_out,Always steady,Steady,Steady,6
+corrected,HUL,market,held_out,Always steady,Steady,Steady,4
 corrected,HUL,market,held_out,Always steady,Steady,Slowing,0
 corrected,HUL,market,held_out,Always steady,Slowing,Accelerating,0
 corrected,HUL,market,held_out,Always steady,Slowing,Steady,0
 corrected,HUL,market,held_out,Always steady,Slowing,Slowing,0
-corrected,HUL,market,walk_forward,MGNREGA,Accelerating,Accelerating,2
-corrected,HUL,market,walk_forward,MGNREGA,Accelerating,Steady,2
+corrected,HUL,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
+corrected,HUL,market,walk_forward,MGNREGA,Accelerating,Steady,1
 corrected,HUL,market,walk_forward,MGNREGA,Accelerating,Slowing,0
-corrected,HUL,market,walk_forward,MGNREGA,Steady,Accelerating,2
-corrected,HUL,market,walk_forward,MGNREGA,Steady,Steady,6
+corrected,HUL,market,walk_forward,MGNREGA,Steady,Accelerating,3
+corrected,HUL,market,walk_forward,MGNREGA,Steady,Steady,4
 corrected,HUL,market,walk_forward,MGNREGA,Steady,Slowing,0
 corrected,HUL,market,walk_forward,MGNREGA,Slowing,Accelerating,0
 corrected,HUL,market,walk_forward,MGNREGA,Slowing,Steady,0
 corrected,HUL,market,walk_forward,MGNREGA,Slowing,Slowing,0
-corrected,HUL,market,walk_forward,Repeat last,Accelerating,Accelerating,2
-corrected,HUL,market,walk_forward,Repeat last,Accelerating,Steady,2
+corrected,HUL,market,walk_forward,Repeat last,Accelerating,Accelerating,0
+corrected,HUL,market,walk_forward,Repeat last,Accelerating,Steady,1
 corrected,HUL,market,walk_forward,Repeat last,Accelerating,Slowing,0
-corrected,HUL,market,walk_forward,Repeat last,Steady,Accelerating,3
+corrected,HUL,market,walk_forward,Repeat last,Steady,Accelerating,2
 corrected,HUL,market,walk_forward,Repeat last,Steady,Steady,5
 corrected,HUL,market,walk_forward,Repeat last,Steady,Slowing,0
 corrected,HUL,market,walk_forward,Repeat last,Slowing,Accelerating,0
 corrected,HUL,market,walk_forward,Repeat last,Slowing,Steady,0
 corrected,HUL,market,walk_forward,Repeat last,Slowing,Slowing,0
-corrected,HUL,market,walk_forward,Most common,Accelerating,Accelerating,4
+corrected,HUL,market,walk_forward,Most common,Accelerating,Accelerating,1
 corrected,HUL,market,walk_forward,Most common,Accelerating,Steady,0
 corrected,HUL,market,walk_forward,Most common,Accelerating,Slowing,0
-corrected,HUL,market,walk_forward,Most common,Steady,Accelerating,6
+corrected,HUL,market,walk_forward,Most common,Steady,Accelerating,5
 corrected,HUL,market,walk_forward,Most common,Steady,Steady,2
 corrected,HUL,market,walk_forward,Most common,Steady,Slowing,0
 corrected,HUL,market,walk_forward,Most common,Slowing,Accelerating,0
 corrected,HUL,market,walk_forward,Most common,Slowing,Steady,0
 corrected,HUL,market,walk_forward,Most common,Slowing,Slowing,0
 corrected,HUL,market,walk_forward,Always steady,Accelerating,Accelerating,0
-corrected,HUL,market,walk_forward,Always steady,Accelerating,Steady,4
+corrected,HUL,market,walk_forward,Always steady,Accelerating,Steady,1
 corrected,HUL,market,walk_forward,Always steady,Accelerating,Slowing,0
 corrected,HUL,market,walk_forward,Always steady,Steady,Accelerating,0
-corrected,HUL,market,walk_forward,Always steady,Steady,Steady,8
+corrected,HUL,market,walk_forward,Always steady,Steady,Steady,7
 corrected,HUL,market,walk_forward,Always steady,Steady,Slowing,0
 corrected,HUL,market,walk_forward,Always steady,Slowing,Accelerating,0
 corrected,HUL,market,walk_forward,Always steady,Slowing,Steady,0
@@ -147,70 +147,70 @@ corrected,Dabur,own,held_out,MGNREGA,Accelerating,Accelerating,0
 corrected,Dabur,own,held_out,MGNREGA,Accelerating,Steady,0
 corrected,Dabur,own,held_out,MGNREGA,Accelerating,Slowing,0
 corrected,Dabur,own,held_out,MGNREGA,Steady,Accelerating,0
-corrected,Dabur,own,held_out,MGNREGA,Steady,Steady,6
+corrected,Dabur,own,held_out,MGNREGA,Steady,Steady,5
 corrected,Dabur,own,held_out,MGNREGA,Steady,Slowing,0
-corrected,Dabur,own,held_out,MGNREGA,Slowing,Accelerating,1
+corrected,Dabur,own,held_out,MGNREGA,Slowing,Accelerating,0
 corrected,Dabur,own,held_out,MGNREGA,Slowing,Steady,0
 corrected,Dabur,own,held_out,MGNREGA,Slowing,Slowing,0
 corrected,Dabur,own,held_out,Repeat last,Accelerating,Accelerating,0
 corrected,Dabur,own,held_out,Repeat last,Accelerating,Steady,0
 corrected,Dabur,own,held_out,Repeat last,Accelerating,Slowing,0
 corrected,Dabur,own,held_out,Repeat last,Steady,Accelerating,0
-corrected,Dabur,own,held_out,Repeat last,Steady,Steady,5
+corrected,Dabur,own,held_out,Repeat last,Steady,Steady,4
 corrected,Dabur,own,held_out,Repeat last,Steady,Slowing,1
 corrected,Dabur,own,held_out,Repeat last,Slowing,Accelerating,0
-corrected,Dabur,own,held_out,Repeat last,Slowing,Steady,1
+corrected,Dabur,own,held_out,Repeat last,Slowing,Steady,0
 corrected,Dabur,own,held_out,Repeat last,Slowing,Slowing,0
 corrected,Dabur,own,held_out,Most common,Accelerating,Accelerating,0
 corrected,Dabur,own,held_out,Most common,Accelerating,Steady,0
 corrected,Dabur,own,held_out,Most common,Accelerating,Slowing,0
 corrected,Dabur,own,held_out,Most common,Steady,Accelerating,0
-corrected,Dabur,own,held_out,Most common,Steady,Steady,6
+corrected,Dabur,own,held_out,Most common,Steady,Steady,5
 corrected,Dabur,own,held_out,Most common,Steady,Slowing,0
 corrected,Dabur,own,held_out,Most common,Slowing,Accelerating,0
-corrected,Dabur,own,held_out,Most common,Slowing,Steady,1
+corrected,Dabur,own,held_out,Most common,Slowing,Steady,0
 corrected,Dabur,own,held_out,Most common,Slowing,Slowing,0
 corrected,Dabur,own,held_out,Always steady,Accelerating,Accelerating,0
 corrected,Dabur,own,held_out,Always steady,Accelerating,Steady,0
 corrected,Dabur,own,held_out,Always steady,Accelerating,Slowing,0
 corrected,Dabur,own,held_out,Always steady,Steady,Accelerating,0
-corrected,Dabur,own,held_out,Always steady,Steady,Steady,6
+corrected,Dabur,own,held_out,Always steady,Steady,Steady,5
 corrected,Dabur,own,held_out,Always steady,Steady,Slowing,0
 corrected,Dabur,own,held_out,Always steady,Slowing,Accelerating,0
-corrected,Dabur,own,held_out,Always steady,Slowing,Steady,1
+corrected,Dabur,own,held_out,Always steady,Slowing,Steady,0
 corrected,Dabur,own,held_out,Always steady,Slowing,Slowing,0
-corrected,Dabur,own,walk_forward,MGNREGA,Accelerating,Accelerating,1
+corrected,Dabur,own,walk_forward,MGNREGA,Accelerating,Accelerating,0
 corrected,Dabur,own,walk_forward,MGNREGA,Accelerating,Steady,0
 corrected,Dabur,own,walk_forward,MGNREGA,Accelerating,Slowing,0
-corrected,Dabur,own,walk_forward,MGNREGA,Steady,Accelerating,2
+corrected,Dabur,own,walk_forward,MGNREGA,Steady,Accelerating,0
 corrected,Dabur,own,walk_forward,MGNREGA,Steady,Steady,7
-corrected,Dabur,own,walk_forward,MGNREGA,Steady,Slowing,1
+corrected,Dabur,own,walk_forward,MGNREGA,Steady,Slowing,0
 corrected,Dabur,own,walk_forward,MGNREGA,Slowing,Accelerating,1
 corrected,Dabur,own,walk_forward,MGNREGA,Slowing,Steady,0
 corrected,Dabur,own,walk_forward,MGNREGA,Slowing,Slowing,0
 corrected,Dabur,own,walk_forward,Repeat last,Accelerating,Accelerating,0
-corrected,Dabur,own,walk_forward,Repeat last,Accelerating,Steady,1
+corrected,Dabur,own,walk_forward,Repeat last,Accelerating,Steady,0
 corrected,Dabur,own,walk_forward,Repeat last,Accelerating,Slowing,0
-corrected,Dabur,own,walk_forward,Repeat last,Steady,Accelerating,2
-corrected,Dabur,own,walk_forward,Repeat last,Steady,Steady,7
+corrected,Dabur,own,walk_forward,Repeat last,Steady,Accelerating,0
+corrected,Dabur,own,walk_forward,Repeat last,Steady,Steady,6
 corrected,Dabur,own,walk_forward,Repeat last,Steady,Slowing,1
 corrected,Dabur,own,walk_forward,Repeat last,Slowing,Accelerating,0
 corrected,Dabur,own,walk_forward,Repeat last,Slowing,Steady,1
 corrected,Dabur,own,walk_forward,Repeat last,Slowing,Slowing,0
-corrected,Dabur,own,walk_forward,Most common,Accelerating,Accelerating,1
+corrected,Dabur,own,walk_forward,Most common,Accelerating,Accelerating,0
 corrected,Dabur,own,walk_forward,Most common,Accelerating,Steady,0
 corrected,Dabur,own,walk_forward,Most common,Accelerating,Slowing,0
-corrected,Dabur,own,walk_forward,Most common,Steady,Accelerating,3
+corrected,Dabur,own,walk_forward,Most common,Steady,Accelerating,0
 corrected,Dabur,own,walk_forward,Most common,Steady,Steady,7
 corrected,Dabur,own,walk_forward,Most common,Steady,Slowing,0
 corrected,Dabur,own,walk_forward,Most common,Slowing,Accelerating,0
 corrected,Dabur,own,walk_forward,Most common,Slowing,Steady,1
 corrected,Dabur,own,walk_forward,Most common,Slowing,Slowing,0
 corrected,Dabur,own,walk_forward,Always steady,Accelerating,Accelerating,0
-corrected,Dabur,own,walk_forward,Always steady,Accelerating,Steady,1
+corrected,Dabur,own,walk_forward,Always steady,Accelerating,Steady,0
 corrected,Dabur,own,walk_forward,Always steady,Accelerating,Slowing,0
 corrected,Dabur,own,walk_forward,Always steady,Steady,Accelerating,0
-corrected,Dabur,own,walk_forward,Always steady,Steady,Steady,10
+corrected,Dabur,own,walk_forward,Always steady,Steady,Steady,7
 corrected,Dabur,own,walk_forward,Always steady,Steady,Slowing,0
 corrected,Dabur,own,walk_forward,Always steady,Slowing,Accelerating,0
 corrected,Dabur,own,walk_forward,Always steady,Slowing,Steady,1
@@ -218,17 +218,17 @@ corrected,Dabur,own,walk_forward,Always steady,Slowing,Slowing,0
 corrected,Dabur,market,held_out,MGNREGA,Accelerating,Accelerating,0
 corrected,Dabur,market,held_out,MGNREGA,Accelerating,Steady,0
 corrected,Dabur,market,held_out,MGNREGA,Accelerating,Slowing,0
-corrected,Dabur,market,held_out,MGNREGA,Steady,Accelerating,1
-corrected,Dabur,market,held_out,MGNREGA,Steady,Steady,1
-corrected,Dabur,market,held_out,MGNREGA,Steady,Slowing,3
-corrected,Dabur,market,held_out,MGNREGA,Slowing,Accelerating,0
-corrected,Dabur,market,held_out,MGNREGA,Slowing,Steady,2
+corrected,Dabur,market,held_out,MGNREGA,Steady,Accelerating,0
+corrected,Dabur,market,held_out,MGNREGA,Steady,Steady,3
+corrected,Dabur,market,held_out,MGNREGA,Steady,Slowing,0
+corrected,Dabur,market,held_out,MGNREGA,Slowing,Accelerating,2
+corrected,Dabur,market,held_out,MGNREGA,Slowing,Steady,0
 corrected,Dabur,market,held_out,MGNREGA,Slowing,Slowing,0
 corrected,Dabur,market,held_out,Repeat last,Accelerating,Accelerating,0
 corrected,Dabur,market,held_out,Repeat last,Accelerating,Steady,0
 corrected,Dabur,market,held_out,Repeat last,Accelerating,Slowing,0
 corrected,Dabur,market,held_out,Repeat last,Steady,Accelerating,0
-corrected,Dabur,market,held_out,Repeat last,Steady,Steady,5
+corrected,Dabur,market,held_out,Repeat last,Steady,Steady,3
 corrected,Dabur,market,held_out,Repeat last,Steady,Slowing,0
 corrected,Dabur,market,held_out,Repeat last,Slowing,Accelerating,0
 corrected,Dabur,market,held_out,Repeat last,Slowing,Steady,1
@@ -236,7 +236,7 @@ corrected,Dabur,market,held_out,Repeat last,Slowing,Slowing,1
 corrected,Dabur,market,held_out,Most common,Accelerating,Accelerating,0
 corrected,Dabur,market,held_out,Most common,Accelerating,Steady,0
 corrected,Dabur,market,held_out,Most common,Accelerating,Slowing,0
-corrected,Dabur,market,held_out,Most common,Steady,Accelerating,5
+corrected,Dabur,market,held_out,Most common,Steady,Accelerating,3
 corrected,Dabur,market,held_out,Most common,Steady,Steady,0
 corrected,Dabur,market,held_out,Most common,Steady,Slowing,0
 corrected,Dabur,market,held_out,Most common,Slowing,Accelerating,2
@@ -246,46 +246,46 @@ corrected,Dabur,market,held_out,Always steady,Accelerating,Accelerating,0
 corrected,Dabur,market,held_out,Always steady,Accelerating,Steady,0
 corrected,Dabur,market,held_out,Always steady,Accelerating,Slowing,0
 corrected,Dabur,market,held_out,Always steady,Steady,Accelerating,0
-corrected,Dabur,market,held_out,Always steady,Steady,Steady,5
+corrected,Dabur,market,held_out,Always steady,Steady,Steady,3
 corrected,Dabur,market,held_out,Always steady,Steady,Slowing,0
 corrected,Dabur,market,held_out,Always steady,Slowing,Accelerating,0
 corrected,Dabur,market,held_out,Always steady,Slowing,Steady,2
 corrected,Dabur,market,held_out,Always steady,Slowing,Slowing,0
-corrected,Dabur,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
+corrected,Dabur,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
 corrected,Dabur,market,walk_forward,MGNREGA,Accelerating,Steady,0
-corrected,Dabur,market,walk_forward,MGNREGA,Accelerating,Slowing,2
-corrected,Dabur,market,walk_forward,MGNREGA,Steady,Accelerating,1
+corrected,Dabur,market,walk_forward,MGNREGA,Accelerating,Slowing,0
+corrected,Dabur,market,walk_forward,MGNREGA,Steady,Accelerating,3
 corrected,Dabur,market,walk_forward,MGNREGA,Steady,Steady,3
-corrected,Dabur,market,walk_forward,MGNREGA,Steady,Slowing,2
-corrected,Dabur,market,walk_forward,MGNREGA,Slowing,Accelerating,0
-corrected,Dabur,market,walk_forward,MGNREGA,Slowing,Steady,3
+corrected,Dabur,market,walk_forward,MGNREGA,Steady,Slowing,0
+corrected,Dabur,market,walk_forward,MGNREGA,Slowing,Accelerating,1
+corrected,Dabur,market,walk_forward,MGNREGA,Slowing,Steady,1
 corrected,Dabur,market,walk_forward,MGNREGA,Slowing,Slowing,0
-corrected,Dabur,market,walk_forward,Repeat last,Accelerating,Accelerating,2
+corrected,Dabur,market,walk_forward,Repeat last,Accelerating,Accelerating,0
 corrected,Dabur,market,walk_forward,Repeat last,Accelerating,Steady,0
-corrected,Dabur,market,walk_forward,Repeat last,Accelerating,Slowing,1
+corrected,Dabur,market,walk_forward,Repeat last,Accelerating,Slowing,0
 corrected,Dabur,market,walk_forward,Repeat last,Steady,Accelerating,1
 corrected,Dabur,market,walk_forward,Repeat last,Steady,Steady,5
 corrected,Dabur,market,walk_forward,Repeat last,Steady,Slowing,0
-corrected,Dabur,market,walk_forward,Repeat last,Slowing,Accelerating,1
+corrected,Dabur,market,walk_forward,Repeat last,Slowing,Accelerating,0
 corrected,Dabur,market,walk_forward,Repeat last,Slowing,Steady,1
 corrected,Dabur,market,walk_forward,Repeat last,Slowing,Slowing,1
 corrected,Dabur,market,walk_forward,Most common,Accelerating,Accelerating,0
 corrected,Dabur,market,walk_forward,Most common,Accelerating,Steady,0
-corrected,Dabur,market,walk_forward,Most common,Accelerating,Slowing,3
-corrected,Dabur,market,walk_forward,Most common,Steady,Accelerating,4
-corrected,Dabur,market,walk_forward,Most common,Steady,Steady,2
+corrected,Dabur,market,walk_forward,Most common,Accelerating,Slowing,0
+corrected,Dabur,market,walk_forward,Most common,Steady,Accelerating,5
+corrected,Dabur,market,walk_forward,Most common,Steady,Steady,1
 corrected,Dabur,market,walk_forward,Most common,Steady,Slowing,0
 corrected,Dabur,market,walk_forward,Most common,Slowing,Accelerating,0
 corrected,Dabur,market,walk_forward,Most common,Slowing,Steady,2
-corrected,Dabur,market,walk_forward,Most common,Slowing,Slowing,1
+corrected,Dabur,market,walk_forward,Most common,Slowing,Slowing,0
 corrected,Dabur,market,walk_forward,Always steady,Accelerating,Accelerating,0
-corrected,Dabur,market,walk_forward,Always steady,Accelerating,Steady,3
+corrected,Dabur,market,walk_forward,Always steady,Accelerating,Steady,0
 corrected,Dabur,market,walk_forward,Always steady,Accelerating,Slowing,0
 corrected,Dabur,market,walk_forward,Always steady,Steady,Accelerating,0
 corrected,Dabur,market,walk_forward,Always steady,Steady,Steady,6
 corrected,Dabur,market,walk_forward,Always steady,Steady,Slowing,0
 corrected,Dabur,market,walk_forward,Always steady,Slowing,Accelerating,0
-corrected,Dabur,market,walk_forward,Always steady,Slowing,Steady,3
+corrected,Dabur,market,walk_forward,Always steady,Slowing,Steady,2
 corrected,Dabur,market,walk_forward,Always steady,Slowing,Slowing,0
 corrected,Marico,market,held_out,MGNREGA,Accelerating,Accelerating,0
 corrected,Marico,market,held_out,MGNREGA,Accelerating,Steady,0
@@ -359,78 +359,6 @@ corrected,Marico,market,walk_forward,Always steady,Steady,Slowing,0
 corrected,Marico,market,walk_forward,Always steady,Slowing,Accelerating,0
 corrected,Marico,market,walk_forward,Always steady,Slowing,Steady,0
 corrected,Marico,market,walk_forward,Always steady,Slowing,Slowing,0
-corrected,Emami,own,held_out,MGNREGA,Accelerating,Accelerating,0
-corrected,Emami,own,held_out,MGNREGA,Accelerating,Steady,2
-corrected,Emami,own,held_out,MGNREGA,Accelerating,Slowing,0
-corrected,Emami,own,held_out,MGNREGA,Steady,Accelerating,0
-corrected,Emami,own,held_out,MGNREGA,Steady,Steady,1
-corrected,Emami,own,held_out,MGNREGA,Steady,Slowing,0
-corrected,Emami,own,held_out,MGNREGA,Slowing,Accelerating,0
-corrected,Emami,own,held_out,MGNREGA,Slowing,Steady,0
-corrected,Emami,own,held_out,MGNREGA,Slowing,Slowing,0
-corrected,Emami,own,held_out,Repeat last,Accelerating,Accelerating,0
-corrected,Emami,own,held_out,Repeat last,Accelerating,Steady,2
-corrected,Emami,own,held_out,Repeat last,Accelerating,Slowing,0
-corrected,Emami,own,held_out,Repeat last,Steady,Accelerating,1
-corrected,Emami,own,held_out,Repeat last,Steady,Steady,0
-corrected,Emami,own,held_out,Repeat last,Steady,Slowing,0
-corrected,Emami,own,held_out,Repeat last,Slowing,Accelerating,0
-corrected,Emami,own,held_out,Repeat last,Slowing,Steady,0
-corrected,Emami,own,held_out,Repeat last,Slowing,Slowing,0
-corrected,Emami,own,held_out,Most common,Accelerating,Accelerating,0
-corrected,Emami,own,held_out,Most common,Accelerating,Steady,2
-corrected,Emami,own,held_out,Most common,Accelerating,Slowing,0
-corrected,Emami,own,held_out,Most common,Steady,Accelerating,0
-corrected,Emami,own,held_out,Most common,Steady,Steady,1
-corrected,Emami,own,held_out,Most common,Steady,Slowing,0
-corrected,Emami,own,held_out,Most common,Slowing,Accelerating,0
-corrected,Emami,own,held_out,Most common,Slowing,Steady,0
-corrected,Emami,own,held_out,Most common,Slowing,Slowing,0
-corrected,Emami,own,held_out,Always steady,Accelerating,Accelerating,0
-corrected,Emami,own,held_out,Always steady,Accelerating,Steady,2
-corrected,Emami,own,held_out,Always steady,Accelerating,Slowing,0
-corrected,Emami,own,held_out,Always steady,Steady,Accelerating,0
-corrected,Emami,own,held_out,Always steady,Steady,Steady,1
-corrected,Emami,own,held_out,Always steady,Steady,Slowing,0
-corrected,Emami,own,held_out,Always steady,Slowing,Accelerating,0
-corrected,Emami,own,held_out,Always steady,Slowing,Steady,0
-corrected,Emami,own,held_out,Always steady,Slowing,Slowing,0
-corrected,Emami,own,walk_forward,MGNREGA,Accelerating,Accelerating,0
-corrected,Emami,own,walk_forward,MGNREGA,Accelerating,Steady,1
-corrected,Emami,own,walk_forward,MGNREGA,Accelerating,Slowing,0
-corrected,Emami,own,walk_forward,MGNREGA,Steady,Accelerating,0
-corrected,Emami,own,walk_forward,MGNREGA,Steady,Steady,1
-corrected,Emami,own,walk_forward,MGNREGA,Steady,Slowing,0
-corrected,Emami,own,walk_forward,MGNREGA,Slowing,Accelerating,0
-corrected,Emami,own,walk_forward,MGNREGA,Slowing,Steady,0
-corrected,Emami,own,walk_forward,MGNREGA,Slowing,Slowing,0
-corrected,Emami,own,walk_forward,Repeat last,Accelerating,Accelerating,0
-corrected,Emami,own,walk_forward,Repeat last,Accelerating,Steady,1
-corrected,Emami,own,walk_forward,Repeat last,Accelerating,Slowing,0
-corrected,Emami,own,walk_forward,Repeat last,Steady,Accelerating,1
-corrected,Emami,own,walk_forward,Repeat last,Steady,Steady,0
-corrected,Emami,own,walk_forward,Repeat last,Steady,Slowing,0
-corrected,Emami,own,walk_forward,Repeat last,Slowing,Accelerating,0
-corrected,Emami,own,walk_forward,Repeat last,Slowing,Steady,0
-corrected,Emami,own,walk_forward,Repeat last,Slowing,Slowing,0
-corrected,Emami,own,walk_forward,Most common,Accelerating,Accelerating,0
-corrected,Emami,own,walk_forward,Most common,Accelerating,Steady,1
-corrected,Emami,own,walk_forward,Most common,Accelerating,Slowing,0
-corrected,Emami,own,walk_forward,Most common,Steady,Accelerating,0
-corrected,Emami,own,walk_forward,Most common,Steady,Steady,1
-corrected,Emami,own,walk_forward,Most common,Steady,Slowing,0
-corrected,Emami,own,walk_forward,Most common,Slowing,Accelerating,0
-corrected,Emami,own,walk_forward,Most common,Slowing,Steady,0
-corrected,Emami,own,walk_forward,Most common,Slowing,Slowing,0
-corrected,Emami,own,walk_forward,Always steady,Accelerating,Accelerating,0
-corrected,Emami,own,walk_forward,Always steady,Accelerating,Steady,1
-corrected,Emami,own,walk_forward,Always steady,Accelerating,Slowing,0
-corrected,Emami,own,walk_forward,Always steady,Steady,Accelerating,0
-corrected,Emami,own,walk_forward,Always steady,Steady,Steady,1
-corrected,Emami,own,walk_forward,Always steady,Steady,Slowing,0
-corrected,Emami,own,walk_forward,Always steady,Slowing,Accelerating,0
-corrected,Emami,own,walk_forward,Always steady,Slowing,Steady,0
-corrected,Emami,own,walk_forward,Always steady,Slowing,Slowing,0
 corrected,Emami,market,held_out,MGNREGA,Accelerating,Accelerating,0
 corrected,Emami,market,held_out,MGNREGA,Accelerating,Steady,0
 corrected,Emami,market,held_out,MGNREGA,Accelerating,Slowing,0
@@ -506,8 +434,8 @@ corrected,Emami,market,walk_forward,Always steady,Slowing,Slowing,0
 early_deadline,Market,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Market,market,held_out,MGNREGA,Accelerating,Steady,0
 early_deadline,Market,market,held_out,MGNREGA,Accelerating,Slowing,0
-early_deadline,Market,market,held_out,MGNREGA,Steady,Accelerating,1
-early_deadline,Market,market,held_out,MGNREGA,Steady,Steady,6
+early_deadline,Market,market,held_out,MGNREGA,Steady,Accelerating,3
+early_deadline,Market,market,held_out,MGNREGA,Steady,Steady,2
 early_deadline,Market,market,held_out,MGNREGA,Steady,Slowing,0
 early_deadline,Market,market,held_out,MGNREGA,Slowing,Accelerating,0
 early_deadline,Market,market,held_out,MGNREGA,Slowing,Steady,0
@@ -516,7 +444,7 @@ early_deadline,Market,market,held_out,Repeat last,Accelerating,Accelerating,0
 early_deadline,Market,market,held_out,Repeat last,Accelerating,Steady,0
 early_deadline,Market,market,held_out,Repeat last,Accelerating,Slowing,0
 early_deadline,Market,market,held_out,Repeat last,Steady,Accelerating,0
-early_deadline,Market,market,held_out,Repeat last,Steady,Steady,7
+early_deadline,Market,market,held_out,Repeat last,Steady,Steady,5
 early_deadline,Market,market,held_out,Repeat last,Steady,Slowing,0
 early_deadline,Market,market,held_out,Repeat last,Slowing,Accelerating,0
 early_deadline,Market,market,held_out,Repeat last,Slowing,Steady,0
@@ -524,8 +452,8 @@ early_deadline,Market,market,held_out,Repeat last,Slowing,Slowing,0
 early_deadline,Market,market,held_out,Most common,Accelerating,Accelerating,0
 early_deadline,Market,market,held_out,Most common,Accelerating,Steady,0
 early_deadline,Market,market,held_out,Most common,Accelerating,Slowing,0
-early_deadline,Market,market,held_out,Most common,Steady,Accelerating,0
-early_deadline,Market,market,held_out,Most common,Steady,Steady,7
+early_deadline,Market,market,held_out,Most common,Steady,Accelerating,5
+early_deadline,Market,market,held_out,Most common,Steady,Steady,0
 early_deadline,Market,market,held_out,Most common,Steady,Slowing,0
 early_deadline,Market,market,held_out,Most common,Slowing,Accelerating,0
 early_deadline,Market,market,held_out,Most common,Slowing,Steady,0
@@ -534,52 +462,52 @@ early_deadline,Market,market,held_out,Always steady,Accelerating,Accelerating,0
 early_deadline,Market,market,held_out,Always steady,Accelerating,Steady,0
 early_deadline,Market,market,held_out,Always steady,Accelerating,Slowing,0
 early_deadline,Market,market,held_out,Always steady,Steady,Accelerating,0
-early_deadline,Market,market,held_out,Always steady,Steady,Steady,7
+early_deadline,Market,market,held_out,Always steady,Steady,Steady,5
 early_deadline,Market,market,held_out,Always steady,Steady,Slowing,0
 early_deadline,Market,market,held_out,Always steady,Slowing,Accelerating,0
 early_deadline,Market,market,held_out,Always steady,Slowing,Steady,0
 early_deadline,Market,market,held_out,Always steady,Slowing,Slowing,0
-early_deadline,Market,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
-early_deadline,Market,market,walk_forward,MGNREGA,Accelerating,Steady,2
+early_deadline,Market,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
+early_deadline,Market,market,walk_forward,MGNREGA,Accelerating,Steady,0
 early_deadline,Market,market,walk_forward,MGNREGA,Accelerating,Slowing,0
-early_deadline,Market,market,walk_forward,MGNREGA,Steady,Accelerating,2
-early_deadline,Market,market,walk_forward,MGNREGA,Steady,Steady,6
-early_deadline,Market,market,walk_forward,MGNREGA,Steady,Slowing,0
+early_deadline,Market,market,walk_forward,MGNREGA,Steady,Accelerating,1
+early_deadline,Market,market,walk_forward,MGNREGA,Steady,Steady,5
+early_deadline,Market,market,walk_forward,MGNREGA,Steady,Slowing,1
 early_deadline,Market,market,walk_forward,MGNREGA,Slowing,Accelerating,0
-early_deadline,Market,market,walk_forward,MGNREGA,Slowing,Steady,1
+early_deadline,Market,market,walk_forward,MGNREGA,Slowing,Steady,0
 early_deadline,Market,market,walk_forward,MGNREGA,Slowing,Slowing,0
-early_deadline,Market,market,walk_forward,Repeat last,Accelerating,Accelerating,1
-early_deadline,Market,market,walk_forward,Repeat last,Accelerating,Steady,1
-early_deadline,Market,market,walk_forward,Repeat last,Accelerating,Slowing,1
-early_deadline,Market,market,walk_forward,Repeat last,Steady,Accelerating,1
+early_deadline,Market,market,walk_forward,Repeat last,Accelerating,Accelerating,0
+early_deadline,Market,market,walk_forward,Repeat last,Accelerating,Steady,0
+early_deadline,Market,market,walk_forward,Repeat last,Accelerating,Slowing,0
+early_deadline,Market,market,walk_forward,Repeat last,Steady,Accelerating,0
 early_deadline,Market,market,walk_forward,Repeat last,Steady,Steady,7
 early_deadline,Market,market,walk_forward,Repeat last,Steady,Slowing,0
-early_deadline,Market,market,walk_forward,Repeat last,Slowing,Accelerating,1
+early_deadline,Market,market,walk_forward,Repeat last,Slowing,Accelerating,0
 early_deadline,Market,market,walk_forward,Repeat last,Slowing,Steady,0
 early_deadline,Market,market,walk_forward,Repeat last,Slowing,Slowing,0
 early_deadline,Market,market,walk_forward,Most common,Accelerating,Accelerating,0
-early_deadline,Market,market,walk_forward,Most common,Accelerating,Steady,3
+early_deadline,Market,market,walk_forward,Most common,Accelerating,Steady,0
 early_deadline,Market,market,walk_forward,Most common,Accelerating,Slowing,0
-early_deadline,Market,market,walk_forward,Most common,Steady,Accelerating,0
-early_deadline,Market,market,walk_forward,Most common,Steady,Steady,8
+early_deadline,Market,market,walk_forward,Most common,Steady,Accelerating,3
+early_deadline,Market,market,walk_forward,Most common,Steady,Steady,4
 early_deadline,Market,market,walk_forward,Most common,Steady,Slowing,0
 early_deadline,Market,market,walk_forward,Most common,Slowing,Accelerating,0
-early_deadline,Market,market,walk_forward,Most common,Slowing,Steady,1
+early_deadline,Market,market,walk_forward,Most common,Slowing,Steady,0
 early_deadline,Market,market,walk_forward,Most common,Slowing,Slowing,0
 early_deadline,Market,market,walk_forward,Always steady,Accelerating,Accelerating,0
-early_deadline,Market,market,walk_forward,Always steady,Accelerating,Steady,3
+early_deadline,Market,market,walk_forward,Always steady,Accelerating,Steady,0
 early_deadline,Market,market,walk_forward,Always steady,Accelerating,Slowing,0
 early_deadline,Market,market,walk_forward,Always steady,Steady,Accelerating,0
-early_deadline,Market,market,walk_forward,Always steady,Steady,Steady,8
+early_deadline,Market,market,walk_forward,Always steady,Steady,Steady,7
 early_deadline,Market,market,walk_forward,Always steady,Steady,Slowing,0
 early_deadline,Market,market,walk_forward,Always steady,Slowing,Accelerating,0
-early_deadline,Market,market,walk_forward,Always steady,Slowing,Steady,1
+early_deadline,Market,market,walk_forward,Always steady,Slowing,Steady,0
 early_deadline,Market,market,walk_forward,Always steady,Slowing,Slowing,0
 early_deadline,HUL,market,held_out,MGNREGA,Accelerating,Accelerating,1
 early_deadline,HUL,market,held_out,MGNREGA,Accelerating,Steady,0
 early_deadline,HUL,market,held_out,MGNREGA,Accelerating,Slowing,0
-early_deadline,HUL,market,held_out,MGNREGA,Steady,Accelerating,2
-early_deadline,HUL,market,held_out,MGNREGA,Steady,Steady,4
+early_deadline,HUL,market,held_out,MGNREGA,Steady,Accelerating,1
+early_deadline,HUL,market,held_out,MGNREGA,Steady,Steady,3
 early_deadline,HUL,market,held_out,MGNREGA,Steady,Slowing,0
 early_deadline,HUL,market,held_out,MGNREGA,Slowing,Accelerating,0
 early_deadline,HUL,market,held_out,MGNREGA,Slowing,Steady,0
@@ -588,7 +516,7 @@ early_deadline,HUL,market,held_out,Repeat last,Accelerating,Accelerating,0
 early_deadline,HUL,market,held_out,Repeat last,Accelerating,Steady,1
 early_deadline,HUL,market,held_out,Repeat last,Accelerating,Slowing,0
 early_deadline,HUL,market,held_out,Repeat last,Steady,Accelerating,1
-early_deadline,HUL,market,held_out,Repeat last,Steady,Steady,5
+early_deadline,HUL,market,held_out,Repeat last,Steady,Steady,3
 early_deadline,HUL,market,held_out,Repeat last,Steady,Slowing,0
 early_deadline,HUL,market,held_out,Repeat last,Slowing,Accelerating,0
 early_deadline,HUL,market,held_out,Repeat last,Slowing,Steady,0
@@ -596,7 +524,7 @@ early_deadline,HUL,market,held_out,Repeat last,Slowing,Slowing,0
 early_deadline,HUL,market,held_out,Most common,Accelerating,Accelerating,1
 early_deadline,HUL,market,held_out,Most common,Accelerating,Steady,0
 early_deadline,HUL,market,held_out,Most common,Accelerating,Slowing,0
-early_deadline,HUL,market,held_out,Most common,Steady,Accelerating,6
+early_deadline,HUL,market,held_out,Most common,Steady,Accelerating,4
 early_deadline,HUL,market,held_out,Most common,Steady,Steady,0
 early_deadline,HUL,market,held_out,Most common,Steady,Slowing,0
 early_deadline,HUL,market,held_out,Most common,Slowing,Accelerating,0
@@ -606,43 +534,43 @@ early_deadline,HUL,market,held_out,Always steady,Accelerating,Accelerating,0
 early_deadline,HUL,market,held_out,Always steady,Accelerating,Steady,1
 early_deadline,HUL,market,held_out,Always steady,Accelerating,Slowing,0
 early_deadline,HUL,market,held_out,Always steady,Steady,Accelerating,0
-early_deadline,HUL,market,held_out,Always steady,Steady,Steady,6
+early_deadline,HUL,market,held_out,Always steady,Steady,Steady,4
 early_deadline,HUL,market,held_out,Always steady,Steady,Slowing,0
 early_deadline,HUL,market,held_out,Always steady,Slowing,Accelerating,0
 early_deadline,HUL,market,held_out,Always steady,Slowing,Steady,0
 early_deadline,HUL,market,held_out,Always steady,Slowing,Slowing,0
-early_deadline,HUL,market,walk_forward,MGNREGA,Accelerating,Accelerating,3
-early_deadline,HUL,market,walk_forward,MGNREGA,Accelerating,Steady,1
+early_deadline,HUL,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
+early_deadline,HUL,market,walk_forward,MGNREGA,Accelerating,Steady,0
 early_deadline,HUL,market,walk_forward,MGNREGA,Accelerating,Slowing,0
-early_deadline,HUL,market,walk_forward,MGNREGA,Steady,Accelerating,2
-early_deadline,HUL,market,walk_forward,MGNREGA,Steady,Steady,6
+early_deadline,HUL,market,walk_forward,MGNREGA,Steady,Accelerating,3
+early_deadline,HUL,market,walk_forward,MGNREGA,Steady,Steady,4
 early_deadline,HUL,market,walk_forward,MGNREGA,Steady,Slowing,0
 early_deadline,HUL,market,walk_forward,MGNREGA,Slowing,Accelerating,0
 early_deadline,HUL,market,walk_forward,MGNREGA,Slowing,Steady,0
 early_deadline,HUL,market,walk_forward,MGNREGA,Slowing,Slowing,0
-early_deadline,HUL,market,walk_forward,Repeat last,Accelerating,Accelerating,2
-early_deadline,HUL,market,walk_forward,Repeat last,Accelerating,Steady,2
+early_deadline,HUL,market,walk_forward,Repeat last,Accelerating,Accelerating,0
+early_deadline,HUL,market,walk_forward,Repeat last,Accelerating,Steady,1
 early_deadline,HUL,market,walk_forward,Repeat last,Accelerating,Slowing,0
-early_deadline,HUL,market,walk_forward,Repeat last,Steady,Accelerating,3
+early_deadline,HUL,market,walk_forward,Repeat last,Steady,Accelerating,2
 early_deadline,HUL,market,walk_forward,Repeat last,Steady,Steady,5
 early_deadline,HUL,market,walk_forward,Repeat last,Steady,Slowing,0
 early_deadline,HUL,market,walk_forward,Repeat last,Slowing,Accelerating,0
 early_deadline,HUL,market,walk_forward,Repeat last,Slowing,Steady,0
 early_deadline,HUL,market,walk_forward,Repeat last,Slowing,Slowing,0
-early_deadline,HUL,market,walk_forward,Most common,Accelerating,Accelerating,4
+early_deadline,HUL,market,walk_forward,Most common,Accelerating,Accelerating,1
 early_deadline,HUL,market,walk_forward,Most common,Accelerating,Steady,0
 early_deadline,HUL,market,walk_forward,Most common,Accelerating,Slowing,0
-early_deadline,HUL,market,walk_forward,Most common,Steady,Accelerating,6
+early_deadline,HUL,market,walk_forward,Most common,Steady,Accelerating,5
 early_deadline,HUL,market,walk_forward,Most common,Steady,Steady,2
 early_deadline,HUL,market,walk_forward,Most common,Steady,Slowing,0
 early_deadline,HUL,market,walk_forward,Most common,Slowing,Accelerating,0
 early_deadline,HUL,market,walk_forward,Most common,Slowing,Steady,0
 early_deadline,HUL,market,walk_forward,Most common,Slowing,Slowing,0
 early_deadline,HUL,market,walk_forward,Always steady,Accelerating,Accelerating,0
-early_deadline,HUL,market,walk_forward,Always steady,Accelerating,Steady,4
+early_deadline,HUL,market,walk_forward,Always steady,Accelerating,Steady,1
 early_deadline,HUL,market,walk_forward,Always steady,Accelerating,Slowing,0
 early_deadline,HUL,market,walk_forward,Always steady,Steady,Accelerating,0
-early_deadline,HUL,market,walk_forward,Always steady,Steady,Steady,8
+early_deadline,HUL,market,walk_forward,Always steady,Steady,Steady,7
 early_deadline,HUL,market,walk_forward,Always steady,Steady,Slowing,0
 early_deadline,HUL,market,walk_forward,Always steady,Slowing,Accelerating,0
 early_deadline,HUL,market,walk_forward,Always steady,Slowing,Steady,0
@@ -650,71 +578,71 @@ early_deadline,HUL,market,walk_forward,Always steady,Slowing,Slowing,0
 early_deadline,Dabur,own,held_out,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Dabur,own,held_out,MGNREGA,Accelerating,Steady,0
 early_deadline,Dabur,own,held_out,MGNREGA,Accelerating,Slowing,0
-early_deadline,Dabur,own,held_out,MGNREGA,Steady,Accelerating,2
-early_deadline,Dabur,own,held_out,MGNREGA,Steady,Steady,4
+early_deadline,Dabur,own,held_out,MGNREGA,Steady,Accelerating,0
+early_deadline,Dabur,own,held_out,MGNREGA,Steady,Steady,5
 early_deadline,Dabur,own,held_out,MGNREGA,Steady,Slowing,0
-early_deadline,Dabur,own,held_out,MGNREGA,Slowing,Accelerating,1
+early_deadline,Dabur,own,held_out,MGNREGA,Slowing,Accelerating,0
 early_deadline,Dabur,own,held_out,MGNREGA,Slowing,Steady,0
 early_deadline,Dabur,own,held_out,MGNREGA,Slowing,Slowing,0
 early_deadline,Dabur,own,held_out,Repeat last,Accelerating,Accelerating,0
 early_deadline,Dabur,own,held_out,Repeat last,Accelerating,Steady,0
 early_deadline,Dabur,own,held_out,Repeat last,Accelerating,Slowing,0
 early_deadline,Dabur,own,held_out,Repeat last,Steady,Accelerating,0
-early_deadline,Dabur,own,held_out,Repeat last,Steady,Steady,5
+early_deadline,Dabur,own,held_out,Repeat last,Steady,Steady,4
 early_deadline,Dabur,own,held_out,Repeat last,Steady,Slowing,1
 early_deadline,Dabur,own,held_out,Repeat last,Slowing,Accelerating,0
-early_deadline,Dabur,own,held_out,Repeat last,Slowing,Steady,1
+early_deadline,Dabur,own,held_out,Repeat last,Slowing,Steady,0
 early_deadline,Dabur,own,held_out,Repeat last,Slowing,Slowing,0
 early_deadline,Dabur,own,held_out,Most common,Accelerating,Accelerating,0
 early_deadline,Dabur,own,held_out,Most common,Accelerating,Steady,0
 early_deadline,Dabur,own,held_out,Most common,Accelerating,Slowing,0
 early_deadline,Dabur,own,held_out,Most common,Steady,Accelerating,0
-early_deadline,Dabur,own,held_out,Most common,Steady,Steady,6
+early_deadline,Dabur,own,held_out,Most common,Steady,Steady,5
 early_deadline,Dabur,own,held_out,Most common,Steady,Slowing,0
 early_deadline,Dabur,own,held_out,Most common,Slowing,Accelerating,0
-early_deadline,Dabur,own,held_out,Most common,Slowing,Steady,1
+early_deadline,Dabur,own,held_out,Most common,Slowing,Steady,0
 early_deadline,Dabur,own,held_out,Most common,Slowing,Slowing,0
 early_deadline,Dabur,own,held_out,Always steady,Accelerating,Accelerating,0
 early_deadline,Dabur,own,held_out,Always steady,Accelerating,Steady,0
 early_deadline,Dabur,own,held_out,Always steady,Accelerating,Slowing,0
 early_deadline,Dabur,own,held_out,Always steady,Steady,Accelerating,0
-early_deadline,Dabur,own,held_out,Always steady,Steady,Steady,6
+early_deadline,Dabur,own,held_out,Always steady,Steady,Steady,5
 early_deadline,Dabur,own,held_out,Always steady,Steady,Slowing,0
 early_deadline,Dabur,own,held_out,Always steady,Slowing,Accelerating,0
-early_deadline,Dabur,own,held_out,Always steady,Slowing,Steady,1
+early_deadline,Dabur,own,held_out,Always steady,Slowing,Steady,0
 early_deadline,Dabur,own,held_out,Always steady,Slowing,Slowing,0
-early_deadline,Dabur,own,walk_forward,MGNREGA,Accelerating,Accelerating,1
+early_deadline,Dabur,own,walk_forward,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Dabur,own,walk_forward,MGNREGA,Accelerating,Steady,0
 early_deadline,Dabur,own,walk_forward,MGNREGA,Accelerating,Slowing,0
-early_deadline,Dabur,own,walk_forward,MGNREGA,Steady,Accelerating,4
-early_deadline,Dabur,own,walk_forward,MGNREGA,Steady,Steady,5
-early_deadline,Dabur,own,walk_forward,MGNREGA,Steady,Slowing,1
+early_deadline,Dabur,own,walk_forward,MGNREGA,Steady,Accelerating,0
+early_deadline,Dabur,own,walk_forward,MGNREGA,Steady,Steady,7
+early_deadline,Dabur,own,walk_forward,MGNREGA,Steady,Slowing,0
 early_deadline,Dabur,own,walk_forward,MGNREGA,Slowing,Accelerating,1
 early_deadline,Dabur,own,walk_forward,MGNREGA,Slowing,Steady,0
 early_deadline,Dabur,own,walk_forward,MGNREGA,Slowing,Slowing,0
 early_deadline,Dabur,own,walk_forward,Repeat last,Accelerating,Accelerating,0
-early_deadline,Dabur,own,walk_forward,Repeat last,Accelerating,Steady,1
+early_deadline,Dabur,own,walk_forward,Repeat last,Accelerating,Steady,0
 early_deadline,Dabur,own,walk_forward,Repeat last,Accelerating,Slowing,0
-early_deadline,Dabur,own,walk_forward,Repeat last,Steady,Accelerating,2
-early_deadline,Dabur,own,walk_forward,Repeat last,Steady,Steady,7
+early_deadline,Dabur,own,walk_forward,Repeat last,Steady,Accelerating,0
+early_deadline,Dabur,own,walk_forward,Repeat last,Steady,Steady,6
 early_deadline,Dabur,own,walk_forward,Repeat last,Steady,Slowing,1
 early_deadline,Dabur,own,walk_forward,Repeat last,Slowing,Accelerating,0
 early_deadline,Dabur,own,walk_forward,Repeat last,Slowing,Steady,1
 early_deadline,Dabur,own,walk_forward,Repeat last,Slowing,Slowing,0
-early_deadline,Dabur,own,walk_forward,Most common,Accelerating,Accelerating,1
+early_deadline,Dabur,own,walk_forward,Most common,Accelerating,Accelerating,0
 early_deadline,Dabur,own,walk_forward,Most common,Accelerating,Steady,0
 early_deadline,Dabur,own,walk_forward,Most common,Accelerating,Slowing,0
-early_deadline,Dabur,own,walk_forward,Most common,Steady,Accelerating,3
+early_deadline,Dabur,own,walk_forward,Most common,Steady,Accelerating,0
 early_deadline,Dabur,own,walk_forward,Most common,Steady,Steady,7
 early_deadline,Dabur,own,walk_forward,Most common,Steady,Slowing,0
 early_deadline,Dabur,own,walk_forward,Most common,Slowing,Accelerating,0
 early_deadline,Dabur,own,walk_forward,Most common,Slowing,Steady,1
 early_deadline,Dabur,own,walk_forward,Most common,Slowing,Slowing,0
 early_deadline,Dabur,own,walk_forward,Always steady,Accelerating,Accelerating,0
-early_deadline,Dabur,own,walk_forward,Always steady,Accelerating,Steady,1
+early_deadline,Dabur,own,walk_forward,Always steady,Accelerating,Steady,0
 early_deadline,Dabur,own,walk_forward,Always steady,Accelerating,Slowing,0
 early_deadline,Dabur,own,walk_forward,Always steady,Steady,Accelerating,0
-early_deadline,Dabur,own,walk_forward,Always steady,Steady,Steady,10
+early_deadline,Dabur,own,walk_forward,Always steady,Steady,Steady,7
 early_deadline,Dabur,own,walk_forward,Always steady,Steady,Slowing,0
 early_deadline,Dabur,own,walk_forward,Always steady,Slowing,Accelerating,0
 early_deadline,Dabur,own,walk_forward,Always steady,Slowing,Steady,1
@@ -723,16 +651,16 @@ early_deadline,Dabur,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Dabur,market,held_out,MGNREGA,Accelerating,Steady,0
 early_deadline,Dabur,market,held_out,MGNREGA,Accelerating,Slowing,0
 early_deadline,Dabur,market,held_out,MGNREGA,Steady,Accelerating,1
-early_deadline,Dabur,market,held_out,MGNREGA,Steady,Steady,0
-early_deadline,Dabur,market,held_out,MGNREGA,Steady,Slowing,4
-early_deadline,Dabur,market,held_out,MGNREGA,Slowing,Accelerating,0
-early_deadline,Dabur,market,held_out,MGNREGA,Slowing,Steady,0
-early_deadline,Dabur,market,held_out,MGNREGA,Slowing,Slowing,2
+early_deadline,Dabur,market,held_out,MGNREGA,Steady,Steady,2
+early_deadline,Dabur,market,held_out,MGNREGA,Steady,Slowing,0
+early_deadline,Dabur,market,held_out,MGNREGA,Slowing,Accelerating,1
+early_deadline,Dabur,market,held_out,MGNREGA,Slowing,Steady,1
+early_deadline,Dabur,market,held_out,MGNREGA,Slowing,Slowing,0
 early_deadline,Dabur,market,held_out,Repeat last,Accelerating,Accelerating,0
 early_deadline,Dabur,market,held_out,Repeat last,Accelerating,Steady,0
 early_deadline,Dabur,market,held_out,Repeat last,Accelerating,Slowing,0
 early_deadline,Dabur,market,held_out,Repeat last,Steady,Accelerating,0
-early_deadline,Dabur,market,held_out,Repeat last,Steady,Steady,5
+early_deadline,Dabur,market,held_out,Repeat last,Steady,Steady,3
 early_deadline,Dabur,market,held_out,Repeat last,Steady,Slowing,0
 early_deadline,Dabur,market,held_out,Repeat last,Slowing,Accelerating,0
 early_deadline,Dabur,market,held_out,Repeat last,Slowing,Steady,1
@@ -740,7 +668,7 @@ early_deadline,Dabur,market,held_out,Repeat last,Slowing,Slowing,1
 early_deadline,Dabur,market,held_out,Most common,Accelerating,Accelerating,0
 early_deadline,Dabur,market,held_out,Most common,Accelerating,Steady,0
 early_deadline,Dabur,market,held_out,Most common,Accelerating,Slowing,0
-early_deadline,Dabur,market,held_out,Most common,Steady,Accelerating,5
+early_deadline,Dabur,market,held_out,Most common,Steady,Accelerating,3
 early_deadline,Dabur,market,held_out,Most common,Steady,Steady,0
 early_deadline,Dabur,market,held_out,Most common,Steady,Slowing,0
 early_deadline,Dabur,market,held_out,Most common,Slowing,Accelerating,2
@@ -750,46 +678,46 @@ early_deadline,Dabur,market,held_out,Always steady,Accelerating,Accelerating,0
 early_deadline,Dabur,market,held_out,Always steady,Accelerating,Steady,0
 early_deadline,Dabur,market,held_out,Always steady,Accelerating,Slowing,0
 early_deadline,Dabur,market,held_out,Always steady,Steady,Accelerating,0
-early_deadline,Dabur,market,held_out,Always steady,Steady,Steady,5
+early_deadline,Dabur,market,held_out,Always steady,Steady,Steady,3
 early_deadline,Dabur,market,held_out,Always steady,Steady,Slowing,0
 early_deadline,Dabur,market,held_out,Always steady,Slowing,Accelerating,0
 early_deadline,Dabur,market,held_out,Always steady,Slowing,Steady,2
 early_deadline,Dabur,market,held_out,Always steady,Slowing,Slowing,0
-early_deadline,Dabur,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
+early_deadline,Dabur,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Dabur,market,walk_forward,MGNREGA,Accelerating,Steady,0
-early_deadline,Dabur,market,walk_forward,MGNREGA,Accelerating,Slowing,2
-early_deadline,Dabur,market,walk_forward,MGNREGA,Steady,Accelerating,2
-early_deadline,Dabur,market,walk_forward,MGNREGA,Steady,Steady,1
-early_deadline,Dabur,market,walk_forward,MGNREGA,Steady,Slowing,3
-early_deadline,Dabur,market,walk_forward,MGNREGA,Slowing,Accelerating,0
-early_deadline,Dabur,market,walk_forward,MGNREGA,Slowing,Steady,3
+early_deadline,Dabur,market,walk_forward,MGNREGA,Accelerating,Slowing,0
+early_deadline,Dabur,market,walk_forward,MGNREGA,Steady,Accelerating,6
+early_deadline,Dabur,market,walk_forward,MGNREGA,Steady,Steady,0
+early_deadline,Dabur,market,walk_forward,MGNREGA,Steady,Slowing,0
+early_deadline,Dabur,market,walk_forward,MGNREGA,Slowing,Accelerating,1
+early_deadline,Dabur,market,walk_forward,MGNREGA,Slowing,Steady,1
 early_deadline,Dabur,market,walk_forward,MGNREGA,Slowing,Slowing,0
-early_deadline,Dabur,market,walk_forward,Repeat last,Accelerating,Accelerating,2
+early_deadline,Dabur,market,walk_forward,Repeat last,Accelerating,Accelerating,0
 early_deadline,Dabur,market,walk_forward,Repeat last,Accelerating,Steady,0
-early_deadline,Dabur,market,walk_forward,Repeat last,Accelerating,Slowing,1
+early_deadline,Dabur,market,walk_forward,Repeat last,Accelerating,Slowing,0
 early_deadline,Dabur,market,walk_forward,Repeat last,Steady,Accelerating,1
 early_deadline,Dabur,market,walk_forward,Repeat last,Steady,Steady,5
 early_deadline,Dabur,market,walk_forward,Repeat last,Steady,Slowing,0
-early_deadline,Dabur,market,walk_forward,Repeat last,Slowing,Accelerating,1
+early_deadline,Dabur,market,walk_forward,Repeat last,Slowing,Accelerating,0
 early_deadline,Dabur,market,walk_forward,Repeat last,Slowing,Steady,1
 early_deadline,Dabur,market,walk_forward,Repeat last,Slowing,Slowing,1
 early_deadline,Dabur,market,walk_forward,Most common,Accelerating,Accelerating,0
 early_deadline,Dabur,market,walk_forward,Most common,Accelerating,Steady,0
-early_deadline,Dabur,market,walk_forward,Most common,Accelerating,Slowing,3
-early_deadline,Dabur,market,walk_forward,Most common,Steady,Accelerating,4
-early_deadline,Dabur,market,walk_forward,Most common,Steady,Steady,2
+early_deadline,Dabur,market,walk_forward,Most common,Accelerating,Slowing,0
+early_deadline,Dabur,market,walk_forward,Most common,Steady,Accelerating,5
+early_deadline,Dabur,market,walk_forward,Most common,Steady,Steady,1
 early_deadline,Dabur,market,walk_forward,Most common,Steady,Slowing,0
 early_deadline,Dabur,market,walk_forward,Most common,Slowing,Accelerating,0
 early_deadline,Dabur,market,walk_forward,Most common,Slowing,Steady,2
-early_deadline,Dabur,market,walk_forward,Most common,Slowing,Slowing,1
+early_deadline,Dabur,market,walk_forward,Most common,Slowing,Slowing,0
 early_deadline,Dabur,market,walk_forward,Always steady,Accelerating,Accelerating,0
-early_deadline,Dabur,market,walk_forward,Always steady,Accelerating,Steady,3
+early_deadline,Dabur,market,walk_forward,Always steady,Accelerating,Steady,0
 early_deadline,Dabur,market,walk_forward,Always steady,Accelerating,Slowing,0
 early_deadline,Dabur,market,walk_forward,Always steady,Steady,Accelerating,0
 early_deadline,Dabur,market,walk_forward,Always steady,Steady,Steady,6
 early_deadline,Dabur,market,walk_forward,Always steady,Steady,Slowing,0
 early_deadline,Dabur,market,walk_forward,Always steady,Slowing,Accelerating,0
-early_deadline,Dabur,market,walk_forward,Always steady,Slowing,Steady,3
+early_deadline,Dabur,market,walk_forward,Always steady,Slowing,Steady,2
 early_deadline,Dabur,market,walk_forward,Always steady,Slowing,Slowing,0
 early_deadline,Marico,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Marico,market,held_out,MGNREGA,Accelerating,Steady,0
@@ -863,78 +791,6 @@ early_deadline,Marico,market,walk_forward,Always steady,Steady,Slowing,0
 early_deadline,Marico,market,walk_forward,Always steady,Slowing,Accelerating,0
 early_deadline,Marico,market,walk_forward,Always steady,Slowing,Steady,0
 early_deadline,Marico,market,walk_forward,Always steady,Slowing,Slowing,0
-early_deadline,Emami,own,held_out,MGNREGA,Accelerating,Accelerating,0
-early_deadline,Emami,own,held_out,MGNREGA,Accelerating,Steady,2
-early_deadline,Emami,own,held_out,MGNREGA,Accelerating,Slowing,0
-early_deadline,Emami,own,held_out,MGNREGA,Steady,Accelerating,0
-early_deadline,Emami,own,held_out,MGNREGA,Steady,Steady,1
-early_deadline,Emami,own,held_out,MGNREGA,Steady,Slowing,0
-early_deadline,Emami,own,held_out,MGNREGA,Slowing,Accelerating,0
-early_deadline,Emami,own,held_out,MGNREGA,Slowing,Steady,0
-early_deadline,Emami,own,held_out,MGNREGA,Slowing,Slowing,0
-early_deadline,Emami,own,held_out,Repeat last,Accelerating,Accelerating,0
-early_deadline,Emami,own,held_out,Repeat last,Accelerating,Steady,2
-early_deadline,Emami,own,held_out,Repeat last,Accelerating,Slowing,0
-early_deadline,Emami,own,held_out,Repeat last,Steady,Accelerating,1
-early_deadline,Emami,own,held_out,Repeat last,Steady,Steady,0
-early_deadline,Emami,own,held_out,Repeat last,Steady,Slowing,0
-early_deadline,Emami,own,held_out,Repeat last,Slowing,Accelerating,0
-early_deadline,Emami,own,held_out,Repeat last,Slowing,Steady,0
-early_deadline,Emami,own,held_out,Repeat last,Slowing,Slowing,0
-early_deadline,Emami,own,held_out,Most common,Accelerating,Accelerating,0
-early_deadline,Emami,own,held_out,Most common,Accelerating,Steady,2
-early_deadline,Emami,own,held_out,Most common,Accelerating,Slowing,0
-early_deadline,Emami,own,held_out,Most common,Steady,Accelerating,0
-early_deadline,Emami,own,held_out,Most common,Steady,Steady,1
-early_deadline,Emami,own,held_out,Most common,Steady,Slowing,0
-early_deadline,Emami,own,held_out,Most common,Slowing,Accelerating,0
-early_deadline,Emami,own,held_out,Most common,Slowing,Steady,0
-early_deadline,Emami,own,held_out,Most common,Slowing,Slowing,0
-early_deadline,Emami,own,held_out,Always steady,Accelerating,Accelerating,0
-early_deadline,Emami,own,held_out,Always steady,Accelerating,Steady,2
-early_deadline,Emami,own,held_out,Always steady,Accelerating,Slowing,0
-early_deadline,Emami,own,held_out,Always steady,Steady,Accelerating,0
-early_deadline,Emami,own,held_out,Always steady,Steady,Steady,1
-early_deadline,Emami,own,held_out,Always steady,Steady,Slowing,0
-early_deadline,Emami,own,held_out,Always steady,Slowing,Accelerating,0
-early_deadline,Emami,own,held_out,Always steady,Slowing,Steady,0
-early_deadline,Emami,own,held_out,Always steady,Slowing,Slowing,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Accelerating,Accelerating,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Accelerating,Steady,1
-early_deadline,Emami,own,walk_forward,MGNREGA,Accelerating,Slowing,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Steady,Accelerating,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Steady,Steady,1
-early_deadline,Emami,own,walk_forward,MGNREGA,Steady,Slowing,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Slowing,Accelerating,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Slowing,Steady,0
-early_deadline,Emami,own,walk_forward,MGNREGA,Slowing,Slowing,0
-early_deadline,Emami,own,walk_forward,Repeat last,Accelerating,Accelerating,0
-early_deadline,Emami,own,walk_forward,Repeat last,Accelerating,Steady,1
-early_deadline,Emami,own,walk_forward,Repeat last,Accelerating,Slowing,0
-early_deadline,Emami,own,walk_forward,Repeat last,Steady,Accelerating,1
-early_deadline,Emami,own,walk_forward,Repeat last,Steady,Steady,0
-early_deadline,Emami,own,walk_forward,Repeat last,Steady,Slowing,0
-early_deadline,Emami,own,walk_forward,Repeat last,Slowing,Accelerating,0
-early_deadline,Emami,own,walk_forward,Repeat last,Slowing,Steady,0
-early_deadline,Emami,own,walk_forward,Repeat last,Slowing,Slowing,0
-early_deadline,Emami,own,walk_forward,Most common,Accelerating,Accelerating,0
-early_deadline,Emami,own,walk_forward,Most common,Accelerating,Steady,1
-early_deadline,Emami,own,walk_forward,Most common,Accelerating,Slowing,0
-early_deadline,Emami,own,walk_forward,Most common,Steady,Accelerating,0
-early_deadline,Emami,own,walk_forward,Most common,Steady,Steady,1
-early_deadline,Emami,own,walk_forward,Most common,Steady,Slowing,0
-early_deadline,Emami,own,walk_forward,Most common,Slowing,Accelerating,0
-early_deadline,Emami,own,walk_forward,Most common,Slowing,Steady,0
-early_deadline,Emami,own,walk_forward,Most common,Slowing,Slowing,0
-early_deadline,Emami,own,walk_forward,Always steady,Accelerating,Accelerating,0
-early_deadline,Emami,own,walk_forward,Always steady,Accelerating,Steady,1
-early_deadline,Emami,own,walk_forward,Always steady,Accelerating,Slowing,0
-early_deadline,Emami,own,walk_forward,Always steady,Steady,Accelerating,0
-early_deadline,Emami,own,walk_forward,Always steady,Steady,Steady,1
-early_deadline,Emami,own,walk_forward,Always steady,Steady,Slowing,0
-early_deadline,Emami,own,walk_forward,Always steady,Slowing,Accelerating,0
-early_deadline,Emami,own,walk_forward,Always steady,Slowing,Steady,0
-early_deadline,Emami,own,walk_forward,Always steady,Slowing,Slowing,0
 early_deadline,Emami,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_deadline,Emami,market,held_out,MGNREGA,Accelerating,Steady,0
 early_deadline,Emami,market,held_out,MGNREGA,Accelerating,Slowing,0
@@ -1010,9 +866,9 @@ early_deadline,Emami,market,walk_forward,Always steady,Slowing,Slowing,0
 early_lag4,Market,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Market,market,held_out,MGNREGA,Accelerating,Steady,0
 early_lag4,Market,market,held_out,MGNREGA,Accelerating,Slowing,0
-early_lag4,Market,market,held_out,MGNREGA,Steady,Accelerating,3
-early_lag4,Market,market,held_out,MGNREGA,Steady,Steady,2
-early_lag4,Market,market,held_out,MGNREGA,Steady,Slowing,2
+early_lag4,Market,market,held_out,MGNREGA,Steady,Accelerating,1
+early_lag4,Market,market,held_out,MGNREGA,Steady,Steady,4
+early_lag4,Market,market,held_out,MGNREGA,Steady,Slowing,0
 early_lag4,Market,market,held_out,MGNREGA,Slowing,Accelerating,0
 early_lag4,Market,market,held_out,MGNREGA,Slowing,Steady,0
 early_lag4,Market,market,held_out,MGNREGA,Slowing,Slowing,0
@@ -1020,7 +876,7 @@ early_lag4,Market,market,held_out,Repeat last,Accelerating,Accelerating,0
 early_lag4,Market,market,held_out,Repeat last,Accelerating,Steady,0
 early_lag4,Market,market,held_out,Repeat last,Accelerating,Slowing,0
 early_lag4,Market,market,held_out,Repeat last,Steady,Accelerating,0
-early_lag4,Market,market,held_out,Repeat last,Steady,Steady,7
+early_lag4,Market,market,held_out,Repeat last,Steady,Steady,5
 early_lag4,Market,market,held_out,Repeat last,Steady,Slowing,0
 early_lag4,Market,market,held_out,Repeat last,Slowing,Accelerating,0
 early_lag4,Market,market,held_out,Repeat last,Slowing,Steady,0
@@ -1028,8 +884,8 @@ early_lag4,Market,market,held_out,Repeat last,Slowing,Slowing,0
 early_lag4,Market,market,held_out,Most common,Accelerating,Accelerating,0
 early_lag4,Market,market,held_out,Most common,Accelerating,Steady,0
 early_lag4,Market,market,held_out,Most common,Accelerating,Slowing,0
-early_lag4,Market,market,held_out,Most common,Steady,Accelerating,0
-early_lag4,Market,market,held_out,Most common,Steady,Steady,7
+early_lag4,Market,market,held_out,Most common,Steady,Accelerating,5
+early_lag4,Market,market,held_out,Most common,Steady,Steady,0
 early_lag4,Market,market,held_out,Most common,Steady,Slowing,0
 early_lag4,Market,market,held_out,Most common,Slowing,Accelerating,0
 early_lag4,Market,market,held_out,Most common,Slowing,Steady,0
@@ -1038,52 +894,52 @@ early_lag4,Market,market,held_out,Always steady,Accelerating,Accelerating,0
 early_lag4,Market,market,held_out,Always steady,Accelerating,Steady,0
 early_lag4,Market,market,held_out,Always steady,Accelerating,Slowing,0
 early_lag4,Market,market,held_out,Always steady,Steady,Accelerating,0
-early_lag4,Market,market,held_out,Always steady,Steady,Steady,7
+early_lag4,Market,market,held_out,Always steady,Steady,Steady,5
 early_lag4,Market,market,held_out,Always steady,Steady,Slowing,0
 early_lag4,Market,market,held_out,Always steady,Slowing,Accelerating,0
 early_lag4,Market,market,held_out,Always steady,Slowing,Steady,0
 early_lag4,Market,market,held_out,Always steady,Slowing,Slowing,0
-early_lag4,Market,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
-early_lag4,Market,market,walk_forward,MGNREGA,Accelerating,Steady,2
+early_lag4,Market,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
+early_lag4,Market,market,walk_forward,MGNREGA,Accelerating,Steady,0
 early_lag4,Market,market,walk_forward,MGNREGA,Accelerating,Slowing,0
 early_lag4,Market,market,walk_forward,MGNREGA,Steady,Accelerating,3
-early_lag4,Market,market,walk_forward,MGNREGA,Steady,Steady,5
+early_lag4,Market,market,walk_forward,MGNREGA,Steady,Steady,4
 early_lag4,Market,market,walk_forward,MGNREGA,Steady,Slowing,0
-early_lag4,Market,market,walk_forward,MGNREGA,Slowing,Accelerating,1
+early_lag4,Market,market,walk_forward,MGNREGA,Slowing,Accelerating,0
 early_lag4,Market,market,walk_forward,MGNREGA,Slowing,Steady,0
 early_lag4,Market,market,walk_forward,MGNREGA,Slowing,Slowing,0
-early_lag4,Market,market,walk_forward,Repeat last,Accelerating,Accelerating,1
-early_lag4,Market,market,walk_forward,Repeat last,Accelerating,Steady,1
-early_lag4,Market,market,walk_forward,Repeat last,Accelerating,Slowing,1
-early_lag4,Market,market,walk_forward,Repeat last,Steady,Accelerating,1
+early_lag4,Market,market,walk_forward,Repeat last,Accelerating,Accelerating,0
+early_lag4,Market,market,walk_forward,Repeat last,Accelerating,Steady,0
+early_lag4,Market,market,walk_forward,Repeat last,Accelerating,Slowing,0
+early_lag4,Market,market,walk_forward,Repeat last,Steady,Accelerating,0
 early_lag4,Market,market,walk_forward,Repeat last,Steady,Steady,7
 early_lag4,Market,market,walk_forward,Repeat last,Steady,Slowing,0
-early_lag4,Market,market,walk_forward,Repeat last,Slowing,Accelerating,1
+early_lag4,Market,market,walk_forward,Repeat last,Slowing,Accelerating,0
 early_lag4,Market,market,walk_forward,Repeat last,Slowing,Steady,0
 early_lag4,Market,market,walk_forward,Repeat last,Slowing,Slowing,0
 early_lag4,Market,market,walk_forward,Most common,Accelerating,Accelerating,0
-early_lag4,Market,market,walk_forward,Most common,Accelerating,Steady,3
+early_lag4,Market,market,walk_forward,Most common,Accelerating,Steady,0
 early_lag4,Market,market,walk_forward,Most common,Accelerating,Slowing,0
-early_lag4,Market,market,walk_forward,Most common,Steady,Accelerating,0
-early_lag4,Market,market,walk_forward,Most common,Steady,Steady,8
+early_lag4,Market,market,walk_forward,Most common,Steady,Accelerating,3
+early_lag4,Market,market,walk_forward,Most common,Steady,Steady,4
 early_lag4,Market,market,walk_forward,Most common,Steady,Slowing,0
 early_lag4,Market,market,walk_forward,Most common,Slowing,Accelerating,0
-early_lag4,Market,market,walk_forward,Most common,Slowing,Steady,1
+early_lag4,Market,market,walk_forward,Most common,Slowing,Steady,0
 early_lag4,Market,market,walk_forward,Most common,Slowing,Slowing,0
 early_lag4,Market,market,walk_forward,Always steady,Accelerating,Accelerating,0
-early_lag4,Market,market,walk_forward,Always steady,Accelerating,Steady,3
+early_lag4,Market,market,walk_forward,Always steady,Accelerating,Steady,0
 early_lag4,Market,market,walk_forward,Always steady,Accelerating,Slowing,0
 early_lag4,Market,market,walk_forward,Always steady,Steady,Accelerating,0
-early_lag4,Market,market,walk_forward,Always steady,Steady,Steady,8
+early_lag4,Market,market,walk_forward,Always steady,Steady,Steady,7
 early_lag4,Market,market,walk_forward,Always steady,Steady,Slowing,0
 early_lag4,Market,market,walk_forward,Always steady,Slowing,Accelerating,0
-early_lag4,Market,market,walk_forward,Always steady,Slowing,Steady,1
+early_lag4,Market,market,walk_forward,Always steady,Slowing,Steady,0
 early_lag4,Market,market,walk_forward,Always steady,Slowing,Slowing,0
 early_lag4,HUL,market,held_out,MGNREGA,Accelerating,Accelerating,1
 early_lag4,HUL,market,held_out,MGNREGA,Accelerating,Steady,0
 early_lag4,HUL,market,held_out,MGNREGA,Accelerating,Slowing,0
 early_lag4,HUL,market,held_out,MGNREGA,Steady,Accelerating,2
-early_lag4,HUL,market,held_out,MGNREGA,Steady,Steady,4
+early_lag4,HUL,market,held_out,MGNREGA,Steady,Steady,2
 early_lag4,HUL,market,held_out,MGNREGA,Steady,Slowing,0
 early_lag4,HUL,market,held_out,MGNREGA,Slowing,Accelerating,0
 early_lag4,HUL,market,held_out,MGNREGA,Slowing,Steady,0
@@ -1092,7 +948,7 @@ early_lag4,HUL,market,held_out,Repeat last,Accelerating,Accelerating,0
 early_lag4,HUL,market,held_out,Repeat last,Accelerating,Steady,1
 early_lag4,HUL,market,held_out,Repeat last,Accelerating,Slowing,0
 early_lag4,HUL,market,held_out,Repeat last,Steady,Accelerating,1
-early_lag4,HUL,market,held_out,Repeat last,Steady,Steady,5
+early_lag4,HUL,market,held_out,Repeat last,Steady,Steady,3
 early_lag4,HUL,market,held_out,Repeat last,Steady,Slowing,0
 early_lag4,HUL,market,held_out,Repeat last,Slowing,Accelerating,0
 early_lag4,HUL,market,held_out,Repeat last,Slowing,Steady,0
@@ -1100,7 +956,7 @@ early_lag4,HUL,market,held_out,Repeat last,Slowing,Slowing,0
 early_lag4,HUL,market,held_out,Most common,Accelerating,Accelerating,1
 early_lag4,HUL,market,held_out,Most common,Accelerating,Steady,0
 early_lag4,HUL,market,held_out,Most common,Accelerating,Slowing,0
-early_lag4,HUL,market,held_out,Most common,Steady,Accelerating,6
+early_lag4,HUL,market,held_out,Most common,Steady,Accelerating,4
 early_lag4,HUL,market,held_out,Most common,Steady,Steady,0
 early_lag4,HUL,market,held_out,Most common,Steady,Slowing,0
 early_lag4,HUL,market,held_out,Most common,Slowing,Accelerating,0
@@ -1110,43 +966,43 @@ early_lag4,HUL,market,held_out,Always steady,Accelerating,Accelerating,0
 early_lag4,HUL,market,held_out,Always steady,Accelerating,Steady,1
 early_lag4,HUL,market,held_out,Always steady,Accelerating,Slowing,0
 early_lag4,HUL,market,held_out,Always steady,Steady,Accelerating,0
-early_lag4,HUL,market,held_out,Always steady,Steady,Steady,6
+early_lag4,HUL,market,held_out,Always steady,Steady,Steady,4
 early_lag4,HUL,market,held_out,Always steady,Steady,Slowing,0
 early_lag4,HUL,market,held_out,Always steady,Slowing,Accelerating,0
 early_lag4,HUL,market,held_out,Always steady,Slowing,Steady,0
 early_lag4,HUL,market,held_out,Always steady,Slowing,Slowing,0
 early_lag4,HUL,market,walk_forward,MGNREGA,Accelerating,Accelerating,1
-early_lag4,HUL,market,walk_forward,MGNREGA,Accelerating,Steady,3
+early_lag4,HUL,market,walk_forward,MGNREGA,Accelerating,Steady,0
 early_lag4,HUL,market,walk_forward,MGNREGA,Accelerating,Slowing,0
 early_lag4,HUL,market,walk_forward,MGNREGA,Steady,Accelerating,4
-early_lag4,HUL,market,walk_forward,MGNREGA,Steady,Steady,4
+early_lag4,HUL,market,walk_forward,MGNREGA,Steady,Steady,3
 early_lag4,HUL,market,walk_forward,MGNREGA,Steady,Slowing,0
 early_lag4,HUL,market,walk_forward,MGNREGA,Slowing,Accelerating,0
 early_lag4,HUL,market,walk_forward,MGNREGA,Slowing,Steady,0
 early_lag4,HUL,market,walk_forward,MGNREGA,Slowing,Slowing,0
-early_lag4,HUL,market,walk_forward,Repeat last,Accelerating,Accelerating,2
-early_lag4,HUL,market,walk_forward,Repeat last,Accelerating,Steady,2
+early_lag4,HUL,market,walk_forward,Repeat last,Accelerating,Accelerating,0
+early_lag4,HUL,market,walk_forward,Repeat last,Accelerating,Steady,1
 early_lag4,HUL,market,walk_forward,Repeat last,Accelerating,Slowing,0
-early_lag4,HUL,market,walk_forward,Repeat last,Steady,Accelerating,3
+early_lag4,HUL,market,walk_forward,Repeat last,Steady,Accelerating,2
 early_lag4,HUL,market,walk_forward,Repeat last,Steady,Steady,5
 early_lag4,HUL,market,walk_forward,Repeat last,Steady,Slowing,0
 early_lag4,HUL,market,walk_forward,Repeat last,Slowing,Accelerating,0
 early_lag4,HUL,market,walk_forward,Repeat last,Slowing,Steady,0
 early_lag4,HUL,market,walk_forward,Repeat last,Slowing,Slowing,0
-early_lag4,HUL,market,walk_forward,Most common,Accelerating,Accelerating,4
+early_lag4,HUL,market,walk_forward,Most common,Accelerating,Accelerating,1
 early_lag4,HUL,market,walk_forward,Most common,Accelerating,Steady,0
 early_lag4,HUL,market,walk_forward,Most common,Accelerating,Slowing,0
-early_lag4,HUL,market,walk_forward,Most common,Steady,Accelerating,6
+early_lag4,HUL,market,walk_forward,Most common,Steady,Accelerating,5
 early_lag4,HUL,market,walk_forward,Most common,Steady,Steady,2
 early_lag4,HUL,market,walk_forward,Most common,Steady,Slowing,0
 early_lag4,HUL,market,walk_forward,Most common,Slowing,Accelerating,0
 early_lag4,HUL,market,walk_forward,Most common,Slowing,Steady,0
 early_lag4,HUL,market,walk_forward,Most common,Slowing,Slowing,0
 early_lag4,HUL,market,walk_forward,Always steady,Accelerating,Accelerating,0
-early_lag4,HUL,market,walk_forward,Always steady,Accelerating,Steady,4
+early_lag4,HUL,market,walk_forward,Always steady,Accelerating,Steady,1
 early_lag4,HUL,market,walk_forward,Always steady,Accelerating,Slowing,0
 early_lag4,HUL,market,walk_forward,Always steady,Steady,Accelerating,0
-early_lag4,HUL,market,walk_forward,Always steady,Steady,Steady,8
+early_lag4,HUL,market,walk_forward,Always steady,Steady,Steady,7
 early_lag4,HUL,market,walk_forward,Always steady,Steady,Slowing,0
 early_lag4,HUL,market,walk_forward,Always steady,Slowing,Accelerating,0
 early_lag4,HUL,market,walk_forward,Always steady,Slowing,Steady,0
@@ -1155,70 +1011,70 @@ early_lag4,Dabur,own,held_out,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Dabur,own,held_out,MGNREGA,Accelerating,Steady,0
 early_lag4,Dabur,own,held_out,MGNREGA,Accelerating,Slowing,0
 early_lag4,Dabur,own,held_out,MGNREGA,Steady,Accelerating,2
-early_lag4,Dabur,own,held_out,MGNREGA,Steady,Steady,1
-early_lag4,Dabur,own,held_out,MGNREGA,Steady,Slowing,3
-early_lag4,Dabur,own,held_out,MGNREGA,Slowing,Accelerating,1
+early_lag4,Dabur,own,held_out,MGNREGA,Steady,Steady,3
+early_lag4,Dabur,own,held_out,MGNREGA,Steady,Slowing,0
+early_lag4,Dabur,own,held_out,MGNREGA,Slowing,Accelerating,0
 early_lag4,Dabur,own,held_out,MGNREGA,Slowing,Steady,0
 early_lag4,Dabur,own,held_out,MGNREGA,Slowing,Slowing,0
 early_lag4,Dabur,own,held_out,Repeat last,Accelerating,Accelerating,0
 early_lag4,Dabur,own,held_out,Repeat last,Accelerating,Steady,0
 early_lag4,Dabur,own,held_out,Repeat last,Accelerating,Slowing,0
 early_lag4,Dabur,own,held_out,Repeat last,Steady,Accelerating,0
-early_lag4,Dabur,own,held_out,Repeat last,Steady,Steady,5
+early_lag4,Dabur,own,held_out,Repeat last,Steady,Steady,4
 early_lag4,Dabur,own,held_out,Repeat last,Steady,Slowing,1
 early_lag4,Dabur,own,held_out,Repeat last,Slowing,Accelerating,0
-early_lag4,Dabur,own,held_out,Repeat last,Slowing,Steady,1
+early_lag4,Dabur,own,held_out,Repeat last,Slowing,Steady,0
 early_lag4,Dabur,own,held_out,Repeat last,Slowing,Slowing,0
 early_lag4,Dabur,own,held_out,Most common,Accelerating,Accelerating,0
 early_lag4,Dabur,own,held_out,Most common,Accelerating,Steady,0
 early_lag4,Dabur,own,held_out,Most common,Accelerating,Slowing,0
 early_lag4,Dabur,own,held_out,Most common,Steady,Accelerating,0
-early_lag4,Dabur,own,held_out,Most common,Steady,Steady,6
+early_lag4,Dabur,own,held_out,Most common,Steady,Steady,5
 early_lag4,Dabur,own,held_out,Most common,Steady,Slowing,0
 early_lag4,Dabur,own,held_out,Most common,Slowing,Accelerating,0
-early_lag4,Dabur,own,held_out,Most common,Slowing,Steady,1
+early_lag4,Dabur,own,held_out,Most common,Slowing,Steady,0
 early_lag4,Dabur,own,held_out,Most common,Slowing,Slowing,0
 early_lag4,Dabur,own,held_out,Always steady,Accelerating,Accelerating,0
 early_lag4,Dabur,own,held_out,Always steady,Accelerating,Steady,0
 early_lag4,Dabur,own,held_out,Always steady,Accelerating,Slowing,0
 early_lag4,Dabur,own,held_out,Always steady,Steady,Accelerating,0
-early_lag4,Dabur,own,held_out,Always steady,Steady,Steady,6
+early_lag4,Dabur,own,held_out,Always steady,Steady,Steady,5
 early_lag4,Dabur,own,held_out,Always steady,Steady,Slowing,0
 early_lag4,Dabur,own,held_out,Always steady,Slowing,Accelerating,0
-early_lag4,Dabur,own,held_out,Always steady,Slowing,Steady,1
+early_lag4,Dabur,own,held_out,Always steady,Slowing,Steady,0
 early_lag4,Dabur,own,held_out,Always steady,Slowing,Slowing,0
-early_lag4,Dabur,own,walk_forward,MGNREGA,Accelerating,Accelerating,1
+early_lag4,Dabur,own,walk_forward,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Dabur,own,walk_forward,MGNREGA,Accelerating,Steady,0
 early_lag4,Dabur,own,walk_forward,MGNREGA,Accelerating,Slowing,0
-early_lag4,Dabur,own,walk_forward,MGNREGA,Steady,Accelerating,3
-early_lag4,Dabur,own,walk_forward,MGNREGA,Steady,Steady,5
-early_lag4,Dabur,own,walk_forward,MGNREGA,Steady,Slowing,2
+early_lag4,Dabur,own,walk_forward,MGNREGA,Steady,Accelerating,1
+early_lag4,Dabur,own,walk_forward,MGNREGA,Steady,Steady,6
+early_lag4,Dabur,own,walk_forward,MGNREGA,Steady,Slowing,0
 early_lag4,Dabur,own,walk_forward,MGNREGA,Slowing,Accelerating,1
 early_lag4,Dabur,own,walk_forward,MGNREGA,Slowing,Steady,0
 early_lag4,Dabur,own,walk_forward,MGNREGA,Slowing,Slowing,0
 early_lag4,Dabur,own,walk_forward,Repeat last,Accelerating,Accelerating,0
-early_lag4,Dabur,own,walk_forward,Repeat last,Accelerating,Steady,1
+early_lag4,Dabur,own,walk_forward,Repeat last,Accelerating,Steady,0
 early_lag4,Dabur,own,walk_forward,Repeat last,Accelerating,Slowing,0
-early_lag4,Dabur,own,walk_forward,Repeat last,Steady,Accelerating,2
-early_lag4,Dabur,own,walk_forward,Repeat last,Steady,Steady,7
+early_lag4,Dabur,own,walk_forward,Repeat last,Steady,Accelerating,0
+early_lag4,Dabur,own,walk_forward,Repeat last,Steady,Steady,6
 early_lag4,Dabur,own,walk_forward,Repeat last,Steady,Slowing,1
 early_lag4,Dabur,own,walk_forward,Repeat last,Slowing,Accelerating,0
 early_lag4,Dabur,own,walk_forward,Repeat last,Slowing,Steady,1
 early_lag4,Dabur,own,walk_forward,Repeat last,Slowing,Slowing,0
-early_lag4,Dabur,own,walk_forward,Most common,Accelerating,Accelerating,1
+early_lag4,Dabur,own,walk_forward,Most common,Accelerating,Accelerating,0
 early_lag4,Dabur,own,walk_forward,Most common,Accelerating,Steady,0
 early_lag4,Dabur,own,walk_forward,Most common,Accelerating,Slowing,0
-early_lag4,Dabur,own,walk_forward,Most common,Steady,Accelerating,3
+early_lag4,Dabur,own,walk_forward,Most common,Steady,Accelerating,0
 early_lag4,Dabur,own,walk_forward,Most common,Steady,Steady,7
 early_lag4,Dabur,own,walk_forward,Most common,Steady,Slowing,0
 early_lag4,Dabur,own,walk_forward,Most common,Slowing,Accelerating,0
 early_lag4,Dabur,own,walk_forward,Most common,Slowing,Steady,1
 early_lag4,Dabur,own,walk_forward,Most common,Slowing,Slowing,0
 early_lag4,Dabur,own,walk_forward,Always steady,Accelerating,Accelerating,0
-early_lag4,Dabur,own,walk_forward,Always steady,Accelerating,Steady,1
+early_lag4,Dabur,own,walk_forward,Always steady,Accelerating,Steady,0
 early_lag4,Dabur,own,walk_forward,Always steady,Accelerating,Slowing,0
 early_lag4,Dabur,own,walk_forward,Always steady,Steady,Accelerating,0
-early_lag4,Dabur,own,walk_forward,Always steady,Steady,Steady,10
+early_lag4,Dabur,own,walk_forward,Always steady,Steady,Steady,7
 early_lag4,Dabur,own,walk_forward,Always steady,Steady,Slowing,0
 early_lag4,Dabur,own,walk_forward,Always steady,Slowing,Accelerating,0
 early_lag4,Dabur,own,walk_forward,Always steady,Slowing,Steady,1
@@ -1227,16 +1083,16 @@ early_lag4,Dabur,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Dabur,market,held_out,MGNREGA,Accelerating,Steady,0
 early_lag4,Dabur,market,held_out,MGNREGA,Accelerating,Slowing,0
 early_lag4,Dabur,market,held_out,MGNREGA,Steady,Accelerating,2
-early_lag4,Dabur,market,held_out,MGNREGA,Steady,Steady,0
-early_lag4,Dabur,market,held_out,MGNREGA,Steady,Slowing,3
-early_lag4,Dabur,market,held_out,MGNREGA,Slowing,Accelerating,1
+early_lag4,Dabur,market,held_out,MGNREGA,Steady,Steady,1
+early_lag4,Dabur,market,held_out,MGNREGA,Steady,Slowing,0
+early_lag4,Dabur,market,held_out,MGNREGA,Slowing,Accelerating,2
 early_lag4,Dabur,market,held_out,MGNREGA,Slowing,Steady,0
-early_lag4,Dabur,market,held_out,MGNREGA,Slowing,Slowing,1
+early_lag4,Dabur,market,held_out,MGNREGA,Slowing,Slowing,0
 early_lag4,Dabur,market,held_out,Repeat last,Accelerating,Accelerating,0
 early_lag4,Dabur,market,held_out,Repeat last,Accelerating,Steady,0
 early_lag4,Dabur,market,held_out,Repeat last,Accelerating,Slowing,0
 early_lag4,Dabur,market,held_out,Repeat last,Steady,Accelerating,0
-early_lag4,Dabur,market,held_out,Repeat last,Steady,Steady,5
+early_lag4,Dabur,market,held_out,Repeat last,Steady,Steady,3
 early_lag4,Dabur,market,held_out,Repeat last,Steady,Slowing,0
 early_lag4,Dabur,market,held_out,Repeat last,Slowing,Accelerating,0
 early_lag4,Dabur,market,held_out,Repeat last,Slowing,Steady,1
@@ -1244,7 +1100,7 @@ early_lag4,Dabur,market,held_out,Repeat last,Slowing,Slowing,1
 early_lag4,Dabur,market,held_out,Most common,Accelerating,Accelerating,0
 early_lag4,Dabur,market,held_out,Most common,Accelerating,Steady,0
 early_lag4,Dabur,market,held_out,Most common,Accelerating,Slowing,0
-early_lag4,Dabur,market,held_out,Most common,Steady,Accelerating,5
+early_lag4,Dabur,market,held_out,Most common,Steady,Accelerating,3
 early_lag4,Dabur,market,held_out,Most common,Steady,Steady,0
 early_lag4,Dabur,market,held_out,Most common,Steady,Slowing,0
 early_lag4,Dabur,market,held_out,Most common,Slowing,Accelerating,2
@@ -1254,46 +1110,46 @@ early_lag4,Dabur,market,held_out,Always steady,Accelerating,Accelerating,0
 early_lag4,Dabur,market,held_out,Always steady,Accelerating,Steady,0
 early_lag4,Dabur,market,held_out,Always steady,Accelerating,Slowing,0
 early_lag4,Dabur,market,held_out,Always steady,Steady,Accelerating,0
-early_lag4,Dabur,market,held_out,Always steady,Steady,Steady,5
+early_lag4,Dabur,market,held_out,Always steady,Steady,Steady,3
 early_lag4,Dabur,market,held_out,Always steady,Steady,Slowing,0
 early_lag4,Dabur,market,held_out,Always steady,Slowing,Accelerating,0
 early_lag4,Dabur,market,held_out,Always steady,Slowing,Steady,2
 early_lag4,Dabur,market,held_out,Always steady,Slowing,Slowing,0
-early_lag4,Dabur,market,walk_forward,MGNREGA,Accelerating,Accelerating,2
+early_lag4,Dabur,market,walk_forward,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Dabur,market,walk_forward,MGNREGA,Accelerating,Steady,0
-early_lag4,Dabur,market,walk_forward,MGNREGA,Accelerating,Slowing,1
-early_lag4,Dabur,market,walk_forward,MGNREGA,Steady,Accelerating,3
-early_lag4,Dabur,market,walk_forward,MGNREGA,Steady,Steady,0
-early_lag4,Dabur,market,walk_forward,MGNREGA,Steady,Slowing,3
-early_lag4,Dabur,market,walk_forward,MGNREGA,Slowing,Accelerating,1
-early_lag4,Dabur,market,walk_forward,MGNREGA,Slowing,Steady,1
-early_lag4,Dabur,market,walk_forward,MGNREGA,Slowing,Slowing,1
-early_lag4,Dabur,market,walk_forward,Repeat last,Accelerating,Accelerating,2
+early_lag4,Dabur,market,walk_forward,MGNREGA,Accelerating,Slowing,0
+early_lag4,Dabur,market,walk_forward,MGNREGA,Steady,Accelerating,4
+early_lag4,Dabur,market,walk_forward,MGNREGA,Steady,Steady,2
+early_lag4,Dabur,market,walk_forward,MGNREGA,Steady,Slowing,0
+early_lag4,Dabur,market,walk_forward,MGNREGA,Slowing,Accelerating,2
+early_lag4,Dabur,market,walk_forward,MGNREGA,Slowing,Steady,0
+early_lag4,Dabur,market,walk_forward,MGNREGA,Slowing,Slowing,0
+early_lag4,Dabur,market,walk_forward,Repeat last,Accelerating,Accelerating,0
 early_lag4,Dabur,market,walk_forward,Repeat last,Accelerating,Steady,0
-early_lag4,Dabur,market,walk_forward,Repeat last,Accelerating,Slowing,1
+early_lag4,Dabur,market,walk_forward,Repeat last,Accelerating,Slowing,0
 early_lag4,Dabur,market,walk_forward,Repeat last,Steady,Accelerating,1
 early_lag4,Dabur,market,walk_forward,Repeat last,Steady,Steady,5
 early_lag4,Dabur,market,walk_forward,Repeat last,Steady,Slowing,0
-early_lag4,Dabur,market,walk_forward,Repeat last,Slowing,Accelerating,1
+early_lag4,Dabur,market,walk_forward,Repeat last,Slowing,Accelerating,0
 early_lag4,Dabur,market,walk_forward,Repeat last,Slowing,Steady,1
 early_lag4,Dabur,market,walk_forward,Repeat last,Slowing,Slowing,1
 early_lag4,Dabur,market,walk_forward,Most common,Accelerating,Accelerating,0
 early_lag4,Dabur,market,walk_forward,Most common,Accelerating,Steady,0
-early_lag4,Dabur,market,walk_forward,Most common,Accelerating,Slowing,3
-early_lag4,Dabur,market,walk_forward,Most common,Steady,Accelerating,4
-early_lag4,Dabur,market,walk_forward,Most common,Steady,Steady,2
+early_lag4,Dabur,market,walk_forward,Most common,Accelerating,Slowing,0
+early_lag4,Dabur,market,walk_forward,Most common,Steady,Accelerating,5
+early_lag4,Dabur,market,walk_forward,Most common,Steady,Steady,1
 early_lag4,Dabur,market,walk_forward,Most common,Steady,Slowing,0
 early_lag4,Dabur,market,walk_forward,Most common,Slowing,Accelerating,0
 early_lag4,Dabur,market,walk_forward,Most common,Slowing,Steady,2
-early_lag4,Dabur,market,walk_forward,Most common,Slowing,Slowing,1
+early_lag4,Dabur,market,walk_forward,Most common,Slowing,Slowing,0
 early_lag4,Dabur,market,walk_forward,Always steady,Accelerating,Accelerating,0
-early_lag4,Dabur,market,walk_forward,Always steady,Accelerating,Steady,3
+early_lag4,Dabur,market,walk_forward,Always steady,Accelerating,Steady,0
 early_lag4,Dabur,market,walk_forward,Always steady,Accelerating,Slowing,0
 early_lag4,Dabur,market,walk_forward,Always steady,Steady,Accelerating,0
 early_lag4,Dabur,market,walk_forward,Always steady,Steady,Steady,6
 early_lag4,Dabur,market,walk_forward,Always steady,Steady,Slowing,0
 early_lag4,Dabur,market,walk_forward,Always steady,Slowing,Accelerating,0
-early_lag4,Dabur,market,walk_forward,Always steady,Slowing,Steady,3
+early_lag4,Dabur,market,walk_forward,Always steady,Slowing,Steady,2
 early_lag4,Dabur,market,walk_forward,Always steady,Slowing,Slowing,0
 early_lag4,Marico,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Marico,market,held_out,MGNREGA,Accelerating,Steady,0
@@ -1367,78 +1223,6 @@ early_lag4,Marico,market,walk_forward,Always steady,Steady,Slowing,0
 early_lag4,Marico,market,walk_forward,Always steady,Slowing,Accelerating,0
 early_lag4,Marico,market,walk_forward,Always steady,Slowing,Steady,0
 early_lag4,Marico,market,walk_forward,Always steady,Slowing,Slowing,0
-early_lag4,Emami,own,held_out,MGNREGA,Accelerating,Accelerating,0
-early_lag4,Emami,own,held_out,MGNREGA,Accelerating,Steady,2
-early_lag4,Emami,own,held_out,MGNREGA,Accelerating,Slowing,0
-early_lag4,Emami,own,held_out,MGNREGA,Steady,Accelerating,0
-early_lag4,Emami,own,held_out,MGNREGA,Steady,Steady,1
-early_lag4,Emami,own,held_out,MGNREGA,Steady,Slowing,0
-early_lag4,Emami,own,held_out,MGNREGA,Slowing,Accelerating,0
-early_lag4,Emami,own,held_out,MGNREGA,Slowing,Steady,0
-early_lag4,Emami,own,held_out,MGNREGA,Slowing,Slowing,0
-early_lag4,Emami,own,held_out,Repeat last,Accelerating,Accelerating,0
-early_lag4,Emami,own,held_out,Repeat last,Accelerating,Steady,2
-early_lag4,Emami,own,held_out,Repeat last,Accelerating,Slowing,0
-early_lag4,Emami,own,held_out,Repeat last,Steady,Accelerating,1
-early_lag4,Emami,own,held_out,Repeat last,Steady,Steady,0
-early_lag4,Emami,own,held_out,Repeat last,Steady,Slowing,0
-early_lag4,Emami,own,held_out,Repeat last,Slowing,Accelerating,0
-early_lag4,Emami,own,held_out,Repeat last,Slowing,Steady,0
-early_lag4,Emami,own,held_out,Repeat last,Slowing,Slowing,0
-early_lag4,Emami,own,held_out,Most common,Accelerating,Accelerating,0
-early_lag4,Emami,own,held_out,Most common,Accelerating,Steady,2
-early_lag4,Emami,own,held_out,Most common,Accelerating,Slowing,0
-early_lag4,Emami,own,held_out,Most common,Steady,Accelerating,0
-early_lag4,Emami,own,held_out,Most common,Steady,Steady,1
-early_lag4,Emami,own,held_out,Most common,Steady,Slowing,0
-early_lag4,Emami,own,held_out,Most common,Slowing,Accelerating,0
-early_lag4,Emami,own,held_out,Most common,Slowing,Steady,0
-early_lag4,Emami,own,held_out,Most common,Slowing,Slowing,0
-early_lag4,Emami,own,held_out,Always steady,Accelerating,Accelerating,0
-early_lag4,Emami,own,held_out,Always steady,Accelerating,Steady,2
-early_lag4,Emami,own,held_out,Always steady,Accelerating,Slowing,0
-early_lag4,Emami,own,held_out,Always steady,Steady,Accelerating,0
-early_lag4,Emami,own,held_out,Always steady,Steady,Steady,1
-early_lag4,Emami,own,held_out,Always steady,Steady,Slowing,0
-early_lag4,Emami,own,held_out,Always steady,Slowing,Accelerating,0
-early_lag4,Emami,own,held_out,Always steady,Slowing,Steady,0
-early_lag4,Emami,own,held_out,Always steady,Slowing,Slowing,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Accelerating,Accelerating,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Accelerating,Steady,1
-early_lag4,Emami,own,walk_forward,MGNREGA,Accelerating,Slowing,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Steady,Accelerating,1
-early_lag4,Emami,own,walk_forward,MGNREGA,Steady,Steady,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Steady,Slowing,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Slowing,Accelerating,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Slowing,Steady,0
-early_lag4,Emami,own,walk_forward,MGNREGA,Slowing,Slowing,0
-early_lag4,Emami,own,walk_forward,Repeat last,Accelerating,Accelerating,0
-early_lag4,Emami,own,walk_forward,Repeat last,Accelerating,Steady,1
-early_lag4,Emami,own,walk_forward,Repeat last,Accelerating,Slowing,0
-early_lag4,Emami,own,walk_forward,Repeat last,Steady,Accelerating,1
-early_lag4,Emami,own,walk_forward,Repeat last,Steady,Steady,0
-early_lag4,Emami,own,walk_forward,Repeat last,Steady,Slowing,0
-early_lag4,Emami,own,walk_forward,Repeat last,Slowing,Accelerating,0
-early_lag4,Emami,own,walk_forward,Repeat last,Slowing,Steady,0
-early_lag4,Emami,own,walk_forward,Repeat last,Slowing,Slowing,0
-early_lag4,Emami,own,walk_forward,Most common,Accelerating,Accelerating,0
-early_lag4,Emami,own,walk_forward,Most common,Accelerating,Steady,1
-early_lag4,Emami,own,walk_forward,Most common,Accelerating,Slowing,0
-early_lag4,Emami,own,walk_forward,Most common,Steady,Accelerating,0
-early_lag4,Emami,own,walk_forward,Most common,Steady,Steady,1
-early_lag4,Emami,own,walk_forward,Most common,Steady,Slowing,0
-early_lag4,Emami,own,walk_forward,Most common,Slowing,Accelerating,0
-early_lag4,Emami,own,walk_forward,Most common,Slowing,Steady,0
-early_lag4,Emami,own,walk_forward,Most common,Slowing,Slowing,0
-early_lag4,Emami,own,walk_forward,Always steady,Accelerating,Accelerating,0
-early_lag4,Emami,own,walk_forward,Always steady,Accelerating,Steady,1
-early_lag4,Emami,own,walk_forward,Always steady,Accelerating,Slowing,0
-early_lag4,Emami,own,walk_forward,Always steady,Steady,Accelerating,0
-early_lag4,Emami,own,walk_forward,Always steady,Steady,Steady,1
-early_lag4,Emami,own,walk_forward,Always steady,Steady,Slowing,0
-early_lag4,Emami,own,walk_forward,Always steady,Slowing,Accelerating,0
-early_lag4,Emami,own,walk_forward,Always steady,Slowing,Steady,0
-early_lag4,Emami,own,walk_forward,Always steady,Slowing,Slowing,0
 early_lag4,Emami,market,held_out,MGNREGA,Accelerating,Accelerating,0
 early_lag4,Emami,market,held_out,MGNREGA,Accelerating,Steady,0
 early_lag4,Emami,market,held_out,MGNREGA,Accelerating,Slowing,0

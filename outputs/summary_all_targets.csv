@@ -1,0 +1,10 @@
+tag,company,target,usable,quarters,n_train,n_test,status,selected,direction,train_acc,test_correct,test_n,best_baseline,best_baseline_correct,wf_n,wf_rule,wf_repeat,wf_most_common
+Dabur,Dabur,own,13,13,8,5,tested,MGNREGA persondays,distress,0.75,5.0,5.0,most_common,5.0,8.0,7.0,6.0,7.0
+Dabur_market,Dabur,market,13,13,8,5,tested,MGNREGA persondays,income,0.625,3.0,5.0,repeat_last,4.0,8.0,3.0,6.0,1.0
+Emami,Emami,own,7,13,4,3,not testable,,,,,,,,,,,
+Emami_market,Emami,market,10,13,6,4,tested,MGNREGA persondays,distress,0.833,2.0,4.0,repeat_last,4.0,5.0,3.0,5.0,5.0
+HUL,HUL,own,2,13,2,0,not testable,,,,,,,,,,,
+HUL_market,HUL,market,13,13,8,5,tested,MGNREGA persondays,income,0.875,3.0,5.0,repeat_last,3.0,8.0,4.0,5.0,3.0
+Marico,Marico,own,2,13,2,0,not testable,,,,,,,,,,,
+Marico_market,Marico,market,13,13,8,5,tested,MGNREGA persondays,distress,0.75,3.0,5.0,repeat_last,5.0,8.0,4.0,7.0,7.0
+Market_market,Market,market,12,13,7,5,tested,MGNREGA work demanded,distress,0.714,1.0,5.0,repeat_last,5.0,7.0,4.0,7.0,4.0

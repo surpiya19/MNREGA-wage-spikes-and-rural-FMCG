@@ -1,6 +1,6 @@
-Quarters in table: 13
+Quarters in table: 13 (Q1 FY24 to Q1 FY27)
 Both readers labelled: 13;  agreed on 9 (69%);  Cohen's kappa = 0.54
   Agreement is moderate: kappa 0.54, below the 0.6 bar.
-Agreed labels: Insufficient 6, Steady 5, Accelerating 2
-Usable quarters for testing (not Insufficient): 7 of 13
-Disagreements saved to ./outputs/quality/runs/early_deadline/label_disagreements_Emami.csv
+Final labels (after reconciling disagreements): Insufficient 6, Steady 5, Accelerating 2
+Usable own-rural quarters (not Insufficient): 7 of 13 - too few to fit and test a rule (needs 6 to train plus 2 to test); in most quarters Emami did not describe its own rural trend
+Disagreements saved to outputs/label_disagreements_Emami.csv

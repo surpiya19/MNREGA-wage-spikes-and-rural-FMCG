@@ -17,6 +17,7 @@ import sys
 import numpy as np
 import pandas as pd
 
+import config as C
 from quality_core import LABELS, classification_metrics, market_consensus
 
 ROOT = Path(__file__).resolve().parent
@@ -169,9 +170,9 @@ def build_review_and_sensitivity():
     votes = pd.read_csv(ROOT / "labels/market_wide/market_labels_by_company.csv").fillna("")
     rows = []
     for quarter, group in votes.groupby("quarter", sort=False):
-        base, confidence = market_consensus(group["market_label"])
+        base, confidence = market_consensus(group["market_label"], tie=C.MARKET_TIE_RULE)
         for drop in COMPANIES:
-            label, _ = market_consensus(group.loc[group["company"] != drop, "market_label"])
+            label, _ = market_consensus(group.loc[group["company"] != drop, "market_label"], tie=C.MARKET_TIE_RULE)
             rows.append(dict(quarter=quarter, excluded_company=drop, original_label=base,
                              original_confidence=confidence, revised_label=label, changed=label != base,
                              note="Target-label sensitivity only; model not refitted"))

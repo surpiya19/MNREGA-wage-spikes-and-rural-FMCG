@@ -11,7 +11,7 @@ Candidate rules (fitted on train only; the selected rule is picked among the MGN
   Rainfall               train accuracy 67% on 6 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.77
   MGNREGA + rainfall     train accuracy 67% on 6 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 0.83
 
-Selected on train: MGNREGA work demanded
+Selected on train: MGNREGA work demanded (higher MGNREGA -> Slowing (distress reading))
 
 TEST RESULTS (4 test quarters; 4 where all main methods could predict):
   selected               2/4 correct overall   |   2/4 on common quarters
@@ -25,6 +25,7 @@ TEST RESULTS (4 test quarters; 4 where all main methods could predict):
 
 Finding: the selected rule did not beat the best baseline (repeat_last: 4 vs 2 of 4).
 With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.
+Overfit warning: the selected rule scored 100% on train but 50% on test (50% points lower) - the training fit does not carry over.
 
 WALK-FORWARD TEST (refit before every quarter; first 5 labelled quarters used only for training):
   period                             MGNREGA rule  repeat last  most common
@@ -32,4 +33,4 @@ WALK-FORWARD TEST (refit before every quarter; first 5 labelled quarters used on
   before spending cap                   3 of 4        4 of 4        4 of 4    
   spending cap (from Aug 2025)          0 of 1        1 of 1        1 of 1    
   Rule picked at each step: Q2 FY25=work demanded, Q3 FY25=work demanded, Q4 FY25=work demanded, Q1 FY26=persondays, Q3 FY26=persondays
-  Before the spending cap, the MGNREGA rule did not beat 'same as last quarter' (3 vs 4 of 4).
+  Before the spending cap, the MGNREGA rule did not beat the best baseline, same as last quarter (3 vs 4 of 4; same as last quarter 4, most common 4).

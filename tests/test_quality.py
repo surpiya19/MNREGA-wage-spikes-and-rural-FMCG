@@ -45,9 +45,13 @@ class QualityTests(unittest.TestCase):
         self.assertEqual(result["classes_present"], 1)
         self.assertIsNone(result["details"][0]["recall"])
 
-    def test_consensus_ties_are_steady(self):
-        self.assertEqual(market_consensus(["Accelerating", "Slowing"])[0], "Steady")
-        self.assertEqual(market_consensus(["Accelerating", "Steady"])[0], "Steady")
+    def test_consensus_ties_are_insufficient(self):
+        self.assertEqual(market_consensus(["Accelerating", "Slowing"]), ("Insufficient", "no consensus (tie)"))
+        self.assertEqual(market_consensus(["Accelerating", "Steady"])[0], "Insufficient")
+
+    def test_consensus_ties_steady_option(self):
+        self.assertEqual(market_consensus(["Accelerating", "Slowing"], tie="Steady")[0], "Steady")
+        self.assertEqual(market_consensus(["Accelerating", "Steady"], tie="Steady")[0], "Steady")
 
     def test_consensus_missing_and_confidence(self):
         self.assertEqual(market_consensus(["Insufficient", ""]), ("Insufficient", ""))

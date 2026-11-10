@@ -1,6 +1,6 @@
-Quarters in table: 17
-Both readers labelled: 17;  agreed on 15 (88%);  Cohen's kappa = 0.79
-  Agreement is good: kappa 0.79, above the 0.6 bar.
-Agreed labels: Steady 11, Slowing 3, Accelerating 3
-Usable quarters for testing (not Insufficient): 17 of 17
-Disagreements saved to ./outputs/quality/runs/early_deadline/label_disagreements_Dabur.csv
+Quarters in table: 13 (Q1 FY24 to Q1 FY27); left out (outside window): Q1 FY23, Q2 FY23, Q3 FY23, Q4 FY23
+Both readers labelled: 13;  agreed on 11 (85%);  Cohen's kappa = 0.68
+  Agreement is good: kappa 0.68, above the 0.6 bar.
+Final labels (after reconciling disagreements): Steady 10, Accelerating 2, Slowing 1
+Usable own-rural quarters (not Insufficient): 13 of 13
+Disagreements saved to outputs/label_disagreements_Dabur.csv

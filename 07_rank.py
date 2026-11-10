@@ -32,6 +32,7 @@ mk = pd.read_csv(C.OUT / "predictions_Market_market.csv")
 mk = mk[mk["wf_pred"].notna() & (mk["wf_pred"] != "")]
 expo = pd.read_csv(C.RAW / "company_exposure.csv").set_index("company")
 ev = {c: pd.read_csv(C.RAW / f"evidence_{c}.csv", dtype=str).fillna("").set_index("quarter") for c in COS}
+ev = {c: d[d.index.map(C.in_window)] for c, d in ev.items()}   # FY23 first-pass labels left out
 quarters = list(ev["HUL"].index)
 
 
@@ -91,7 +92,7 @@ qtr = rk.drop_duplicates("quarter")
 m_ok = qtr[qtr["actual_market_wide"] != ""]
 m_c = int((m_ok["predicted_direction"] == m_ok["actual_market_wide"]).sum())
 m_n = len(m_ok)
-mw = pd.read_csv(C.RAW / "evidence_Market.csv", dtype=str).set_index("quarter")["agreed_label"]
+mw = pd.read_csv(C.RAW / "evidence_Market.csv", dtype=str).fillna("").set_index("quarter")["agreed_label"]
 rep = sum(mw.get(prev_q(q), "") == a for q, a in zip(m_ok["quarter"], m_ok["actual_market_wide"]))
 lines.append(f"Market-wide call correct in {m_c} of {m_n} scorable quarters "
              f"('same as last quarter' baseline: {rep} of {m_n}).")
@@ -105,7 +106,8 @@ for c in COS:
 lines += ["", f"Robustness: with equal exposure weights (rural share dropped entirely), the top-ranked company "
           f"changes in {changes} of {qtr.shape[0]} quarters - the order rests mainly on the rural-share assumption.",
           "Calls by quarter: " + ", ".join(f"{a}={b}" for a, b in zip(qtr["quarter"], qtr["predicted_direction"])),
-          "", "Reading this: the market call is Steady in most quarters, so most rankings are decided by the",
+          f"Market calls: {(qtr['predicted_direction'] == 'Steady').sum()} of {len(qtr)} quarters are Steady.",
+          "", "Reading this: when the market call is Steady, the ranking is decided by the",
           "tie-breaks (last reported own rural momentum, then rural share), not by MGNREGA. The ranking is",
           "therefore an exposure ordering more than a MGNREGA signal - say so when presenting it."]
 lines += ["", "signal_rank reports ties in the numerical model score; rank retains the original display order.",

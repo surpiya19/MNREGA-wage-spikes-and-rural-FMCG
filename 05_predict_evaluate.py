@@ -120,10 +120,21 @@ for name, (cols, m) in models.items():
     lines.append(f"  {name:22s} train accuracy {m['train_acc']:.0%} on {m['n_train']} qtrs; {direction}; "
                  f"cut-offs (z-score) {m['lower']:.2f} / {m['upper']:.2f}")
 
-if not models:
+import json
+summary = {"tag": C.TAG, "company": C.COMPANY, "target": C.TARGET, "usable": len(eligible), "quarters": len(f),
+           "n_train": len(train), "n_test": len(test)}
+
+if not models or len(train) < C.MIN_TRAIN_QUARTERS or len(test) < 2:
     lines += ["", f"Finding: {C.COMPANY}'s {C.TARGET_NAME} target can't be tested - only {len(eligible)} of {len(f)} "
-              "quarters have a usable label, too few to fit a rule. In most quarters the company did not "
-              "describe this trend (blank = Insufficient)."]
+              f"quarters have a usable label, too few to fit a rule (needs at least {C.MIN_TRAIN_QUARTERS} training "
+              "and 2 test quarters; with fewer, every rule fits the training quarters and the test says nothing)."
+              + (" In most quarters the company did not describe this trend (blank = Insufficient)."
+                 if len(eligible) < len(f) / 2 else "")]
+    summary["status"] = "not testable"
+    (C.OUT / f"run_summary_{C.TAG}.json").write_text(json.dumps(summary))
+    for stale in [C.OUT / f"predictions_{C.TAG}.csv"]:
+        if stale.exists():
+            stale.rename(stale.with_name(stale.stem + "_STALE_not_testable.csv"))
     (C.OUT / f"results_{C.TAG}.txt").write_text("\n".join(lines) + "\n")
     print("\n".join(lines))
     import sys
@@ -132,7 +143,8 @@ if not any(k in models for k in SELECTABLE):
     raise SystemExit("Not enough training quarters with MGNREGA data to fit a rule.")
 best_name = max([k for k in SELECTABLE if k in models], key=lambda k: models[k][1]["train_acc"])
 cols, m = models[best_name]
-lines.append(f"\nSelected on train: {best_name}")
+sel_dir = "higher MGNREGA -> Accelerating (income reading)" if m["sign"] == 1 else "higher MGNREGA -> Slowing (distress reading)"
+lines.append(f"\nSelected on train: {best_name} ({sel_dir})")
 
 for name, (c_, m_) in models.items():
     f[f"pred_{name}"] = predict(f, c_, m_)
@@ -173,6 +185,17 @@ else:
     lines.append(f"Finding: the selected rule did not beat the best baseline ({best_base.replace('pred_', '')}: {base[best_base]} vs {sel_c} of {sel_n}).")
 if sel_n > 0:
     lines.append("With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.")
+    gap = m["train_acc"] - sel_c / sel_n
+    if gap >= 0.3:
+        lines.append(f"Overfit warning: the selected rule scored {m['train_acc']:.0%} on train but {sel_c / sel_n:.0%} on test "
+                     f"({gap:.0%} points lower) - the training fit does not carry over.")
+    for name, (c_, m_) in models.items():
+        c1, n1 = score(f"pred_{name}", t)
+        if n1 and m_["train_acc"] - c1 / n1 >= 0.4 and name != best_name:
+            lines.append(f"Overfit warning: {name} {m_['train_acc']:.0%} on train vs {c1}/{n1} on test.")
+summary.update(status="tested", selected=best_name, direction="income" if m["sign"] == 1 else "distress",
+               train_acc=round(m["train_acc"], 3), test_correct=sel_c, test_n=sel_n,
+               best_baseline=best_base.replace("pred_", ""), best_baseline_correct=base[best_base])
 shock = t[t["pd_yoy"] < -0.25]
 if len(shock):
     lines.append(f"Note: in {len(shock)} of {len(t)} test quarters MGNREGA persondays were down more than 25% year on year "
@@ -227,8 +250,15 @@ else:
     pre = wf[wf["period"] == "before spending cap"].dropna(subset=["wf_pred", "pred_repeat_last"])
     if len(pre):
         a = int((pre["wf_pred"] == pre["agreed_label"]).sum()); b = int((pre["pred_repeat_last"] == pre["agreed_label"]).sum())
-        verdict = "beat" if a > b else "tied" if a == b else "did not beat"
-        lines.append(f"  Before the spending cap, the MGNREGA rule {verdict} 'same as last quarter' ({a} vs {b} of {len(pre)}).")
+        c = int((pre["wf_most_common"] == pre["agreed_label"]).sum())
+        best_b, best_name_b = max((b, "same as last quarter"), (c, "most common label"))
+        verdict = "beat" if a > best_b else "tied with" if a == best_b else "did not beat"
+        lines.append(f"  Before the spending cap, the MGNREGA rule {verdict} the best baseline, {best_name_b} "
+                     f"({a} vs {best_b} of {len(pre)}; same as last quarter {b}, most common {c}).")
+    g2 = wf.dropna(subset=["wf_pred", "pred_repeat_last"])
+    summary.update(wf_n=len(g2), wf_rule=int((g2["wf_pred"] == g2["agreed_label"]).sum()),
+                   wf_repeat=int((g2["pred_repeat_last"] == g2["agreed_label"]).sum()),
+                   wf_most_common=int((g2["wf_most_common"] == g2["agreed_label"]).sum()))
 
 out_cols = ["company", "quarter", "split", "prediction_date", "mgnrega_data_through", "rain_data_through",
             "pd_yoy", "pd_yoy_chg", "dm_yoy", "dm_yoy_chg", "rain_dep", "rain_dep_chg", "pred_selected", "agreed_label",
@@ -240,5 +270,6 @@ pred = pred.rename(columns={"agreed_label": "target_label"})
 pred["target"] = C.TARGET
 pred.to_csv(C.OUT / f"predictions_{C.TAG}.csv", index=False)
 (C.OUT / f"results_{C.TAG}.txt").write_text("\n".join(lines) + "\n")
+(C.OUT / f"run_summary_{C.TAG}.json").write_text(json.dumps(summary))
 print("\n".join(lines))
 print(f"\nSaved {C.OUT / f'predictions_{C.TAG}.csv'}")

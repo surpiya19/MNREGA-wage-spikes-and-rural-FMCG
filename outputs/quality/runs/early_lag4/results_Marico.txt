@@ -6,4 +6,4 @@ Test :
 
 Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
 
-Finding: Marico's own rural business target can't be tested - only 2 of 13 quarters have a usable label, too few to fit a rule. In most quarters the company did not describe this trend (blank = Insufficient).
+Finding: Marico's own rural business target can't be tested - only 2 of 13 quarters have a usable label, too few to fit a rule (needs at least 6 training and 2 test quarters; with fewer, every rule fits the training quarters and the test says nothing). In most quarters the company did not describe this trend (blank = Insufficient).

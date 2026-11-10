@@ -34,24 +34,38 @@ monthly = (df.groupby(["state", "month_end"])
              .reset_index())
 monthly["days_in_month"] = monthly["month_end"].dt.day
 monthly["complete"] = monthly["days_reported"] >= monthly["days_in_month"] - 2
-if df.groupby(["state", "month_end"]).size().max() == 1:
+MONTHLY_INPUT = df.groupby(["state", "month_end"]).size().max() == 1
+if MONTHLY_INPUT:
     # Input is already one row per state per month (monthly totals), not daily.
-    monthly["complete"] = True
+    # days_with_data = days that had data; missing = days in month - days_with_data.
     notes.append("Input has one row per state per month: treated as monthly totals.")
     if "days_with_data" in df.columns:
-        short = df[pd.to_numeric(df["days_with_data"], errors="coerce") < df["month_end"].dt.day - 5]
+        dwd = pd.to_numeric(df.set_index(["state", "month_end"])["days_with_data"], errors="coerce")
+        monthly["days_reported"] = monthly.set_index(["state", "month_end"]).index.map(dwd)
+        monthly["complete"] = monthly["days_reported"] >= monthly["days_in_month"] - 2
+        short = monthly[monthly["days_reported"] < monthly["days_in_month"] - 5]
         if len(short):
-            notes.append("Months with 5+ days missing (departure is still valid: actual and normal cover the same days): "
-                         + ", ".join(f"{d:%b %Y} ({int(n)} days)" for d, n in zip(short["month_end"], short["days_with_data"])))
+            notes.append("Months with 5+ days missing (kept: actual and normal cover the same days, so the departure "
+                         "is valid for the days reported, but it may miss heavy-rain days): "
+                         + ", ".join(f"{r.month_end:%b %Y} ({int(r.days_in_month - r.days_reported)} of {r.days_in_month} days missing)"
+                                     for r in short.itertuples()))
+    else:
+        monthly["complete"] = True
 monthly["departure_pct"] = (monthly["actual_mm"] / monthly["normal_mm"] - 1) * 100
 inc = monthly[~monthly["complete"]]
-notes.append(f"Coverage: {df['date'].min():%d %b %Y} to {df['date'].max():%d %b %Y}, {df['state'].nunique()} states.")
-notes.append(f"{len(inc)} state-months have more than 2 missing days and are flagged complete=False "
-             "(the first and last months usually fall here).")
+_names = df["state"].dropna().unique()
+if len(_names) == 1 and "all states" in str(_names[0]).lower():
+    _cov = f"one all-India series ('{_names[0]}': the file has no separate state rows, so state weights can't be applied)"
+else:
+    _cov = f"{len(_names)} states"
+notes.append(f"Coverage: {df['date'].min():%d %b %Y} to {df['date'].max():%d %b %Y}, {_cov}.")
+notes.append(f"{len(inc)} month(s) have more than 2 missing days and are flagged complete=False"
+             + (f": {', '.join(f'{d:%b %Y}' for d in inc['month_end'])}" if len(inc) else "") + ".")
 
 # All-India: total actual / total normal across states. This weights states by
 # their normal rainfall, not by area or farm output - say so in the deck.
-good = monthly[monthly["complete"]]
+# Monthly input: partial months are kept (see note above). Daily input: only complete months.
+good = monthly if MONTHLY_INPUT else monthly[monthly["complete"]]
 india = good.groupby("month_end")[["actual_mm", "normal_mm"]].sum().reset_index()
 india["states_reporting"] = good.groupby("month_end")["state"].count().values
 india["departure_pct"] = (india["actual_mm"] / india["normal_mm"] - 1) * 100

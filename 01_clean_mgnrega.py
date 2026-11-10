@@ -67,8 +67,13 @@ states = states.set_index(["state", "month_end"]).reindex(grid).reset_index()
 states["fy"] = states["month_end"].apply(C.fiscal_year)
 miss = states["persondays"].isna().groupby(states["state"]).sum()
 miss = miss[miss > 0].sort_values(ascending=False)
-notes.append(f"Coverage: {all_months.min():%b %Y} to {all_months.max():%b %Y}, {states['state'].nunique()} states.")
-notes.append("States with missing persondays months: " + (", ".join(f"{s} ({n})" for s, n in miss.items()) if len(miss) else "none"))
+_names = states["state"].dropna().unique()
+if len(_names) == 1 and "all states" in str(_names[0]).lower():
+    _cov = f"one all-India series ('{_names[0]}': the file has no separate state rows, so state weights can't be applied)"
+else:
+    _cov = f"{len(_names)} states"
+notes.append(f"Coverage: {all_months.min():%b %Y} to {all_months.max():%b %Y}, {_cov}.")
+notes.append("Series with missing persondays months: " + (", ".join(f"{s} ({n})" for s, n in miss.items()) if len(miss) else "none"))
 
 # --- Derived measures -------------------------------------------------------
 # No direct wage-payment series exists, so build a PROXY wage bill.

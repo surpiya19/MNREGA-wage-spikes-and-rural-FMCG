@@ -1,36 +1,38 @@
 Company: Market   |   Target: market-wide rural trend (consensus across HUL, Dabur, Marico, Emami) (market)
-Coverage: 17 of 17 quarters have a usable label. Blank (Insufficient) quarters are left out of scoring, not counted as misses (Thurro guidance).
-Eligible quarters (labelled, not Insufficient): 17  ->  train 10, test 7
-Train: Q1 FY23, Q2 FY23, Q3 FY23, Q4 FY23, Q1 FY24, Q2 FY24, Q3 FY24, Q4 FY24, Q1 FY25, Q2 FY25
-Test : Q3 FY25, Q4 FY25, Q1 FY26, Q2 FY26, Q3 FY26, Q4 FY26, Q1 FY27
+Coverage: 12 of 13 quarters have a usable label. Blank (Insufficient) quarters are left out of scoring, not counted as misses (Thurro guidance).
+Eligible quarters (labelled, not Insufficient): 12  ->  train 7, test 5
+Train: Q2 FY24, Q3 FY24, Q4 FY24, Q1 FY25, Q2 FY25, Q3 FY25, Q4 FY25
+Test : Q1 FY26, Q2 FY26, Q3 FY26, Q4 FY26, Q1 FY27
 
 Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
-  MGNREGA persondays     train accuracy 70% on 10 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.20
-  MGNREGA wage bill      train accuracy 70% on 10 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.15
-  MGNREGA work demanded  train accuracy 70% on 10 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 0.41
-  Rainfall               train accuracy 67% on 6 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / -1.65
-  MGNREGA + rainfall     train accuracy 67% on 6 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / -0.92
+  MGNREGA persondays     train accuracy 57% on 7 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 0.99
+  MGNREGA wage bill      train accuracy 57% on 7 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.41
+  MGNREGA work demanded  train accuracy 71% on 7 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 0.64
+  Rainfall               train accuracy 86% on 7 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / -1.14
+  MGNREGA + rainfall     train accuracy 71% on 7 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 0.32
 
-Selected on train: MGNREGA persondays
+Selected on train: MGNREGA work demanded (higher MGNREGA -> Slowing (distress reading))
 
-TEST RESULTS (7 test quarters; 7 where all main methods could predict):
-  selected               6/7 correct overall   |   6/7 on common quarters
-  repeat_last            7/7 correct overall   |   7/7 on common quarters
-  most_common            7/7 correct overall   |   7/7 on common quarters
-  MGNREGA persondays     6/7 correct overall   |   6/7 on common quarters
-  MGNREGA wage bill      6/7 correct overall   |   6/7 on common quarters
-  MGNREGA work demanded  4/7 correct overall   |   4/7 on common quarters
-  Rainfall               1/7 correct overall   |   1/7 on common quarters
-  MGNREGA + rainfall     1/7 correct overall   |   1/7 on common quarters
+TEST RESULTS (5 test quarters; 5 where all main methods could predict):
+  selected               2/5 correct overall   |   2/5 on common quarters
+  repeat_last            5/5 correct overall   |   5/5 on common quarters
+  most_common            0/5 correct overall   |   0/5 on common quarters
+  MGNREGA persondays     3/5 correct overall   |   3/5 on common quarters
+  MGNREGA wage bill      5/5 correct overall   |   5/5 on common quarters
+  MGNREGA work demanded  2/5 correct overall   |   2/5 on common quarters
+  Rainfall               0/5 correct overall   |   0/5 on common quarters
+  MGNREGA + rainfall     2/5 correct overall   |   2/5 on common quarters
 
-Finding: the selected rule did not beat the best baseline (repeat_last: 7 vs 6 of 7).
+Finding: the selected rule did not beat the best baseline (repeat_last: 5 vs 2 of 5).
 With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.
-Note: in 2 of 7 test quarters MGNREGA persondays were down more than 25% year on year (Q4 FY26, Q1 FY27). From Aug 2025 the fall looks like a scheme/policy change rather than rural demand, so the signal may be measuring policy in these quarters.
+Overfit warning: the selected rule scored 71% on train but 40% on test (31% points lower) - the training fit does not carry over.
+Overfit warning: Rainfall 86% on train vs 0/5 on test.
+Note: in 2 of 5 test quarters MGNREGA persondays were down more than 25% year on year (Q4 FY26, Q1 FY27). From Aug 2025 the fall looks like a scheme/policy change rather than rural demand, so the signal may be measuring policy in these quarters.
 
 WALK-FORWARD TEST (refit before every quarter; first 5 labelled quarters used only for training):
   period                             MGNREGA rule  repeat last  most common
-  all                                   7 of 12       8 of 12       8 of 12   
-  before spending cap                   5 of 9        5 of 9        5 of 9    
+  all                                   5 of 7        7 of 7        4 of 7    
+  before spending cap                   3 of 4        4 of 4        1 of 4    
   spending cap (from Aug 2025)          2 of 3        3 of 3        3 of 3    
-  Rule picked at each step: Q2 FY24=persondays, Q3 FY24=persondays, Q4 FY24=persondays, Q1 FY25=persondays, Q2 FY25=persondays, Q3 FY25=persondays, Q4 FY25=persondays, Q1 FY26=work demanded, Q2 FY26=work demanded, Q3 FY26=work demanded, Q4 FY26=persondays, Q1 FY27=persondays
-  Before the spending cap, the MGNREGA rule tied 'same as last quarter' (5 vs 5 of 9).
+  Rule picked at each step: Q3 FY25=work demanded, Q4 FY25=work demanded, Q1 FY26=work demanded, Q2 FY26=work demanded, Q3 FY26=work demanded, Q4 FY26=persondays, Q1 FY27=persondays
+  Before the spending cap, the MGNREGA rule did not beat the best baseline, same as last quarter (3 vs 4 of 4; same as last quarter 4, most common 1).

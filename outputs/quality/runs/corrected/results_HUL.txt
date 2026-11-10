@@ -1,9 +1,9 @@
 Company: HUL   |   Target: own rural business (own)
-Coverage: 2 of 17 quarters have a usable label. Blank (Insufficient) quarters are left out of scoring, not counted as misses (Thurro guidance).
+Coverage: 2 of 13 quarters have a usable label. Blank (Insufficient) quarters are left out of scoring, not counted as misses (Thurro guidance).
 Eligible quarters (labelled, not Insufficient): 2  ->  train 2, test 0
 Train: Q4 FY26, Q1 FY27
 Test : 
 
 Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
 
-Finding: HUL's own rural business target can't be tested - only 2 of 17 quarters have a usable label, too few to fit a rule. In most quarters the company did not describe this trend (blank = Insufficient).
+Finding: HUL's own rural business target can't be tested - only 2 of 13 quarters have a usable label, too few to fit a rule (needs at least 6 training and 2 test quarters; with fewer, every rule fits the training quarters and the test says nothing). In most quarters the company did not describe this trend (blank = Insufficient).

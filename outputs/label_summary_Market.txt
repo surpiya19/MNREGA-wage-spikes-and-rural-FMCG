@@ -1,6 +1,10 @@
-Quarters in table: 17
-Both readers labelled: 0;  agreed on 0 (nan%);  Cohen's kappa = nan
-  Agreement: kappa can't be computed (too few labels or only one label used).
-Agreed labels: Steady 13, Accelerating 3, Slowing 1
-Usable quarters for testing (not Insufficient): 17 of 17
-Disagreements saved to /tmp/claude-0/-home-claude/25839b9c-4fa5-5954-aa8e-5747eecec4e6/scratchpad/work/outputs/label_disagreements_Market.csv
+Quarters in table: 13 (Q1 FY24 to Q1 FY27); left out (outside window): Q1 FY23, Q2 FY23, Q3 FY23, Q4 FY23
+Market vote check (no second reader for market labels, so this compares the companies' market reads):
+  Quarters with 2+ companies commenting: 13; all commenting companies agree in 5 (38%).
+  Company-pair agreement: 42 of 69 pairs (61%).
+  HUL and Dabur market labels are first-pass (3 AI readers, majority), Marico and Emami are drafted from
+  second-pass text and human-reviewed. None has an independent second labeller.
+  Quarters with no consensus (tie, treated as Insufficient): 1 (Q1 FY24)
+Market-wide labels (company vote): Steady 8, Accelerating 3, Insufficient 1, Slowing 1
+Usable market-wide quarters (not Insufficient): 12 of 13
+Disagreements saved to outputs/label_disagreements_Market.csv

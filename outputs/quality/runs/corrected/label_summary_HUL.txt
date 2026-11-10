@@ -1,6 +1,6 @@
-Quarters in table: 17
-Both readers labelled: 17;  agreed on 16 (94%);  Cohen's kappa = 0.73
-  Agreement is good: kappa 0.73, above the 0.6 bar.
-Agreed labels: Insufficient 15, Steady 2
-Usable quarters for testing (not Insufficient): 2 of 17 - too few to hold any back for testing; in most quarters HUL did not describe its own rural trend
-Disagreements saved to ./outputs/quality/runs/corrected/label_disagreements_HUL.csv
+Quarters in table: 13 (Q1 FY24 to Q1 FY27); left out (outside window): Q1 FY23, Q2 FY23, Q3 FY23, Q4 FY23
+Both readers labelled: 13;  agreed on 12 (92%);  Cohen's kappa = 0.72
+  Agreement is good: kappa 0.72, above the 0.6 bar.
+Final labels (after reconciling disagreements): Insufficient 11, Steady 2
+Usable own-rural quarters (not Insufficient): 2 of 13 - too few to fit and test a rule (needs 6 to train plus 2 to test); in most quarters HUL did not describe its own rural trend
+Disagreements saved to outputs/label_disagreements_HUL.csv

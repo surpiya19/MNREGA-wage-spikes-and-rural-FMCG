@@ -7,20 +7,25 @@ What it does
        - Marico, Emami: labels/market_wide/draft_market_labels_marico_emami.csv (drafted from the
          market_rural_figure text in labels/<co>/labels_final.csv; human review pending)
      The market-wide label for a quarter is the most common direction across the companies that
-     commented. Ties, or an Accelerating vs Slowing split, count as Steady (the cautious call).
+     commented. Ties, or an Accelerating vs Slowing split, are Insufficient (no consensus) and are
+     left out of scoring. (Before Nov 2026 they counted as Steady, which made the series look
+     flatter than the companies' commentary and handed the 'repeat last' baseline easy wins.)
      -> labels/market_wide/market_labels_by_company.csv, labels/market_wide/market_wide_labels.csv
      -> data/raw/evidence_Market.csv  (run with --company Market --target market)
   2. Own-rural labels (Thurro: SECONDARY check). FY24 onward now use labels/<co>/labels_final.csv
      (two labellers + reconciler, guide v2); FY23 keeps the older 3-reader labels for HUL and Dabur.
      Blank = Insufficient and is excluded from scoring.
      -> data/raw/evidence_<HUL|Dabur|Marico|Emami>.csv
-  3. Cut-off: Q1 FY27 is the last quarter (Thurro: "Q1FY27 is fine"). Q2 FY27 rows are dropped.
+  3. FY23 rows stay in the evidence files for reference, but config.FIRST_QUARTER (Q1 FY24) keeps
+     them out of every test and agreement score (03_labels.py applies the window).
+  4. Cut-off: Q1 FY27 is the last quarter (Thurro: "Q1FY27 is fine"). Q2 FY27 rows are dropped.
 
 Run once after editing any label file:  python build_label_inputs.py
 """
 from pathlib import Path
 
 import pandas as pd
+import config as C
 from quality_core import market_consensus
 
 ROOT = Path(__file__).resolve().parent
@@ -148,7 +153,7 @@ by_co.to_csv(MW / "market_labels_by_company.csv", index=False)
 out = []
 for q, g in by_co.groupby("quarter", sort=False):
     votes = g[g["market_label"] != "Insufficient"]
-    lab, conf = market_consensus(votes["market_label"])
+    lab, conf = market_consensus(votes["market_label"], tie=C.MARKET_TIE_RULE)
     dates = pd.to_datetime(g["results_date"], errors="coerce").dropna()
     out.append({"quarter": q, "market_wide_label": lab, "confidence": conf,
                 "votes": "; ".join(f"{r.company}: {r.market_label}" for r in g.itertuples()),
@@ -169,7 +174,7 @@ ev["reader1_label"] = ""
 ev["reader2_label"] = ""
 ev["agreed_label"] = mw["market_wide_label"].values
 ev["market_rural_label"] = mw["market_wide_label"].values
-ev["label_source"] = "Market-wide consensus across HUL, Dabur, Marico, Emami (ties = Steady)"
+ev["label_source"] = f"Market-wide consensus across HUL, Dabur, Marico, Emami (ties = {C.MARKET_TIE_RULE})"
 ev["results_date_source"] = "Earliest available company result date; see company evidence provenance"
 ev["own_evidence_kind"] = "Derived consensus, not a verbatim quote"
 ev["reconciliation_note"] = ""

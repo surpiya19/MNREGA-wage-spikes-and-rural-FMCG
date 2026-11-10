@@ -48,6 +48,8 @@ ev = pd.read_csv(C.EVIDENCE_FILE, dtype=str).fillna("")
 for c in COLUMNS:
     if c not in ev.columns:
         sys.exit(f"Evidence file is missing column '{c}'.")
+dropped = ev.loc[~ev["quarter"].map(C.in_window), "quarter"].tolist()
+ev = ev[ev["quarter"].map(C.in_window)].copy()
 ev["quarter_end"] = ev["quarter"].map(C.quarter_end)
 ev = ev.sort_values("quarter_end").reset_index(drop=True)
 
@@ -96,22 +98,57 @@ def agreement_finding(k):
 
 def usable_finding(n_usable, n_total):
     """State how many quarters can be used, and whether that is enough to test."""
-    line = f"Usable quarters for testing (not Insufficient): {n_usable} of {n_total}"
-    if n_usable <= 3:
-        line += (f" - too few to hold any back for testing; in most quarters {C.COMPANY} "
-                 "did not describe its own rural trend")
+    what = "market-wide" if C.COMPANY == "Market" else "own-rural"
+    line = f"Usable {what} quarters (not Insufficient): {n_usable} of {n_total}"
+    if n_usable < C.MIN_TRAIN_QUARTERS + 2 and C.COMPANY != "Market":
+        line += (f" - too few to fit and test a rule (needs {C.MIN_TRAIN_QUARTERS} to train plus 2 to test); "
+                 f"in most quarters {C.COMPANY} did not describe its own rural trend")
     return line
+
+
+def market_vote_check():
+    """Market-wide labels have no second reader. Instead, check how far the companies'
+    own market reads agree with each other, quarter by quarter."""
+    p = C.ROOT / "labels" / "market_wide" / "market_labels_by_company.csv"
+    if not p.exists():
+        return ["Market vote check: market_labels_by_company.csv not found."]
+    v = pd.read_csv(p, dtype=str).fillna("")
+    v = v[v["quarter"].map(C.in_window) & v["market_label"].isin(C.LABELS)]
+    wide = v.pivot_table(index="quarter", columns="company", values="market_label", aggfunc="first")
+    cos = list(wide.columns)
+    pairs_a = pairs_n = 0
+    unanimous = multi = 0
+    for _, r in wide.iterrows():
+        labs = r.dropna().tolist()
+        if len(labs) >= 2:
+            multi += 1
+            unanimous += len(set(labs)) == 1
+            for i in range(len(labs)):
+                for j in range(i + 1, len(labs)):
+                    pairs_n += 1
+                    pairs_a += labs[i] == labs[j]
+    out = ["Market vote check (no second reader for market labels, so this compares the companies' market reads):",
+           f"  Quarters with 2+ companies commenting: {multi}; all commenting companies agree in {unanimous} ({unanimous / multi:.0%})." if multi else "  Fewer than 2 companies commented in every quarter.",
+           f"  Company-pair agreement: {pairs_a} of {pairs_n} pairs ({pairs_a / pairs_n:.0%})." if pairs_n else "",
+           "  HUL and Dabur market labels are first-pass (3 AI readers, majority), Marico and Emami are drafted from",
+           "  second-pass text and human-reviewed. None has an independent second labeller."]
+    ties = ev[ev["agreed_label"] == C.INSUFFICIENT]["quarter"].tolist()
+    out.append(f"  Quarters with no consensus (tie, treated as Insufficient): {len(ties)}" + (f" ({', '.join(ties)})" if ties else ""))
+    return [x for x in out if x]
 
 
 counts = ev["agreed_label"].replace("", "(not agreed yet)").value_counts()
 lines = [
-    f"Quarters in table: {len(ev)}",
+    f"Quarters in table: {len(ev)} ({C.FIRST_QUARTER} to {C.LAST_QUARTER})"
+    + (f"; left out (outside window): {', '.join(dropped)}" if dropped else ""),
     f"Both readers labelled: {n};  agreed on {int(agree.sum())} ({po:.0%});  Cohen's kappa = {kappa:.2f}",
     agreement_finding(kappa),
-    f"Agreed labels: " + ", ".join(f"{k} {v}" for k, v in counts.items()),
+    ("Market-wide labels (company vote): " if C.COMPANY == "Market" else "Final labels (after reconciling disagreements): ") + ", ".join(f"{k} {v}" for k, v in counts.items()),
     usable_finding(int(ev['agreed_label'].isin(C.LABELS).sum()), len(ev)),
-    f"Disagreements saved to {C.OUT / f'label_disagreements_{C.COMPANY}.csv'}",
+    f"Disagreements saved to outputs/label_disagreements_{C.COMPANY}.csv",
 ]
+if C.COMPANY == "Market":
+    lines[1:3] = market_vote_check()
 if problems:
     lines += ["", "PROBLEMS TO FIX:"] + [f"  - {p}" for p in problems]
 (C.OUT / f"label_summary_{C.COMPANY}.txt").write_text("\n".join(lines) + "\n")

@@ -1,0 +1,1 @@
+{"tag": "Emami_market", "company": "Emami", "target": "market", "usable": 10, "quarters": 13, "n_train": 6, "n_test": 4, "status": "tested", "selected": "MGNREGA work demanded", "direction": "distress", "train_acc": 1.0, "test_correct": 2, "test_n": 4, "best_baseline": "repeat_last", "best_baseline_correct": 4, "wf_n": 5, "wf_rule": 3, "wf_repeat": 5, "wf_most_common": 5}

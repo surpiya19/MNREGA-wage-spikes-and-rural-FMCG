@@ -1,32 +1,32 @@
 quarter,excluded_company,original_label,original_confidence,revised_label,changed,note
-Q1 FY23,HUL,Steady,low,Slowing,True,Target-label sensitivity only; model not refitted
-Q1 FY23,Dabur,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY23,Marico,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY23,Emami,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q2 FY23,HUL,Steady,low,Slowing,True,Target-label sensitivity only; model not refitted
-Q2 FY23,Dabur,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q2 FY23,Marico,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q2 FY23,Emami,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q3 FY23,HUL,Steady,low,Slowing,True,Target-label sensitivity only; model not refitted
-Q3 FY23,Dabur,Steady,low,Accelerating,True,Target-label sensitivity only; model not refitted
-Q3 FY23,Marico,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q3 FY23,Emami,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q4 FY23,HUL,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q4 FY23,Dabur,Steady,low,Accelerating,True,Target-label sensitivity only; model not refitted
-Q4 FY23,Marico,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q4 FY23,Emami,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY24,HUL,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY24,Dabur,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY24,Marico,Steady,low,Accelerating,True,Target-label sensitivity only; model not refitted
-Q1 FY24,Emami,Steady,low,Accelerating,True,Target-label sensitivity only; model not refitted
-Q2 FY24,HUL,Accelerating,low,Steady,True,Target-label sensitivity only; model not refitted
-Q2 FY24,Dabur,Accelerating,low,Steady,True,Target-label sensitivity only; model not refitted
+Q1 FY23,HUL,Insufficient,no consensus (tie),Slowing,True,Target-label sensitivity only; model not refitted
+Q1 FY23,Dabur,Insufficient,no consensus (tie),Steady,True,Target-label sensitivity only; model not refitted
+Q1 FY23,Marico,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q1 FY23,Emami,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q2 FY23,HUL,Insufficient,no consensus (tie),Slowing,True,Target-label sensitivity only; model not refitted
+Q2 FY23,Dabur,Insufficient,no consensus (tie),Steady,True,Target-label sensitivity only; model not refitted
+Q2 FY23,Marico,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q2 FY23,Emami,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q3 FY23,HUL,Insufficient,no consensus (tie),Slowing,True,Target-label sensitivity only; model not refitted
+Q3 FY23,Dabur,Insufficient,no consensus (tie),Accelerating,True,Target-label sensitivity only; model not refitted
+Q3 FY23,Marico,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q3 FY23,Emami,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q4 FY23,HUL,Insufficient,no consensus (tie),Steady,True,Target-label sensitivity only; model not refitted
+Q4 FY23,Dabur,Insufficient,no consensus (tie),Accelerating,True,Target-label sensitivity only; model not refitted
+Q4 FY23,Marico,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q4 FY23,Emami,Insufficient,no consensus (tie),Insufficient,False,Target-label sensitivity only; model not refitted
+Q1 FY24,HUL,Insufficient,no consensus (tie),Steady,True,Target-label sensitivity only; model not refitted
+Q1 FY24,Dabur,Insufficient,no consensus (tie),Steady,True,Target-label sensitivity only; model not refitted
+Q1 FY24,Marico,Insufficient,no consensus (tie),Accelerating,True,Target-label sensitivity only; model not refitted
+Q1 FY24,Emami,Insufficient,no consensus (tie),Accelerating,True,Target-label sensitivity only; model not refitted
+Q2 FY24,HUL,Accelerating,low,Insufficient,True,Target-label sensitivity only; model not refitted
+Q2 FY24,Dabur,Accelerating,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q2 FY24,Marico,Accelerating,low,Accelerating,False,Target-label sensitivity only; model not refitted
 Q2 FY24,Emami,Accelerating,low,Accelerating,False,Target-label sensitivity only; model not refitted
 Q3 FY24,HUL,Slowing,low,Slowing,False,Target-label sensitivity only; model not refitted
-Q3 FY24,Dabur,Slowing,low,Steady,True,Target-label sensitivity only; model not refitted
+Q3 FY24,Dabur,Slowing,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q3 FY24,Marico,Slowing,low,Slowing,False,Target-label sensitivity only; model not refitted
-Q3 FY24,Emami,Slowing,low,Steady,True,Target-label sensitivity only; model not refitted
+Q3 FY24,Emami,Slowing,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q4 FY24,HUL,Accelerating,high,Accelerating,False,Target-label sensitivity only; model not refitted
 Q4 FY24,Dabur,Accelerating,high,Accelerating,False,Target-label sensitivity only; model not refitted
 Q4 FY24,Marico,Accelerating,high,Accelerating,False,Target-label sensitivity only; model not refitted
@@ -59,11 +59,11 @@ Q3 FY26,HUL,Steady,high,Steady,False,Target-label sensitivity only; model not re
 Q3 FY26,Dabur,Steady,high,Steady,False,Target-label sensitivity only; model not refitted
 Q3 FY26,Marico,Steady,high,Steady,False,Target-label sensitivity only; model not refitted
 Q3 FY26,Emami,Steady,high,Steady,False,Target-label sensitivity only; model not refitted
-Q4 FY26,HUL,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
+Q4 FY26,HUL,Steady,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q4 FY26,Dabur,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q4 FY26,Marico,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
+Q4 FY26,Marico,Steady,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q4 FY26,Emami,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY27,HUL,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
+Q1 FY27,HUL,Steady,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q1 FY27,Dabur,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
-Q1 FY27,Marico,Steady,low,Steady,False,Target-label sensitivity only; model not refitted
+Q1 FY27,Marico,Steady,low,Insufficient,True,Target-label sensitivity only; model not refitted
 Q1 FY27,Emami,Steady,low,Steady,False,Target-label sensitivity only; model not refitted

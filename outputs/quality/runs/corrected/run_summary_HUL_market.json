@@ -1,0 +1,1 @@
+{"tag": "HUL_market", "company": "HUL", "target": "market", "usable": 13, "quarters": 13, "n_train": 8, "n_test": 5, "status": "tested", "selected": "MGNREGA persondays", "direction": "income", "train_acc": 0.875, "test_correct": 3, "test_n": 5, "best_baseline": "repeat_last", "best_baseline_correct": 3, "wf_n": 8, "wf_rule": 4, "wf_repeat": 5, "wf_most_common": 3}

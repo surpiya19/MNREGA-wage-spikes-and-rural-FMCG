@@ -1,9 +1,9 @@
 quarter,market_wide_label,confidence,votes,n_companies_commenting,first_results_date
-Q1 FY23,Steady,low,Dabur: Slowing; HUL: Steady,2,2022-07-19
-Q2 FY23,Steady,low,Dabur: Slowing; HUL: Steady,2,2022-10-21
-Q3 FY23,Steady,low,Dabur: Slowing; HUL: Accelerating,2,2023-01-19
-Q4 FY23,Steady,low,Dabur: Steady; HUL: Accelerating,2,2023-04-27
-Q1 FY24,Steady,low,Dabur: Accelerating; Emami: Steady; HUL: Accelerating; Marico: Steady,4,2023-07-20
+Q1 FY23,Insufficient,no consensus (tie),Dabur: Slowing; HUL: Steady,2,2022-07-19
+Q2 FY23,Insufficient,no consensus (tie),Dabur: Slowing; HUL: Steady,2,2022-10-21
+Q3 FY23,Insufficient,no consensus (tie),Dabur: Slowing; HUL: Accelerating,2,2023-01-19
+Q4 FY23,Insufficient,no consensus (tie),Dabur: Steady; HUL: Accelerating,2,2023-04-27
+Q1 FY24,Insufficient,no consensus (tie),Dabur: Accelerating; Emami: Steady; HUL: Accelerating; Marico: Steady,4,2023-07-20
 Q2 FY24,Accelerating,low,Dabur: Accelerating; Emami: Steady; HUL: Accelerating; Marico: Slowing,4,2023-10-19
 Q3 FY24,Slowing,low,Dabur: Slowing; Emami: Slowing; HUL: Accelerating; Marico: Steady,4,2024-01-19
 Q4 FY24,Accelerating,high,Dabur: Accelerating; Emami: Accelerating; HUL: Steady; Marico: Accelerating,4,2024-04-24

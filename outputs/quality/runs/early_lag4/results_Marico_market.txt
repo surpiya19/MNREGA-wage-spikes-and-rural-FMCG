@@ -11,7 +11,7 @@ Candidate rules (fitted on train only; the selected rule is picked among the MGN
   Rainfall               train accuracy 62% on 8 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.15
   MGNREGA + rainfall     train accuracy 75% on 8 qtrs; higher signal -> SLOWING (distress reading); cut-offs (z-score) -inf / 0.25
 
-Selected on train: MGNREGA persondays
+Selected on train: MGNREGA persondays (higher MGNREGA -> Slowing (distress reading))
 
 TEST RESULTS (5 test quarters; 5 where all main methods could predict):
   selected               3/5 correct overall   |   3/5 on common quarters
@@ -33,4 +33,4 @@ WALK-FORWARD TEST (refit before every quarter; first 5 labelled quarters used on
   before spending cap                   1 of 5        4 of 5        4 of 5    
   spending cap (from Aug 2025)          2 of 3        3 of 3        3 of 3    
   Rule picked at each step: Q2 FY25=persondays, Q3 FY25=persondays, Q4 FY25=persondays, Q1 FY26=persondays, Q2 FY26=persondays, Q3 FY26=persondays, Q4 FY26=persondays, Q1 FY27=persondays
-  Before the spending cap, the MGNREGA rule did not beat 'same as last quarter' (1 vs 4 of 5).
+  Before the spending cap, the MGNREGA rule did not beat the best baseline, same as last quarter (1 vs 4 of 5; same as last quarter 4, most common 4).

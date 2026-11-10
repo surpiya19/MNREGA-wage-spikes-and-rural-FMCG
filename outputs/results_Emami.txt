@@ -5,32 +5,10 @@ Train: Q2 FY24, Q4 FY24, Q1 FY25, Q2 FY25
 Test : Q3 FY25, Q2 FY26, Q3 FY26
 
 Candidate rules (fitted on train only; the selected rule is picked among the MGNREGA rules):
-  MGNREGA persondays     train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.61
-  MGNREGA wage bill      train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.65
-  MGNREGA work demanded  train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.62
-  Rainfall               train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.69
-  MGNREGA + rainfall     train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 0.60
+  MGNREGA persondays     train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.29
+  MGNREGA wage bill      train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.39
+  MGNREGA work demanded  train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.38
+  Rainfall               train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 1.26
+  MGNREGA + rainfall     train accuracy 100% on 4 qtrs; higher signal -> Accelerating; cut-offs (z-score) -inf / 0.67
 
-Selected on train: MGNREGA persondays
-
-TEST RESULTS (3 test quarters; 2 where all main methods could predict):
-  selected               1/3 correct overall   |   1/2 on common quarters
-  repeat_last            0/3 correct overall   |   0/2 on common quarters
-  follow_market          1/2 correct overall   |   1/2 on common quarters
-  most_common            1/3 correct overall   |   1/2 on common quarters
-  MGNREGA persondays     1/3 correct overall   |   1/2 on common quarters
-  MGNREGA wage bill      1/3 correct overall   |   1/2 on common quarters
-  MGNREGA work demanded  1/3 correct overall   |   1/2 on common quarters
-  Rainfall               1/3 correct overall   |   1/2 on common quarters
-  MGNREGA + rainfall     1/3 correct overall   |   1/2 on common quarters
-
-Finding: the selected rule did not beat the best baseline (most_common: 1 vs 1 of 2).
-With this few quarters, one quarter can change the conclusion, so results are given as counts as well as percentages.
-
-WALK-FORWARD TEST (refit before every quarter; first 5 labelled quarters used only for training):
-  period                             MGNREGA rule  repeat last  most common
-  all                                   1 of 2        0 of 2        1 of 2    
-  before spending cap                   1 of 1        0 of 1        1 of 1    
-  spending cap (from Aug 2025)          0 of 1        0 of 1        0 of 1    
-  Rule picked at each step: Q2 FY26=persondays, Q3 FY26=persondays
-  Before the spending cap, the MGNREGA rule beat 'same as last quarter' (1 vs 0 of 1).
+Finding: Emami's own rural business target can't be tested - only 7 of 13 quarters have a usable label, too few to fit a rule (needs at least 6 training and 2 test quarters; with fewer, every rule fits the training quarters and the test says nothing).

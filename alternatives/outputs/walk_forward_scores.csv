@@ -1,0 +1,9 @@
+feature,subset,n,mae_mgnrega,mae_meanrev,mae_nochange,dir_hits_mgnrega,dir_hits_meanrev,coef_sign_last,coef_sign_flips
+d_pd_yoy,all,32,3.85,3.7,4.24,20/32,19/32,+,1
+d_pd_yoy,pre_cap,20,3.47,3.33,3.18,12/20,11/20,+,1
+pd_yoy,all,32,3.59,3.7,4.24,20/32,19/32,-,2
+pd_yoy,pre_cap,20,3.3,3.33,3.18,12/20,11/20,-,2
+d_company_weighted_yoy,all,32,3.79,3.7,4.24,20/32,19/32,+,1
+d_company_weighted_yoy,pre_cap,20,3.43,3.33,3.18,12/20,11/20,+,1
+d_breadth_share_up,all,32,3.88,3.7,4.24,20/32,19/32,+,1
+d_breadth_share_up,pre_cap,20,3.42,3.33,3.18,12/20,11/20,+,1

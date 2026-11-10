@@ -4,16 +4,22 @@ from collections import Counter
 LABELS = ("Accelerating", "Steady", "Slowing")
 
 
-def market_consensus(labels):
-    """Preserve the team's rule, including its conservative split convention."""
+def market_consensus(labels, tie="Insufficient"):
+    """Most common direction among companies that commented.
+
+    A tie, or an equal Accelerating vs Slowing split, has no consensus. From 9 Nov 2026 the
+    team's rule returns "Insufficient" (left out of scoring); pass tie="Steady" for the
+    earlier convention, kept as a sensitivity option (config.MARKET_TIE_RULE).
+    """
     counts = Counter(x for x in labels if x in LABELS)
     if not counts:
         return "Insufficient", ""
     top = [x for x, n in counts.items() if n == max(counts.values())]
     split = counts.get("Accelerating", 0) == counts.get("Slowing", 0) > 0
-    label = "Steady" if len(top) > 1 or split else top[0]
-    confidence = "high" if max(counts.values()) / sum(counts.values()) >= .75 and len(top) == 1 else "low"
-    return label, confidence
+    if len(top) > 1 or split:
+        return tie, "no consensus (tie)"
+    confidence = "high" if max(counts.values()) / sum(counts.values()) >= .75 else "low"
+    return top[0], confidence
 
 
 def classification_metrics(actual, predicted):

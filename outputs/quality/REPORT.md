@@ -8,25 +8,25 @@ These checks reuse the original historical sample: they are exploratory, not ind
 
 | Scenario | Method | Correct / scored | Balanced accuracy | Classes present |
 |---|---|---|---|---|
-| corrected | MGNREGA | 7/12 | 36.1% | 3 |
-| corrected | Repeat last | 8/12 | 40.3% | 3 |
-| corrected | Most common | 8/12 | 33.3% | 3 |
-| corrected | Always steady | 8/12 | 33.3% | 3 |
-| early_deadline | MGNREGA | 7/12 | 36.1% | 3 |
-| early_deadline | Repeat last | 8/12 | 40.3% | 3 |
-| early_deadline | Most common | 8/12 | 33.3% | 3 |
-| early_deadline | Always steady | 8/12 | 33.3% | 3 |
-| early_lag4 | MGNREGA | 6/12 | 31.9% | 3 |
-| early_lag4 | Repeat last | 8/12 | 40.3% | 3 |
-| early_lag4 | Most common | 8/12 | 33.3% | 3 |
-| early_lag4 | Always steady | 8/12 | 33.3% | 3 |
+| corrected | MGNREGA | 4/7 | 57.1% | 1 |
+| corrected | Repeat last | 7/7 | 100.0% | 1 |
+| corrected | Most common | 4/7 | 57.1% | 1 |
+| corrected | Always steady | 7/7 | 100.0% | 1 |
+| early_deadline | MGNREGA | 5/7 | 71.4% | 1 |
+| early_deadline | Repeat last | 7/7 | 100.0% | 1 |
+| early_deadline | Most common | 4/7 | 57.1% | 1 |
+| early_deadline | Always steady | 7/7 | 100.0% | 1 |
+| early_lag4 | MGNREGA | 4/7 | 57.1% | 1 |
+| early_lag4 | Repeat last | 7/7 | 100.0% | 1 |
+| early_lag4 | Most common | 4/7 | 57.1% | 1 |
+| early_lag4 | Always steady | 7/7 | 100.0% | 1 |
 
 Balanced accuracy averages recall across classes actually observed. A single-class test
 cannot establish ability to detect acceleration/slowing, even with perfect accuracy.
 
 ## Timing checks
 
-- Checked 411 company-target-quarter rows across three scenarios.
+- Checked 351 company-target-quarter rows across three scenarios.
 - Before-results failures: 0.
 - Required-data-age failures: 0.
 - `early_deadline` fixes predictions at quarter-end + 7 days, or earlier if results occur sooner.
@@ -39,9 +39,9 @@ cannot establish ability to detect acceleration/slowing, even with perfect accur
 
 ## Turning-point check
 
-- corrected: 4 actual changes from the latest prior label; model got 2 right; 3 false change calls.
-- early_deadline: 4 actual changes from the latest prior label; model got 2 right; 3 false change calls.
-- early_lag4: 4 actual changes from the latest prior label; model got 1 right; 3 false change calls.
+- corrected: 0 actual changes from the latest prior label; model got 0 right; 3 false change calls.
+- early_deadline: 0 actual changes from the latest prior label; model got 0 right; 2 false change calls.
+- early_lag4: 0 actual changes from the latest prior label; model got 0 right; 3 false change calls.
 
 ## Ranking interpretation
 

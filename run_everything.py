@@ -29,4 +29,5 @@ for co in ["HUL", "Dabur", "Marico", "Emami"]:
     for t in ["own", "market"]:
         run(["run_all.py", "--from", "3", "--company", co, "--target", t])
 run(["07_rank.py"])
+run(["08_summary.py"])
 print("\nDone. Headline results: outputs/results_Market_market.txt and outputs/ranking_scores.txt")

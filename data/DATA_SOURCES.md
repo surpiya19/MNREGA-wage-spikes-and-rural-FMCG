@@ -22,23 +22,24 @@ National monthly rainfall, Sep 2022 – Sep 2026. It's the sum of IMD daily stat
 - Four months are missing more than 5 days: Sep 2022, Oct 2022, May 2024 and Jun 2024.
 - All-India departure is normal-weighted across states, not area-weighted.
 
-## raw/evidence_HUL.csv and raw/evidence_Dabur.csv
+## raw/evidence_<company>.csv (HUL, Dabur, Marico, Emami, Market)
 
-One row per quarter, Q1 FY23 – Q1 FY27:
+Built by `build_label_inputs.py`; one row per quarter (Q1 FY23 to Q1 FY27; the analysis uses Q1 FY24 onward):
 
-- **Dates and volumes:** results date and reported volume growth.
+- **Dates and volumes:** results date (with its source) and reported domestic volume growth.
 - **Quotes:** the company's own-rural quote and its market-rural quote, each with a source link.
-- **Labels:** `reader1_label`, `reader2_label`, `reader3_label` (own rural), `agreed_label` (2-of-3 majority), `market_reader1`–`3` and `market_rural_label` (market majority).
+- **Labels:** `agreed_label` (own rural) and `market_rural_label` (overall rural market). `label_source` records how each label was made: Q1 FY24 onward from the reconciled second pass in `labels/<company>/labels_final.csv`; FY23 (HUL and Dabur only) from the first pass.
+- `evidence_Market.csv` is the market-wide consensus across the four companies.
 
-These labels are **AI drafts** (see `label_source`) and need a human spot-check. The HUL sheet also keeps the earlier suggested labels (`suggested_*` columns) for reference.
+`call_date_audit.csv` records the source check of the restored Marico and Emami results dates (see `docs/DATE_AUDIT.md`). `company_exposure.csv` holds each company's rural share of India sales with sources.
 
 ## raw/ai_readers/
 
-Each AI reader's full output, with the quote and source behind every label:
+First-pass labels (three LLM readers, 2-of-3 majority) with the quote and source behind every label:
 
 - `reader_A/B/C.csv` = HUL
 - `dabur_reader_A/B/C.csv` = Dabur
 
-## Not included yet
+## State-level MGNREGA
 
-State-by-state files. You only need them if you want exposure-weighted signals (`STATE_WEIGHTS` in config.py); use README prompts A and B to export them.
+`alternatives/data/` holds state-level MGNREGA (pulled 10 Nov 2026) summed into regions, plus a state breadth measure. See `alternatives/README.md`.

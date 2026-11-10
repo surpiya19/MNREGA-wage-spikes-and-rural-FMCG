@@ -1,7 +1,7 @@
 # Marico Limited: reconciliation report (rural direction, Q1 FY24 to Q2 FY27)
 
-Guide: `/home/claude/pilot/labelling_guide.md` (v2). Inputs: `labels_A.csv`, `labels_B.csv`. Output: `labels_final.csv`.
-Scoring: `python3 /home/claude/pilot/marico/score_agreement.py labels_A.csv labels_B.csv`
+Guide: `labels/labelling_guide.md` (v2). Inputs: `labels_A.csv`, `labels_B.csv`. Output: `labels_final.csv`.
+Scoring: `python3 labels/marico/score_agreement.py labels/marico/labels_A.csv labels/marico/labels_B.csv`
 
 ## 1. Agreement (13 scored quarters, Q2 FY24 to Q2 FY27)
 

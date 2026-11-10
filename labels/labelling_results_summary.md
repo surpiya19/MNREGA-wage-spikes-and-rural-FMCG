@@ -1,8 +1,8 @@
 # Rural commentary labels: results (Q1 FY24–Q1 FY27)
 
-Each company was labelled by two independent agent labellers using guide v2. A third agent then reconciled each company's two sets against the sources.
+Each company was labelled by two independent LLM-assisted labellers working from guide v2, without seeing each other's labels. A third pass reconciled every disagreement against the source documents and recorded the reason for each final label.
 
-**Window (updated 9 Nov 2026).** Agreement is now scored on the same 13 quarters the backtest uses: Q1 FY24 to Q1 FY27. Earlier versions scored Q2 FY24 to Q2 FY27. Q2 FY27 is left out because the analysis stops at Q1 FY27 (Thurro: "Q1FY27 is fine"), and because Dabur's and Emami's Q2 FY27 calls were not out when it was first labelled. The FY23 quarters for HUL and Dabur come from the first pass (3 AI readers, majority, no reconciliation) and are left out of the scoring and the backtest.
+**Window (updated 9 Nov 2026).** Agreement is now scored on the same 13 quarters the backtest uses: Q1 FY24 to Q1 FY27. Earlier versions scored Q2 FY24 to Q2 FY27. Q2 FY27 is left out because the analysis stops at Q1 FY27 (Thurro: "Q1FY27 is fine"), and because Dabur's and Emami's Q2 FY27 calls were not out when it was first labelled. The FY23 quarters for HUL and Dabur come from the first pass (three LLM readers, majority vote, no reconciliation) and are left out of the scoring and the backtest.
 
 ## Agreement (13 scored quarters per company, Q1 FY24–Q1 FY27)
 | Company | Agreement | Cohen's kappa | Final labels |

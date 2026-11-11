@@ -51,7 +51,9 @@ One target at a time: `python run_all.py --from 3 --company Dabur --target marke
 
 Each label is Accelerating, Steady, Slowing or Insufficient (no relevant comment). Insufficient quarters are excluded from scoring and coverage is reported in every results file.
 
-**Labelling.** Labels follow a written guide (`labels/labelling_guide.md`, v2). Key rules: a remark is "own" only if the company is the subject; a level ("rural ahead of urban") is not a direction; numbers beat adjectives and a change of 2 points or less is steady; outlook statements don't count. Each company was labelled by two independent LLM-assisted labellers, agreement was scored before reconciliation (Cohen's kappa 0.54–0.72, except Marico at 0.15 because almost every label is blank), and every disagreement was then reconciled against the source with a written reason. The non-steady own labels were checked by hand against the transcripts. Market labels for Marico and Emami are drafts that still need a human review (`labels/market_wide/`). Details: `labels/labelling_results_summary.md`.
+**Labelling.** Labels follow a written guide (`labels/labelling_guide.md`, v2). Key rules: a remark is "own" only if the company is the subject; a level ("rural ahead of urban") is not a direction; numbers beat adjectives and a change of 2 points or less is steady; outlook statements don't count. Each company was labelled by two independent LLM-assisted labellers, agreement was scored before reconciliation (Cohen's kappa 0.54–0.72, except Marico at 0.15 because almost every label is blank), and every disagreement was then reconciled against the source with a written reason. The non-steady own labels were checked by hand against the transcripts. Details: `labels/labelling_results_summary.md`.
+
+**Marico and Emami market-label review.** Supriya assigned the 26 market labels. Snehal reviewed the evidence with AI assistance without directly viewing Supriya’s labels. The AI had access to the drafts. Snehal agreed with 25 of 26 labels (96.2%, including provisional judgments). The sole disagreement was Marico Q1 FY27: Supriya chose **Steady**, while Snehal provisionally chose **Insufficient**. The analysis retains Supriya’s **Steady** label.
 
 **Window.** Q1 FY24 to Q1 FY27 (`FIRST_QUARTER`, `LAST_QUARTER`). FY23 labels exist only from a first pass (three readers, majority vote, no reconciliation), so FY23 is excluded. Q2 FY27 is excluded per Thurro.
 
@@ -103,7 +105,7 @@ The closest thing to a lead is work given relative to work demanded (rho +0.27, 
 ## Limitations and open work
 
 - **Small sample:** 5–8 scored quarters per test.
-- **Human review is still pending** for the Marico and Emami market labels, and independent review by two team members hasn't been recorded (`outputs/quality/review_queue.csv`).
+- A fully independent two-person label comparison has yet to be documented. The AI-assisted review for Marico and Emami is described under Labelling above.
 - **Volume growth** isn't yet on one like-for-like basis per company (`outputs/quality/volume_review.csv`).
 - **Nielsen rural vs urban growth** is quoted on mixed bases and wasn't turned into a numeric series.
 - **No historical snapshots:** the 3-month MGNREGA lag approximates what was known at the time.
